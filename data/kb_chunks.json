@@ -1,0 +1,258 @@
+{
+ "meta": {
+  "built_at": "2026-10-29 14:49:13",
+  "embedding_model": "nomic-embed-text",
+  "files": [
+   {
+    "name": "MEMO-2026-031 Seal failures on P-2105.txt",
+    "pages": 1,
+    "chunks": 2,
+    "ocr_pages": 0
+   },
+   {
+    "name": "SOP-ADM-002 Approval Notes and Delegation of Powers.md",
+    "pages": 1,
+    "chunks": 5,
+    "ocr_pages": 0
+   },
+   {
+    "name": "SOP-INSP-011 Pressure Vessel Thickness Inspection.md",
+    "pages": 1,
+    "chunks": 9,
+    "ocr_pages": 0
+   },
+   {
+    "name": "SOP-MECH-004 Centrifugal Pump Condition Monitoring.md",
+    "pages": 1,
+    "chunks": 9,
+    "ocr_pages": 0
+   },
+   {
+    "name": "SOP-SAFE-007 Hot Work Permit.docx",
+    "pages": 1,
+    "chunks": 6,
+    "ocr_pages": 0
+   }
+  ],
+  "errors": []
+ },
+ "chunks": [
+  {
+   "text": "SAMPLE DOCUMENT — fictional \"Sample Refinery Ltd.\" — for demonstrating the Sovereign Workbench prototype only.\n\nINTERNAL MEMORANDUM\n\nRef: MECH/MEMO/2026/031\nDate: 12-03-2026\nFrom: Area Maintenance Engineer, Crude Distillation Unit\nTo: Head of Mechanical Maintenance\nSubject: Repeated mechanical seal failures on crude charge pumps P-2105A/B\n\n1. Pump P-2105A has had three mechanical seal failures in the last eight months (July 2025, November 2025 and February 2026). P-2105B, the standby pump, has had one failure (December 2025).\n\n2. Root cause analysis of the February 2026 failure found misalignment of 0.18 mm between pump and motor, well above the 0.05 mm allowed for this pump. Vibration before the failure was 5.9 mm/s, in Zone C as per SOP-MECH-004.",
+   "source": "MEMO-2026-031 Seal failures on P-2105.txt",
+   "page": 1,
+   "section": "",
+   "method": "text"
+  },
+  {
+   "text": ".18 mm between pump and motor, well above the 0.05 mm allowed for this pump. Vibration before the failure was 5.9 mm/s, in Zone C as per SOP-MECH-004.\n\n3. It is recommended that:\n   (a) laser alignment is checked on both pumps after every seal or bearing job;\n   (b) vibration of P-2105A/B is monitored weekly until three consecutive readings are in Zone B or better;\n   (c) one spare cartridge seal and one set of bearings are kept in stock for P-2105A/B, as delivery time is 10 weeks.\n\n4. The approximate cost of one cartridge seal is Rs 2.1 lakh and one set of pump bearings is Rs 0.65 lakh.\n\nArea Maintenance Engineer, CDU",
+   "source": "MEMO-2026-031 Seal failures on P-2105.txt",
+   "page": 1,
+   "section": "",
+   "method": "text"
+  },
+  {
+   "text": "# SOP-ADM-002: Approval Notes and Delegation of Financial Powers\n\nSAMPLE DOCUMENT — fictional \"Sample Refinery Ltd.\" — created for demonstrating the Sovereign Workbench prototype only. Limits are illustrative.\n\nRevision: 5 | Effective date: 01-01-2026 | Owner: Finance and Administration",
+   "source": "SOP-ADM-002 Approval Notes and Delegation of Powers.md",
+   "page": 1,
+   "section": "SOP-ADM-002: Approval Notes and Delegation of Financial Powers",
+   "method": "text"
+  },
+  {
+   "text": "## 1. Purpose\n\nTo standardise the format of internal approval notes and to state who may approve expenditure of different values.",
+   "source": "SOP-ADM-002 Approval Notes and Delegation of Powers.md",
+   "page": 1,
+   "section": "1. Purpose",
+   "method": "text"
+  },
+  {
+   "text": "## 2. Standard Format of an Approval Note\n\nEvery approval note must contain the following sections, in this order:\n\n1. Subject: one line stating what approval is sought.\n2. Reference: inspection report numbers, earlier correspondence, SOP clauses.\n3. Background: the situation in brief, with equipment tag numbers.\n4. Findings: the key facts and measured values that justify the proposal.\n5. Proposal: exactly what is proposed to be done, and by when.\n6. Financial implication: estimated cost (in ₹), budget head, and whether it is within budget.\n7. Approval sought: the specific approval, addressed to the competent authority as per Section 3.\n\nThe note is signed by the initiating officer and recommended by the Department Head before it goes to the approving authority.",
+   "source": "SOP-ADM-002 Approval Notes and Delegation of Powers.md",
+   "page": 1,
+   "section": "2. Standard Format of an Approval Note",
+   "method": "text"
+  },
+  {
+   "text": "## 3. Delegation of Financial Powers (Revenue Expenditure, Maintenance)\n\nUp to ₹5,00,000 (5 lakh): Department Head.\nAbove ₹5 lakh and up to ₹25,00,000 (25 lakh): General Manager of the department.\nAbove ₹25 lakh and up to ₹1,00,00,000 (1 crore): Executive Director (Operations).\nAbove ₹1 crore: Director (Refineries).\n\nEmergency work required to protect safety of people or plant may be started with the approval of the General Manager regardless of value, with post-facto approval of the competent authority within 7 days.",
+   "source": "SOP-ADM-002 Approval Notes and Delegation of Powers.md",
+   "page": 1,
+   "section": "3. Delegation of Financial Powers (Revenue Expenditure, Maintenance)",
+   "method": "text"
+  },
+  {
+   "text": "## 4. Language and Style\n\nApproval notes should be brief, factual and written in the third person. Every measured value must state its unit and source document. Opinions must be clearly separated from facts.",
+   "source": "SOP-ADM-002 Approval Notes and Delegation of Powers.md",
+   "page": 1,
+   "section": "4. Language and Style",
+   "method": "text"
+  },
+  {
+   "text": "# SOP-INSP-011: Ultrasonic Thickness Inspection of Pressure Vessels\n\nSAMPLE DOCUMENT — fictional \"Sample Refinery Ltd.\" — created for demonstrating the Sovereign Workbench prototype only. Values are illustrative and must not be used for real equipment.\n\nRevision: 2 | Effective date: 15-06-2025 | Owner: Inspection Department",
+   "source": "SOP-INSP-011 Pressure Vessel Thickness Inspection.md",
+   "page": 1,
+   "section": "SOP-INSP-011: Ultrasonic Thickness Inspection of Pressure Vessels",
+   "method": "text"
+  },
+  {
+   "text": "## 1. Purpose\n\nTo define the method for ultrasonic thickness (UT) measurement of pressure vessel shells and heads, the calculation of corrosion rate and remaining life, and the fixing of the next inspection date.",
+   "source": "SOP-INSP-011 Pressure Vessel Thickness Inspection.md",
+   "page": 1,
+   "section": "1. Purpose",
+   "method": "text"
+  },
+  {
+   "text": "## 2. Measurement Method\n\nThickness is measured with a calibrated digital UT gauge at the fixed Condition Monitoring Locations (CMLs) marked on the vessel inspection drawing. At each CML, three readings are taken and the LOWEST value is recorded. The gauge calibration must be verified on a reference block before and after the survey.",
+   "source": "SOP-INSP-011 Pressure Vessel Thickness Inspection.md",
+   "page": 1,
+   "section": "2. Measurement Method",
+   "method": "text"
+  },
+  {
+   "text": "## 3. Key Definitions\n\nOriginal thickness (t_original): the nominal thickness at the time of construction, from the vessel data sheet.\nMinimum required thickness (t_min): the thickness needed to safely hold the design pressure, from the vessel data sheet or design calculation.\nActual thickness (t_actual): the lowest thickness measured in the current survey.",
+   "source": "SOP-INSP-011 Pressure Vessel Thickness Inspection.md",
+   "page": 1,
+   "section": "3. Key Definitions",
+   "method": "text"
+  },
+  {
+   "text": "## 4. Corrosion Rate Calculation\n\nLong-term corrosion rate (mm/year) = (t_original − t_actual) ÷ years in service.\n\nIf a previous survey is available, the short-term corrosion rate = (t_previous − t_actual) ÷ years between surveys. The HIGHER of the long-term and short-term rates must be used.",
+   "source": "SOP-INSP-011 Pressure Vessel Thickness Inspection.md",
+   "page": 1,
+   "section": "4. Corrosion Rate Calculation",
+   "method": "text"
+  },
+  {
+   "text": "## 5. Remaining Life Calculation\n\nRemaining life (years) = (t_actual − t_min) ÷ corrosion rate.",
+   "source": "SOP-INSP-011 Pressure Vessel Thickness Inspection.md",
+   "page": 1,
+   "section": "5. Remaining Life Calculation",
+   "method": "text"
+  },
+  {
+   "text": "## 6. Next Inspection Date\n\nThe next internal or UT inspection must be carried out within HALF of the remaining life, or 10 years, whichever is LESS.\n\nExample: if remaining life is 6 years, the next inspection is due within 3 years.",
+   "source": "SOP-INSP-011 Pressure Vessel Thickness Inspection.md",
+   "page": 1,
+   "section": "6. Next Inspection Date",
+   "method": "text"
+  },
+  {
+   "text": "## 7. Acceptance and Escalation\n\nIf t_actual is greater than t_min, the vessel is fit for continued service until the next inspection date.\nIf remaining life is less than 4 years, the Inspection Engineer must raise an approval note for repair or replacement planning in the next turnaround.\nIf t_actual is equal to or less than t_min, the vessel must be taken out of service and a fitness-for-service assessment carried out before restart.",
+   "source": "SOP-INSP-011 Pressure Vessel Thickness Inspection.md",
+   "page": 1,
+   "section": "7. Acceptance and Escalation",
+   "method": "text"
+  },
+  {
+   "text": "## 8. Records\n\nThe UT survey sheet, calculations and the next inspection date are entered in the equipment history file. The Inspection Engineer signs the survey sheet; the Head of Inspection approves the next inspection date.",
+   "source": "SOP-INSP-011 Pressure Vessel Thickness Inspection.md",
+   "page": 1,
+   "section": "8. Records",
+   "method": "text"
+  },
+  {
+   "text": "# SOP-MECH-004: Condition Monitoring of Centrifugal Pumps\n\nSAMPLE DOCUMENT — fictional \"Sample Refinery Ltd.\" — created for demonstrating the Sovereign Workbench prototype only. Values are illustrative and must not be used for real equipment.\n\nRevision: 3 | Effective date: 01-04-2026 | Owner: Mechanical Maintenance Department",
+   "source": "SOP-MECH-004 Centrifugal Pump Condition Monitoring.md",
+   "page": 1,
+   "section": "SOP-MECH-004: Condition Monitoring of Centrifugal Pumps",
+   "method": "text"
+  },
+  {
+   "text": "## 1. Purpose\n\nThis procedure defines how the vibration and bearing temperature of centrifugal pumps are measured, how readings are classified, and what action must be taken when limits are exceeded.",
+   "source": "SOP-MECH-004 Centrifugal Pump Condition Monitoring.md",
+   "page": 1,
+   "section": "1. Purpose",
+   "method": "text"
+  },
+  {
+   "text": "## 2. Scope\n\nApplies to all centrifugal pumps with driver rating between 15 kW and 300 kW in process units, offsites and utilities. Pumps above 300 kW are covered by SOP-MECH-005.",
+   "source": "SOP-MECH-004 Centrifugal Pump Condition Monitoring.md",
+   "page": 1,
+   "section": "2. Scope",
+   "method": "text"
+  },
+  {
+   "text": "## 3. Responsibilities\n\nThe Condition Monitoring (CM) Engineer collects readings, enters them in the CM register and raises a notification when a limit is exceeded. The Area Maintenance Engineer plans the corrective work. The Unit Shift In-charge must be informed immediately of any Zone D reading.",
+   "source": "SOP-MECH-004 Centrifugal Pump Condition Monitoring.md",
+   "page": 1,
+   "section": "3. Responsibilities",
+   "method": "text"
+  },
+  {
+   "text": "## 4. Measurement Frequency\n\nCritical pumps (marked \"C\" in the equipment register): readings every 15 days.\nEssential pumps (marked \"E\"): readings every 30 days.\nGeneral pumps (marked \"G\"): readings every 60 days.\nAfter any overhaul, readings must be taken within 24 hours of restart and again after 7 days.",
+   "source": "SOP-MECH-004 Centrifugal Pump Condition Monitoring.md",
+   "page": 1,
+   "section": "4. Measurement Frequency",
+   "method": "text"
+  },
+  {
+   "text": "## 5. Vibration Severity Zones\n\nOverall vibration velocity is measured in mm/s RMS on both the drive-end (DE) and non-drive-end (NDE) bearing housings, in horizontal, vertical and axial directions. The HIGHEST of all readings is used for classification.\n\nZone A (up to 2.8 mm/s): Good. Newly commissioned machines normally fall in this zone. No action.\nZone B (above 2.8 and up to 4.5 mm/s): Acceptable for unrestricted long-term operation. Continue normal monitoring.\nZone C (above 4.5 and up to 7.1 mm/s): Not acceptable for long-term operation. Increase monitoring to weekly, carry out spectrum analysis to find the cause, and plan corrective maintenance within 30 days.\nZone D (above 7.1 mm/s): Danger. Vibration may cause damage. Inform the Shift In-charge immediately, change over to the standby pump, and stop the pump within 24 hours.",
+   "source": "SOP-MECH-004 Centrifugal Pump Condition Monitoring.md",
+   "page": 1,
+   "section": "5. Vibration Severity Zones",
+   "method": "text"
+  },
+  {
+   "text": "## 6. Bearing Temperature Limits\n\nBearing housing temperature is measured with a calibrated contact thermometer or infrared gun.\n\nNormal: up to 80 °C.\nAlarm: above 80 °C and up to 90 °C. Check lubrication (oil level, oil condition, grease quantity) and re-measure within 8 hours.\nTrip / stop: above 90 °C. Change over to the standby pump and stop the pump.\n\nA temperature rise of more than 15 °C compared with the previous reading at similar load must be investigated even if the absolute value is below 80 °C.",
+   "source": "SOP-MECH-004 Centrifugal Pump Condition Monitoring.md",
+   "page": 1,
+   "section": "6. Bearing Temperature Limits",
+   "method": "text"
+  },
+  {
+   "text": "## 7. Corrective Actions\n\nCommon causes of high vibration are unbalance, misalignment, bearing wear, looseness, cavitation and pipe strain. The spectrum analysis report must identify the most likely cause before parts are ordered. Bearing replacement must be done together with a laser alignment check of the pump-motor coupling. After any corrective work the pump must return to Zone A or Zone B.",
+   "source": "SOP-MECH-004 Centrifugal Pump Condition Monitoring.md",
+   "page": 1,
+   "section": "7. Corrective Actions",
+   "method": "text"
+  },
+  {
+   "text": "## 8. Records\n\nAll readings, spectrum reports and corrective actions are recorded in the CM register and in the maintenance management system against the equipment tag number. Records are retained for 10 years.",
+   "source": "SOP-MECH-004 Centrifugal Pump Condition Monitoring.md",
+   "page": 1,
+   "section": "8. Records",
+   "method": "text"
+  },
+  {
+   "text": "# SOP-SAFE-007: Hot Work Permit\n\nSAMPLE DOCUMENT — fictional \"Sample Refinery Ltd.\" — created for demonstrating the Sovereign Workbench prototype only. Values are illustrative.\nRevision: 4 | Effective date: 10-02-2026 | Owner: Fire and Safety Department",
+   "source": "SOP-SAFE-007 Hot Work Permit.docx",
+   "page": 1,
+   "section": "SOP-SAFE-007: Hot Work Permit",
+   "method": "text"
+  },
+  {
+   "text": "# 1. Purpose\n\nTo control any work that produces a flame, spark or heat high enough to ignite flammable material, such as welding, gas cutting, grinding and drilling with non-spark-proof tools, inside the refinery battery limits.",
+   "source": "SOP-SAFE-007 Hot Work Permit.docx",
+   "page": 1,
+   "section": "1. Purpose",
+   "method": "text"
+  },
+  {
+   "text": "# 2. Who Issues the Permit\n\nThe permit is issued by the Area Shift In-charge (issuer) to the Job Executing Engineer (receiver). A Fire and Safety officer must countersign every hot work permit inside hazardous areas.",
+   "source": "SOP-SAFE-007 Hot Work Permit.docx",
+   "page": 1,
+   "section": "2. Who Issues the Permit",
+   "method": "text"
+  },
+  {
+   "text": "# 3. Gas Test Before Work\n\nA gas test must be done with a calibrated multi-gas detector immediately before work starts and repeated every 2 hours during the work. Work may start only if all of the following limits are met:\n\nParameter | Acceptable limit\nFlammable gas (LEL) | 0 % LEL\nOxygen | 19.5 % to 23.5 %\nHydrogen sulphide (H2S) | Below 1 ppm\nCarbon monoxide (CO) | Below 25 ppm",
+   "source": "SOP-SAFE-007 Hot Work Permit.docx",
+   "page": 1,
+   "section": "3. Gas Test Before Work",
+   "method": "text"
+  },
+  {
+   "text": "# 4. Precautions\n\nAll drains and sewers within 15 metres must be covered with wet gunny bags. A fire watcher with a fire extinguisher must be present throughout the work and for 30 minutes after it ends. Equipment must be isolated with blinds (not only valves) and depressurised.",
+   "source": "SOP-SAFE-007 Hot Work Permit.docx",
+   "page": 1,
+   "section": "4. Precautions",
+   "method": "text"
+  },
+  {
+   "text": "# 5. Validity\n\nA hot work permit is valid for one shift only (maximum 8 hours) and must be renewed for the next shift after a fresh gas test. The permit must be displayed at the work site.",
+   "source": "SOP-SAFE-007 Hot Work Permit.docx",
+   "page": 1,
+   "section": "5. Validity",
+   "method": "text"
+  }
+ ]
+}

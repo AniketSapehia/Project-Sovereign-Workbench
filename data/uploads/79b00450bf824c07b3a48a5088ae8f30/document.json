@@ -1,0 +1,46 @@
+{
+ "summary": {
+  "id": "79b00450bf824c07b3a48a5088ae8f30",
+  "filename": "IR-2026-118 Scanned Inspection Report.pdf",
+  "pages": 2,
+  "ocr_pages": 2,
+  "ocr_confidence": 94.3,
+  "uncertain_words": 3,
+  "characters": 1576,
+  "chunks": 2,
+  "seconds": 5.2,
+  "preview": "SAMPLE — FICTIONAL DOCUMENT FOR PROTOTYPE DEMONSTRATION ONLY SAMPLE REFINERY LTD. — INSPECTION DEPARTMENT INSPECTION REPORT No. IR-2026-118 Date of inspection: 14-10-2026 Unit: Crude Distillation Unit Equipment: Crude charge pump P-2105B (Criticality: C) Inspected by: Condition Monitoring Engineer 1"
+ },
+ "pages": [
+  {
+   "page": 1,
+   "text": "SAMPLE — FICTIONAL DOCUMENT FOR PROTOTYPE DEMONSTRATION ONLY\n\nSAMPLE REFINERY LTD. — INSPECTION DEPARTMENT\nINSPECTION REPORT No. IR-2026-118\n\nDate of inspection: 14-10-2026 Unit: Crude Distillation Unit\nEquipment: Crude charge pump P-2105B (Criticality: C)\n\nInspected by: Condition Monitoring Engineer\n\n1. Vibration readings (mm/s RMS)\n\nLocation Horizontal Vertical Axial\nDE bearing 6.4 4.1 3.2\nNDE bearing yal 3.6 PAT\n\n2. Bearing housing temperature\n\nLocation Previous (14-09-2026) Current\nDE bearing 68 °C 86 °C\nNDE bearing 65 °C 714°C\n\n3. Observations\n\na) Highest vibration 6.4 mm/s at DE horizontal. Spectrum shows\npeaks at bearing defect frequencies, indicating DE bearing wear.\n\nb) DE bearing temperature rose by 18 °C since the last reading.\n\nc) Oil level normal. Oil sample slightly darkened.\n\nd) Coupling alignment not checked (pump in service).\n\nPage 1 of 2",
+   "method": "ocr",
+   "ocr_confidence": 93.2,
+   "uncertain_words": 3
+  },
+  {
+   "page": 2,
+   "text": "SAMPLE — FICTIONAL DOCUMENT FOR PROTOTYPE DEMONSTRATION ONLY\nINSPECTION REPORT No. IR-2026-118 (continued)\n\n4. Recommendations\n\n1) Change over to standby pump P-2105A after confirming its\ncondition, and replace DE and NDE bearings of P-2105B.\n\n2) Carry out laser alignment of pump and motor after bearing job.\n\n3) Replace lubricating oil and send old oil for analysis.\n\n4) Increase vibration monitoring of P-2105B to weekly until\n\nreadings return to Zone B or better.\n\n5. Estimated cost\n\nItem Amount (Rs)\nBearings (1 set, DE + NDE) 65,000\n\nLaser alignment + labour 48,000\n\nLubricating oil + analysis 12,000\n\nTotal 1,25,000\nCondition Monitoring Engineer Area Maintenance Engineer\n(signed) (signed)\n\nPage 2 of 2",
+   "method": "ocr",
+   "ocr_confidence": 95.4,
+   "uncertain_words": 0
+  }
+ ],
+ "chunks": [
+  {
+   "text": "SAMPLE — FICTIONAL DOCUMENT FOR PROTOTYPE DEMONSTRATION ONLY\n\nSAMPLE REFINERY LTD. — INSPECTION DEPARTMENT\nINSPECTION REPORT No. IR-2026-118\n\nDate of inspection: 14-10-2026 Unit: Crude Distillation Unit\nEquipment: Crude charge pump P-2105B (Criticality: C)\n\nInspected by: Condition Monitoring Engineer\n\n1. Vibration readings (mm/s RMS)\n\nLocation Horizontal Vertical Axial\nDE bearing 6.4 4.1 3.2\nNDE bearing yal 3.6 PAT\n\n2. Bearing housing temperature\n\nLocation Previous (14-09-2026) Current\nDE bearing 68 °C 86 °C\nNDE bearing 65 °C 714°C\n\n3. Observations\n\na) Highest vibration 6.4 mm/s at DE horizontal. Spectrum shows\npeaks at bearing defect frequencies, indicating DE bearing wear.\n\nb) DE bearing temperature rose by 18 °C since the last reading.\n\nc) Oil level normal. Oil sample slightly darkened.\n\nd) Coupling alignment not checked (pump in service).\n\nPage 1 of 2",
+   "source": "IR-2026-118 Scanned Inspection Report.pdf",
+   "page": 1,
+   "section": "",
+   "method": "ocr"
+  },
+  {
+   "text": "SAMPLE — FICTIONAL DOCUMENT FOR PROTOTYPE DEMONSTRATION ONLY\nINSPECTION REPORT No. IR-2026-118 (continued)\n\n4. Recommendations\n\n1) Change over to standby pump P-2105A after confirming its\ncondition, and replace DE and NDE bearings of P-2105B.\n\n2) Carry out laser alignment of pump and motor after bearing job.\n\n3) Replace lubricating oil and send old oil for analysis.\n\n4) Increase vibration monitoring of P-2105B to weekly until\n\nreadings return to Zone B or better.\n\n5. Estimated cost\n\nItem Amount (Rs)\nBearings (1 set, DE + NDE) 65,000\n\nLaser alignment + labour 48,000\n\nLubricating oil + analysis 12,000\n\nTotal 1,25,000\nCondition Monitoring Engineer Area Maintenance Engineer\n(signed) (signed)\n\nPage 2 of 2",
+   "source": "IR-2026-118 Scanned Inspection Report.pdf",
+   "page": 2,
+   "section": "",
+   "method": "ocr"
+  }
+ ]
+}

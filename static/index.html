@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--
+  static/index.html — the page you see in the browser.
+
+  Layout:  [ header with model / OCR status + sovereignty badge ]
+           [ chat panel (left) | knowledge base + network monitor (right) ]
+
+  This file only describes STRUCTURE. Looks are in style.css,
+  behaviour (sending messages, uploads, refreshing panels) is in app.js.
+  Note: no fonts, icons or scripts are loaded from the internet —
+  the page works completely offline.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sovereign Workbench</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">SW</span>
+      <div>
+        <h1>Sovereign Workbench</h1>
+        <p class="subtitle">On-premise AI · open-weight models · no data leaves this machine</p>
+      </div>
+    </div>
+
+    <!-- Filled in by app.js from /api/health -->
+    <div id="model-status" class="pill pill-wait">Checking models…</div>
+    <div id="ocr-status" class="pill pill-wait">Checking OCR…</div>
+
+    <!-- Filled in by app.js from /api/network -->
+    <div id="sovereign-badge" class="pill pill-wait">Checking network…</div>
+  </header>
+
+  <main class="layout">
+
+    <!-- ===================== CHAT PANEL ===================== -->
+    <section class="panel chat-panel">
+      <div class="panel-head">
+        <h2>Assistant</h2>
+        <div class="head-actions">
+          <!-- Phase 2: switch knowledge-base search on/off -->
+          <label class="toggle" title="Search the knowledge base for every question">
+            <input type="checkbox" id="use-kb" checked>
+            Use knowledge base
+          </label>
+          <button id="clear-btn" class="ghost" title="Start a new conversation">New chat</button>
+        </div>
+      </div>
+
+      <!-- Messages are added here by app.js -->
+      <div id="messages" class="messages">
+        <div class="empty-hint">
+          Ask anything, or attach a document with <strong>📎</strong>.<br>
+          Try: <em>"What is the vibration limit for centrifugal pumps, and what must be done if it is exceeded?"</em><br>
+          The first answer is slower because the model has to load into memory.
+        </div>
+      </div>
+
+      <!-- Phase 2: documents attached to this conversation appear here -->
+      <div id="attachments" class="attachments"></div>
+
+      <form id="chat-form" class="composer">
+        <!-- The real file picker is hidden; the 📎 button opens it. -->
+        <input type="file" id="file-input" hidden
+               accept=".pdf,.docx,.txt,.md,.png,.jpg,.jpeg,.tif,.tiff,.bmp">
+        <button type="button" id="attach-btn" class="icon-btn" title="Attach a document">📎</button>
+        <textarea id="prompt" rows="2"
+          placeholder="Type your message… (Enter to send, Shift+Enter for a new line)"></textarea>
+        <button id="send-btn" type="submit">Send</button>
+      </form>
+    </section>
+
+    <!-- ================= RIGHT-HAND COLUMN ================= -->
+    <div class="side">
+
+      <!-- ---------- Knowledge base (Phase 2) ---------- -->
+      <aside class="panel kb-panel">
+        <div class="panel-head">
+          <h2>Knowledge Base</h2>
+          <button id="reindex-btn" class="ghost" title="Re-read all files in the knowledge_base folder">Rebuild index</button>
+        </div>
+        <p class="muted small" id="kb-summary">—</p>
+        <ul id="kb-files" class="log"></ul>
+      </aside>
+
+      <!-- ---------- Network monitor (Phase 1) ---------- -->
+      <aside class="panel monitor-panel">
+        <div class="panel-head">
+          <h2>Network Monitor</h2>
+          <span id="checked-at" class="muted">—</span>
+        </div>
+
+        <p class="muted small">
+          Live proof of sovereignty. Refreshes every 2 seconds.
+          Anything leaving this computer appears in <span class="bad-text">red</span>.
+        </p>
+
+        <h3>Layer 1 · Requests sent by the app</h3>
+        <p class="muted small" id="request-totals">—</p>
+        <ul id="request-log" class="log"></ul>
+
+        <h3>Layer 2 · Open connections (from Windows)</h3>
+        <p class="muted small">Workbench and Ollama processes only.</p>
+        <ul id="connection-list" class="log"></ul>
+      </aside>
+
+    </div>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

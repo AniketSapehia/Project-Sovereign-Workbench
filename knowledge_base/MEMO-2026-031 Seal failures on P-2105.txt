@@ -1,0 +1,22 @@
+SAMPLE DOCUMENT — fictional "Sample Refinery Ltd." — for demonstrating the Sovereign Workbench prototype only.
+
+INTERNAL MEMORANDUM
+
+Ref: MECH/MEMO/2026/031
+Date: 12-03-2026
+From: Area Maintenance Engineer, Crude Distillation Unit
+To: Head of Mechanical Maintenance
+Subject: Repeated mechanical seal failures on crude charge pumps P-2105A/B
+
+1. Pump P-2105A has had three mechanical seal failures in the last eight months (July 2025, November 2025 and February 2026). P-2105B, the standby pump, has had one failure (December 2025).
+
+2. Root cause analysis of the February 2026 failure found misalignment of 0.18 mm between pump and motor, well above the 0.05 mm allowed for this pump. Vibration before the failure was 5.9 mm/s, in Zone C as per SOP-MECH-004.
+
+3. It is recommended that:
+   (a) laser alignment is checked on both pumps after every seal or bearing job;
+   (b) vibration of P-2105A/B is monitored weekly until three consecutive readings are in Zone B or better;
+   (c) one spare cartridge seal and one set of bearings are kept in stock for P-2105A/B, as delivery time is 10 weeks.
+
+4. The approximate cost of one cartridge seal is Rs 2.1 lakh and one set of pump bearings is Rs 0.65 lakh.
+
+Area Maintenance Engineer, CDU

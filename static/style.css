@@ -1,0 +1,255 @@
+/*
+  static/style.css — how the page looks.
+
+  Colours are defined once as "CSS variables" at the top, so the whole
+  theme can be changed in one place. A dark theme is applied automatically
+  if Windows is set to dark mode.
+*/
+
+:root {
+  --bg: #f4f5f2;
+  --panel: #ffffff;
+  --ink: #1d2320;
+  --muted: #69716c;
+  --line: #dfe2dd;
+  --accent: #0f6b4f;        /* refinery green */
+  --accent-ink: #ffffff;
+  --user-bubble: #e3efe9;
+  --good: #1a7f4b;
+  --good-bg: #e2f4ea;
+  --bad: #b3261e;
+  --bad-bg: #fbe4e2;
+  --wait-bg: #eceeea;
+  --mono: Consolas, "Cascadia Mono", "Courier New", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #131715;
+    --panel: #1b201d;
+    --ink: #e5e9e6;
+    --muted: #8f9892;
+    --line: #2c332f;
+    --accent: #3fae84;
+    --accent-ink: #0d1210;
+    --user-bubble: #22362d;
+    --good: #5fd39a;
+    --good-bg: #183225;
+    --bad: #ff8a80;
+    --bad-bg: #3a1c1a;
+    --wait-bg: #252a27;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Segoe UI", system-ui, sans-serif;  /* Segoe UI ships with Windows */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Header ---------- */
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel);
+}
+.brand { display: flex; align-items: center; gap: 12px; margin-right: auto; }
+.logo {
+  width: 38px; height: 38px; border-radius: 8px;
+  background: var(--accent); color: var(--accent-ink);
+  display: grid; place-items: center; font-weight: 700;
+}
+h1 { font-size: 18px; margin: 0; }
+.subtitle { margin: 2px 0 0; font-size: 12px; color: var(--muted); }
+
+.pill {
+  padding: 6px 12px; border-radius: 999px;
+  font-size: 13px; font-weight: 600; white-space: nowrap;
+}
+.pill-wait { background: var(--wait-bg); color: var(--muted); }
+.pill-good { background: var(--good-bg); color: var(--good); }
+.pill-bad  { background: var(--bad-bg);  color: var(--bad); }
+
+/* ---------- Two-column layout ---------- */
+.layout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 380px;   /* chat | monitor */
+  gap: 16px;
+  padding: 16px 20px;
+  min-height: 0;                       /* lets inner panels scroll */
+}
+@media (max-width: 900px) {            /* narrow window: stack panels */
+  .layout { grid-template-columns: 1fr; }
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.panel-head { display: flex; align-items: center; justify-content: space-between; }
+h2 { font-size: 15px; margin: 0 0 8px; }
+h3 { font-size: 13px; margin: 14px 0 4px; }
+.muted { color: var(--muted); }
+.small { font-size: 12px; margin: 2px 0 6px; }
+.bad-text { color: var(--bad); font-weight: 600; }
+
+/* ---------- Chat ---------- */
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.empty-hint { color: var(--muted); font-size: 14px; line-height: 1.6; margin: auto 0; text-align: center; }
+
+.msg {
+  max-width: 85%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  line-height: 1.55;
+  white-space: pre-wrap;     /* keep line breaks from the model */
+  word-wrap: break-word;
+  font-size: 14.5px;
+}
+.msg.user { align-self: flex-end; background: var(--user-bubble); }
+.msg.assistant { align-self: flex-start; border: 1px solid var(--line); }
+.msg .meta { display: block; font-size: 11px; color: var(--muted); margin-top: 6px; }
+.msg.thinking { color: var(--muted); font-style: italic; }
+
+.composer { display: flex; gap: 8px; margin-top: 10px; }
+textarea {
+  flex: 1; resize: none;
+  font: inherit; font-size: 14px;
+  padding: 10px 12px;
+  border: 1px solid var(--line); border-radius: 8px;
+  background: var(--bg); color: var(--ink);
+}
+textarea:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+
+button {
+  font: inherit; font-weight: 600; cursor: pointer;
+  border: none; border-radius: 8px;
+  padding: 0 18px;
+  background: var(--accent); color: var(--accent-ink);
+}
+button:disabled { opacity: 0.5; cursor: wait; }
+button.ghost {
+  background: transparent; color: var(--muted);
+  border: 1px solid var(--line); padding: 4px 10px; font-size: 12px;
+}
+
+/* ---------- Right-hand column (Phase 2: two panels stacked) ---------- */
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 0;
+}
+.kb-panel { flex: 0 0 auto; max-height: 40%; overflow-y: auto; }
+
+/* ---------- Monitor ---------- */
+.monitor-panel { overflow-y: auto; flex: 1; }
+.log {
+  list-style: none; margin: 0; padding: 0;
+  font-family: var(--mono); font-size: 12px;
+}
+.log li {
+  padding: 5px 8px;
+  border-left: 3px solid var(--good);
+  background: var(--good-bg);
+  border-radius: 4px;
+  margin-bottom: 4px;
+  overflow-wrap: anywhere;
+}
+.log li.bad { border-left-color: var(--bad); background: var(--bad-bg); color: var(--bad); }
+.log li.none { border-left-color: var(--line); background: transparent; color: var(--muted); }
+
+/* =====================================================================
+   Phase 2 additions: attachments, knowledge-base toggle, sources
+   ===================================================================== */
+
+.head-actions { display: flex; align-items: center; gap: 10px; }
+.toggle { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 4px; cursor: pointer; }
+
+/* The 📎 button */
+.icon-btn {
+  background: transparent; border: 1px solid var(--line);
+  color: var(--ink); font-size: 18px; padding: 0 12px;
+}
+
+/* Attached-document "chips" above the message box */
+.attachments { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.chip {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 12px; padding: 5px 10px;
+  border: 1px solid var(--line); border-radius: 8px; background: var(--bg);
+}
+.chip .muted { font-size: 11px; }
+.chip button {
+  background: transparent; color: var(--muted);
+  padding: 0 2px; font-size: 14px; line-height: 1;
+}
+.chip.working { font-style: italic; color: var(--muted); }
+
+/* Status line while the answer is being prepared */
+.msg .status { color: var(--muted); font-style: italic; }
+
+/* [1], [2] citation markers inside answers */
+.cite {
+  display: inline-block;
+  font-size: 11px; font-weight: 700;
+  padding: 0 5px; margin: 0 1px;
+  border-radius: 4px;
+  background: var(--good-bg); color: var(--accent);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* "Sources" box under an answer */
+.sources {
+  margin-top: 10px; padding-top: 8px;
+  border-top: 1px dashed var(--line);
+  white-space: normal;
+}
+.sources-title { font-size: 12px; font-weight: 600; color: var(--muted); margin-bottom: 4px; }
+.sources details { font-size: 12.5px; margin: 3px 0; }
+.sources summary { cursor: pointer; }
+.sources details.flash summary { background: var(--good-bg); border-radius: 4px; }
+.sources pre {
+  white-space: pre-wrap; font-family: var(--mono); font-size: 11.5px;
+  background: var(--bg); border: 1px solid var(--line);
+  border-radius: 6px; padding: 8px; margin: 6px 0 4px;
+  max-height: 220px; overflow-y: auto;
+}
+.tag {
+  font-size: 10.5px; padding: 1px 6px; border-radius: 4px;
+  background: var(--wait-bg); color: var(--muted); margin-left: 4px;
+}
+.tag.ocr { background: var(--bad-bg); color: var(--bad); }
+
+/* ---------- Narrow windows (phone / half-screen) ---------- */
+@media (max-width: 900px) {
+  .layout { grid-template-columns: minmax(0, 1fr); padding: 12px; }  /* minmax stops overflow */
+  .pill { white-space: normal; }
+  .head-actions { flex-wrap: wrap; justify-content: flex-end; }
+  .panel-head { gap: 8px; flex-wrap: wrap; }
+  .kb-panel { max-height: none; }
+}
