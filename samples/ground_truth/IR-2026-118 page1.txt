@@ -1,0 +1,21 @@
+SAMPLE — FICTIONAL DOCUMENT FOR PROTOTYPE DEMONSTRATION ONLY
+SAMPLE REFINERY LTD. — INSPECTION DEPARTMENT
+INSPECTION REPORT No. IR-2026-118
+Date of inspection: 14-10-2026 Unit: Crude Distillation Unit
+Equipment: Crude charge pump P-2105B (Criticality: C)
+Inspected by: Condition Monitoring Engineer
+1. Vibration readings (mm/s RMS)
+Location Horizontal Vertical Axial
+DE bearing 6.4 4.1 3.2
+NDE bearing 5.1 3.6 2.7
+2. Bearing housing temperature
+Location Previous (14-09-2026) Current
+DE bearing 68 °C 86 °C
+NDE bearing 65 °C 74 °C
+3. Observations
+a) Highest vibration 6.4 mm/s at DE horizontal. Spectrum shows
+peaks at bearing defect frequencies, indicating DE bearing wear.
+b) DE bearing temperature rose by 18 °C since the last reading.
+c) Oil level normal. Oil sample slightly darkened.
+d) Coupling alignment not checked (pump in service).
+Page 1 of 2

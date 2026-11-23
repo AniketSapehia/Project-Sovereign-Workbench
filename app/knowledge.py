@@ -199,12 +199,106 @@ async def rebuild_index() -> dict:
         return status()
 
 
-async def search_knowledge_base(question: str) -> list:
-    """Return the TOP_K most relevant knowledge-base chunks for a question."""
+def _document_id(filename: str) -> str:
+    """
+    The short ID people use for a document: the part of the file name
+    before the first space, e.g.
+        "SOP-INSP-011 Pressure Vessel Thickness Inspection.md" -> "SOP-INSP-011"
+    """
+    return Path(filename).stem.split(" ")[0]
+
+
+def documents_named_in(question: str) -> list:
+    """
+    Knowledge-base files the question mentions BY NAME, e.g. "Using
+    SOP-INSP-011, calculate ..." -> [the SOP-INSP-011 file].
+
+    Why (Phase 3.1): in testing, a question naming SOP-INSP-011 retrieved its
+    title, purpose and scope sections, but NOT the sections with the
+    formulas, and the model invented a wrong formula. When a user names a
+    document, they clearly want it used, so we give the model that document
+    in full instead of trusting search to find the right parts.
+    """
+    text = question.lower()
+    named = []
+    if config.KNOWLEDGE_BASE_DIR.exists():
+        for path in sorted(config.KNOWLEDGE_BASE_DIR.iterdir()):
+            if path.suffix.lower() not in config.SUPPORTED_EXTENSIONS:
+                continue
+            doc_id = _document_id(path.name).lower()
+            # Require a reasonably specific ID (e.g. "SOP-INSP-011"), so a
+            # file called "notes.txt" doesn't match every question with "notes".
+            if len(doc_id) >= 6 and any(c.isdigit() for c in doc_id) and doc_id in text:
+                named.append(path)
+    return named
+
+
+async def context_from_named_documents(question: str) -> list:
+    """
+    Sources for documents named in the question.
+    Short document -> the whole text. Long document -> its best-matching
+    chunks only (it would not fit in the model's context window).
+    """
+    sources = []
+    for path in documents_named_in(question):
+        pages = await asyncio.to_thread(documents.extract, path)
+        total = sum(len(p["text"]) for p in pages)
+        if total <= config.FULL_DOC_LIMIT_CHARS:
+            sources += [{"text": p["text"], "source": path.name, "page": p["page"],
+                         "section": "(whole document)", "method": p["method"], "score": None}
+                        for p in pages if p["text"].strip()]
+        elif _kb["chunks"]:
+            # Search only inside this document's chunks.
+            rows = [i for i, c in enumerate(_kb["chunks"]) if c["source"] == path.name]
+            if rows:
+                query = await _embed_query(question)
+                sources += _top_matches(query, _kb["vectors"][rows],
+                                        [_kb["chunks"][i] for i in rows], config.TOP_K + 2)
+    return sources
+
+
+async def gather_sources(question: str, attachment_ids: list, use_knowledge_base: bool,
+                         search: bool = True) -> list:
+    """
+    Collect every excerpt the model should see for this question, in order:
+      1. attached documents
+      2. knowledge-base documents named in the question (in full)
+      3. a knowledge-base search for anything else that's relevant
+    Duplicates are removed: a search hit from a document that is already
+    included in full is skipped.
+    """
+    sources = []
+    for doc_id in attachment_ids:
+        sources += await context_from_attachment(doc_id, question)
+
+    if use_knowledge_base:
+        named = await context_from_named_documents(question)
+        sources += named
+        whole = {s["source"] for s in named if s.get("section") == "(whole document)"}
+
+        if search:          # False for code tasks (Phase 4.1)
+            hits = await search_knowledge_base(question)
+            sources += [h for h in hits if h["source"] not in whole]
+    return sources
+
+
+async def search_knowledge_base(question: str, only_prefixes: tuple = None, k: int = None) -> list:
+    """
+    Return the most relevant knowledge-base chunks for a question.
+    only_prefixes (Phase 6.5): search only documents whose name starts with
+    one of these, e.g. ("REF-",) = the reference data sheets.
+    """
     if not _kb["chunks"]:
         return []
+    rows = list(range(len(_kb["chunks"])))
+    if only_prefixes:
+        prefixes = tuple(p.upper() for p in only_prefixes)
+        rows = [i for i in rows if _kb["chunks"][i]["source"].upper().startswith(prefixes)]
+        if not rows:
+            return []
     query = await _embed_query(question)
-    return _top_matches(query, _kb["vectors"], _kb["chunks"], config.TOP_K)
+    return _top_matches(query, _kb["vectors"][rows], [_kb["chunks"][i] for i in rows],
+                        k or config.TOP_K)
 
 
 # ===========================================================================
@@ -268,6 +362,23 @@ async def ingest_upload(filename: str, content: bytes) -> dict:
     return summary
 
 
+def attachment_document(doc_id: str) -> dict:
+    """Load a processed upload: {"summary": ..., "pages": [...], "chunks": [...]}."""
+    folder = _upload_dir(doc_id)
+    return json.loads((folder / "document.json").read_text(encoding="utf-8"))
+
+
+async def search_attachment(doc_id: str, question: str, k: int) -> list:
+    """Search inside one attached document (used by the agent's search tool)."""
+    folder = _upload_dir(doc_id)
+    saved = attachment_document(doc_id)
+    vectors = np.load(folder / "vectors.npz")["vectors"]
+    if len(saved["chunks"]) == 0:
+        return []
+    query = await _embed_query(question)
+    return _top_matches(query, vectors, saved["chunks"], k)
+
+
 async def context_from_attachment(doc_id: str, question: str) -> list:
     """
     Choose which parts of an attached document to show the model.
@@ -298,6 +409,17 @@ async def context_from_attachment(doc_id: str, question: str) -> list:
 # Part C — building the final prompt
 # ===========================================================================
 
+def format_sources(sources: list, start: int = 1) -> str:
+    """Write sources as numbered blocks: '[3] Source: file, page 1 ...'."""
+    blocks = []
+    for number, s in enumerate(sources, start=start):
+        where = f"{s['source']}, page {s['page']}"
+        if s.get("section"):
+            where += f', section "{s["section"]}"'
+        blocks.append(f"[{number}] Source: {where}\n{s['text']}")
+    return "\n\n".join(blocks)
+
+
 def build_grounded_question(question: str, sources: list) -> str:
     """
     Put the numbered excerpts in front of the user's question.
@@ -321,7 +443,9 @@ def build_grounded_question(question: str, sources: list) -> str:
         "- If the excerpts do not contain the answer, say: \"The provided "
         "documents do not cover this.\" Then you may answer from general "
         "knowledge, clearly labelled as general knowledge.\n"
-        "- Do not invent document names, clause numbers or values.\n\n"
+        "- Do not invent document names, clause numbers or values.\n"
+        "- Text marked [unclear: ...] was read badly by OCR: never guess those "
+        "values; say they must be checked on the original.\n\n"
         "=== EXCERPTS ===\n"
         + "\n\n".join(blocks)
         + "\n=== END OF EXCERPTS ===\n\n"

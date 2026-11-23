@@ -1,0 +1,62 @@
+{
+ "SOP-MECH-004 Centrifugal Pump Condition Monitoring.md::zones": {
+  "fingerprint": "260d954d5c334452",
+  "rules": {
+   "zones": [
+    {
+     "zone": "Zone D",
+     "upper_limit_mm_s": null,
+     "action": "Inform the Shift In-charge immediately, change over to the standby pump, and stop the pump within 24 hours."
+    },
+    {
+     "zone": "Zone C",
+     "upper_limit_mm_s": 7.1,
+     "action": "Increase monitoring to weekly, carry out spectrum analysis to find the cause, and plan corrective maintenance within 30 days."
+    },
+    {
+     "zone": "Zone B",
+     "upper_limit_mm_s": 4.5,
+     "action": "Continue normal monitoring."
+    },
+    {
+     "zone": "Zone A",
+     "upper_limit_mm_s": 2.8,
+     "action": "No action."
+    }
+   ]
+  }
+ },
+ "SOP-MECH-004 Centrifugal Pump Condition Monitoring.md::temperature": {
+  "fingerprint": "260d954d5c334452",
+  "rules": {
+   "normal_max_c": 80,
+   "alarm_max_c": 90,
+   "rise_investigate_c": 15,
+   "alarm_action": "Check lubrication and re-measure bearing temperature within 8 hours",
+   "trip_action": "Change over to standby pump and stop the pump"
+  }
+ },
+ "SOP-ADM-002 Approval Notes and Delegation of Powers.md::delegation": {
+  "fingerprint": "50bc5fb4970f49f8",
+  "rules": {
+   "levels": [
+    {
+     "up_to_rs": 500000,
+     "authority": "Department Head"
+    },
+    {
+     "up_to_rs": 2500000,
+     "authority": "General Manager of the department"
+    },
+    {
+     "up_to_rs": 10000000,
+     "authority": "Executive Director (Operations)"
+    },
+    {
+     "up_to_rs": null,
+     "authority": "Director (Refineries)"
+    }
+   ]
+  }
+ }
+}

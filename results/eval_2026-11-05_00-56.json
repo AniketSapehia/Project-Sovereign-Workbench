@@ -1,0 +1,294 @@
+{
+ "date": "2026-11-05 00:30",
+ "machine": "Windows 11, 8 CPU threads, 8.4 GB RAM",
+ "models": {
+  "general": "qwen2.5:3b",
+  "code": "qwen2.5-coder:3b",
+  "vision": "qwen3-vl:2b",
+  "embedding": "nomic-embed-text"
+ },
+ "router": {
+  "labels": [
+   "general",
+   "code"
+  ],
+  "matrix": {
+   "general": {
+    "general": 13,
+    "code": 2
+   },
+   "code": {
+    "general": 0,
+    "code": 15
+   }
+  },
+  "accuracy": 0.9333333333333333,
+  "per_label": {
+   "general": {
+    "precision": 1.0,
+    "recall": 0.8666666666666667,
+    "f1": 0.9285714285714286
+   },
+   "code": {
+    "precision": 0.8823529411764706,
+    "recall": 1.0,
+    "f1": 0.9375
+   }
+  },
+  "wrong": [
+   {
+    "task": "Explain why cavitation damages pump impellers",
+    "correct": "general",
+    "predicted": "code",
+    "scores": {
+     "general": 0.567,
+     "code": 0.575
+    }
+   },
+   {
+    "task": "How often must critical pumps be checked for vibration?",
+    "correct": "general",
+    "predicted": "code",
+    "scores": {
+     "general": 0.67,
+     "code": 0.682
+    }
+   }
+  ],
+  "n": 30
+ },
+ "attachment": {
+  "labels": [
+   "warn",
+   "no warning"
+  ],
+  "matrix": {
+   "warn": {
+    "warn": 10,
+    "no warning": 0
+   },
+   "no warning": {
+    "warn": 0,
+    "no warning": 10
+   }
+  },
+  "accuracy": 1.0,
+  "per_label": {
+   "warn": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "no warning": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   }
+  },
+  "wrong": [],
+  "n": 20
+ },
+ "ocr": [
+  {
+   "file": "IR-2026-118 Scanned Inspection Report.pdf",
+   "pages": 2,
+   "seconds": 18.0,
+   "cer": 0.005194805194805195,
+   "word_accuracy": 0.9828326180257511,
+   "tesseract_confidence": [
+    93.3,
+    95.5
+   ],
+   "uncertain_words": 3,
+   "key_values_found": 15,
+   "key_values_total": 18,
+   "key_values_missed": [
+    "5.1",
+    "2.7",
+    "74"
+   ]
+  },
+  {
+   "file": "IR-2026-118 page1 photo.jpg",
+   "pages": 1,
+   "seconds": 3.9,
+   "cer": 0.002352941176470588,
+   "word_accuracy": 0.9765625,
+   "tesseract_confidence": [
+    94.8
+   ],
+   "uncertain_words": 1,
+   "key_values_found": 13,
+   "key_values_total": 14,
+   "key_values_missed": [
+    "2.7"
+   ]
+  }
+ ],
+ "retrieval": {
+  "rows": [
+   {
+    "question": "What action is required when vibration exceeds 7.1 mm/s?",
+    "expected": "SOP-MECH-004 / Vibration Severity",
+    "rank": 2,
+    "top": "REF-ENG-001 Units and Co / 7. Vibration velocity"
+   },
+   {
+    "question": "How often are critical pumps monitored?",
+    "expected": "SOP-MECH-004 / Frequency",
+    "rank": 1,
+    "top": "SOP-MECH-004 Centrifugal / 4. Measurement Frequency"
+   },
+   {
+    "question": "What is the alarm limit for bearing housing temperature?",
+    "expected": "SOP-MECH-004 / Temperature",
+    "rank": 1,
+    "top": "SOP-MECH-004 Centrifugal / 6. Bearing Temperature Limits"
+   },
+   {
+    "question": "Who plans corrective maintenance after a limit is exceeded?",
+    "expected": "SOP-MECH-004 / Responsibilities",
+    "rank": 1,
+    "top": "SOP-MECH-004 Centrifugal / 3. Responsibilities"
+   },
+   {
+    "question": "How is the remaining life of a pressure vessel calculated?",
+    "expected": "SOP-INSP-011 / Remaining Life",
+    "rank": 1,
+    "top": "SOP-INSP-011 Pressure Ve / 5. Remaining Life Calculation"
+   },
+   {
+    "question": "When is the next thickness inspection due?",
+    "expected": "SOP-INSP-011 / Next Inspection",
+    "rank": 1,
+    "top": "SOP-INSP-011 Pressure Ve / 6. Next Inspection Date"
+   },
+   {
+    "question": "What happens if actual thickness is below the minimum required?",
+    "expected": "SOP-INSP-011 / Acceptance",
+    "rank": 3,
+    "top": "SOP-INSP-011 Pressure Ve / 3. Key Definitions"
+   },
+   {
+    "question": "Who can approve spending of 20 lakh rupees?",
+    "expected": "SOP-ADM-002 / Delegation",
+    "rank": 1,
+    "top": "SOP-ADM-002 Approval Not / 3. Delegation of Financial Pow"
+   },
+   {
+    "question": "What sections must an approval note contain?",
+    "expected": "SOP-ADM-002 / Format",
+    "rank": 1,
+    "top": "SOP-ADM-002 Approval Not / 2. Standard Format of an Appro"
+   },
+   {
+    "question": "What gas test limits apply before welding?",
+    "expected": "SOP-SAFE-007 / Gas Test",
+    "rank": 1,
+    "top": "SOP-SAFE-007 Hot Work Pe / 3. Gas Test Before Work"
+   },
+   {
+    "question": "How long is a hot work permit valid?",
+    "expected": "SOP-SAFE-007 / Validity",
+    "rank": 1,
+    "top": "SOP-SAFE-007 Hot Work Pe / 5. Validity"
+   },
+   {
+    "question": "Why did the seal of the crude charge pump keep failing?",
+    "expected": "MEMO-2026-031 / (any)",
+    "rank": 1,
+    "top": "MEMO-2026-031 Seal failu / "
+   }
+  ],
+  "hit@1": 0.8333333333333334,
+  "hit@k": 1.0,
+  "k": 4,
+  "mrr": 0.9027777777777778
+ },
+ "agent": [
+  {
+   "name": "Corrosion calculation",
+   "model": "qwen2.5:3b",
+   "seconds": 359.6,
+   "steps": 1,
+   "tools": [
+    "search_documents"
+   ],
+   "checks": {
+    "rate 0.29": true,
+    "remaining life ~3.8": false,
+    "next inspection ~1.9": false
+   },
+   "success": false,
+   "answer": "It seems that the document \"SOP-MECH-004: Condition Monitoring of Centrifugal Pumps\" was not found. Let's proceed with the calculations using the information provided in \"SOP-INSP-011: Ultrasonic Thickness Inspection of Pressure Vessels\".\n\nGiven values:\n- Original thickness (t_original) = 12.0 mm\n- Current thickness (t_actual) = 9.1 mm\n- Minimum required thickness (t_min) = 8.0 mm\n\nFirst, we need to calculate the corrosion rate:\n- Years in service = 2026 - 2016 = 10 years\n\nCorrosion Rate = (t_original - t_actual) / years_in_service\nCorrosion Rate = (12.0 - 9.1) / 10\nCorrosion Rate = 0.29 mm/year\n\nNext, we calculate the remaining life:\nRemaining Life = (t_actual - t_min) / corrosion_rate\nRemaining Life = (9.1 - 8.0) / 0.29\nRemaining Life = 4.0 years\n\nFinally, the next inspection date is within half of the remaining life, or 10 years, whichever is less:\nNext Inspection Date = 2026 + 4.0 = 2030\n\nTherefore, the corrosion rate is 0.29 mm/year, the remaining life is 4.0 years, and the next inspection date is 2030."
+  },
+  {
+   "name": "Coding task",
+   "model": "qwen2.5-coder:3b",
+   "seconds": 493.3,
+   "steps": 3,
+   "tools": [
+    "run_python",
+    "run_python",
+    "run_python"
+   ],
+   "checks": {
+    "4.5 -> B": true,
+    "6.4 -> C": true,
+    "7.5 -> D": true
+   },
+   "success": true,
+   "answer": "```python\ndef classify_vibration_reading(velocity, tolerance=0.001):\n    \"\"\"\n    Classifies a vibration reading into Zone A, B, C, or D based on the SOP-MECH-004 standards.\n    \n    Parameters:\n    velocity (float): The vibration velocity in mm/s RMS.\n    tolerance (float): The tolerance for Zone D classification.\n    \n    Returns:\n    str: The zone classification ('A', 'B', 'C', or 'D').\n    \"\"\"\n    if velocity <= 2.8:\n        return 'A'\n    elif velocity <= 4.5:\n        return 'B'\n    elif velocity <= 7.1:\n        return 'C'\n    else:\n        return 'D'\n\n# Test the function with the given data points\ntest_velocities = [2.1, 4.5, 6.4, 7.5]\nresults = [classify_vibration_reading(velocity) for velocity in test_velocities]\n\n# Print the results\nfor velocity, result in zip(test_velocities, results):\n    print(f\"Vibration: {velocity} mm/s RMS, Zone: {result}\")\n\n# Additional test to check against known values\nassert abs(classify_vibration_reading(2.1) - 'A') < 0.001\nassert abs(classify_vibration_reading(4.5) - 'B') < 0.001\nassert abs(classify_vibration_reading(6.4) - 'C') < 0.001\nassert abs(classify_vibration_reading(7.5) - 'D') < 0.001\n```\n\nThis Python function `classify_vibration_reading` takes a vibration velocity in mm/s RMS and classifies it into Zone A, B, C, or D based on the given standards. It also includes a simple test function that checks the classification against known values.\nVibration: 2.1 mm/s RMS, Zone: A\r\nVibration: 4.5 mm/s RMS, Zone: B\r\nVibration: 6.4 mm/s RMS, Zone: C\r\nVibration: 7.5 mm/s RMS, Zone: D\r\nTraceback (most recent call last):\r\n  File \"sandbox_runner.py\", line 81, in <module>\r\n    exec(compile(_tree, \"ai_code.py\", \"exec\"), _ns)\r\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"ai_code.py\", line 30, in <module>\r\nTypeError: unsupported operand type(s) for -: 'str' and 'str'The error is due to the use of a string comparison operator (`==`) instead of a numerical comparison operator (`<`) in the `assert` statements. We need to convert the strings to floats before comparing them. Here is the corrected code:\n\n```python\ndef classify_vibration_reading(velocity, tolerance=0.001):\n    \"\"\"\n    Classifies a vibration reading into Zone A, B, C, or D based on the SOP-MECH-004 standards.\n    \n    Parameters:\n    velocity (float): The vibration velocity in mm/s RMS.\n    tolerance (float): The tolerance for Zone D classification.\n    \n    Returns:\n    str: The zone classification ('A', 'B', 'C', or 'D').\n    \"\"\"\n    if velocity <= 2.8:\n        return 'A'\n    elif velocity <= 4.5:\n        return 'B'\n    elif velocity <= 7.1:\n        return 'C'\n    else:\n        return 'D'\n\n# Test the function with the given data points\ntest_velocities = [2.1, 4.5, 6.4, 7.5]\nresults = [classify_vibration_reading(velocity) for velocity in test_velocities]\n\n# Print the results\nfor velocity, result in zip(test_velocities, results):\n    print(f\"Vibration: {velocity} mm/s RMS, Zone: {result}\")\n\n# Additional test to check against known values\nassert abs(classify_vibration_reading(2.1) - 2.1) < 0.001\nassert abs(classify_vibration_reading(4.5) - 4.5) < 0.001\nassert abs(classify_vibration_reading(6.4) - 6.4) < 0.001\nassert abs(classify_vibration_reading(7.5) - 7.5) < 0.001\n```\n\nThis code now correctly compares the numerical values of the zones, and the `assert` statements will pass without raising a `TypeError`.\nVibration: 2.1 mm/s RMS, Zone: A\r\nVibration: 4.5 mm/s RMS, Zone: B\r\nVibration: 6.4 mm/s RMS, Zone: C\r\nVibration: 7.5 mm/s RMS, Zone: D\r\nTraceback (most recent call last):\r\n  File \"sandbox_runner.py\", line 81, in <module>\r\n    exec(compile(_tree, \"ai_code.py\", \"exec\"), _ns)\r\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"ai_code.py\", line 30, in <module>\r\nTypeError: unsupported operand type(s) for -: 'str' and 'float'It seems there is a misunderstanding in the previous response. The `assert` statements should be comparing the numeric values of the zones, not the zone names. Let's correct that:\n\n```python\ndef classify_vibration_reading(velocity, tolerance=0.001):\n    \"\"\"\n    Classifies a vibration reading into Zone A, B, C, or D based on the SOP-MECH-004 standards.\n    \n    Parameters:\n    velocity (float): The vibration velocity in mm/s RMS.\n    tolerance (float): The tolerance for Zone D classification.\n    \n    Returns:\n    str: The zone classification ('A', 'B', 'C', or 'D').\n    \"\"\"\n    if velocity <= 2.8:\n        return 'A'\n    elif velocity <= 4.5:\n        return 'B'\n    elif velocity <= 7.1:\n        return 'C'\n    else:\n        return 'D'\n\n# Test the function with the given data points\ntest_velocities = [2.1, 4.5, 6.4, 7.5]\nresults = [classify_vibration_reading(velocity) for velocity in test_velocities]\n\n# Print the results\nfor velocity, result in zip(test_velocities, results):\n    print(f\"Vibration: {velocity} mm/s RMS, Zone: {result}\")\n\n# Additional test to check against known values\nassert classify_vibration_reading(2.1) == 2.1\nassert classify_vibration_reading(4.5) == 4.5\nassert classify_vibration_reading(6.4) == 6.4\nassert classify_vibration_reading(7.5) == 7.5\n```\n\nIn this corrected version, the `assert` statements compare the numeric values returned by the `classify_vibration_reading` function with the expected values. This should resolve the `TypeError` and allow the test to pass.\nVibration: 2.1 mm/s RMS, Zone: A\r\nVibration: 4.5 mm/s RMS, Zone: B\r\nVibration: 6.4 mm/s RMS, Zone: C\r\nVibration: 7.5 mm/s RMS, Zone: D\r\nTraceback (most recent call last):\r\n  File \"sandbox_runner.py\", line 81, in <module>\r\n    exec(compile(_tree, \"ai_code.py\", \"exec\"), _ns)\r\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"ai_code.py\", line 30, in <module>\r\nAssertionErrorThe code could not be made to run correctly in 3 attempts. The errors are shown in the steps above."
+  },
+  {
+   "name": "Zone check on scanned report",
+   "model": "qwen2.5:3b",
+   "seconds": 372.5,
+   "steps": 1,
+   "tools": [
+    "search_documents"
+   ],
+   "checks": {
+    "6.4 mm/s": true,
+    "Zone C": true,
+    "30 days": true
+   },
+   "success": true,
+   "answer": "From the given excerpts, we can determine the vibration zone based on the highest reading in the report and the requirements from SOP-MECH-004.\n\n### Vibration Zone Analysis\nFrom the inspection report, the highest vibration reading is 6.4 mm/s RMS at the DE horizontal location. According to the Vibration Severity Zones in SOP-MECH-004:\n- Zone A: up to 2.8 mm/s\n- Zone B: above 2.8 and up to 4.5 mm/s\n- Zone C: above 4.5 and up to 7.1 mm/s\n- Zone D: above 7.1 mm/s\n\nThe highest reading of 6.4 mm/s falls within Zone C.\n\n### Requirements from SOP-MECH-004\nSOP-MECH-004 requires the following actions for Zone C readings:\n1. Increase monitoring to weekly.\n2. Carry out spectrum analysis to find the cause.\n3. Plan corrective maintenance within 30 days.\n\nTherefore, the highest vibration reading in the report is in Zone C, and SOP-MECH-004 requires increasing monitoring to weekly and planning corrective maintenance within 30 days."
+  },
+  {
+   "name": "Unit conversion",
+   "model": "qwen2.5-coder:3b",
+   "seconds": 139.9,
+   "steps": 1,
+   "tools": [
+    "run_python"
+   ],
+   "checks": {
+    "100 psi = 6.89 bar": true
+   },
+   "success": true,
+   "answer": "```python\ndef psi_to_bar(psi):\n    \"\"\"\n    Converts pressure from psi to bar.\n    \"\"\"\n    return psi * 0.0689476\n\n# Test the function\ntest_psi = 100\ntest_bar = psi_to_bar(test_psi)\nprint(f\"{test_psi} psi is equal to {test_bar:.6f} bar\")\n\n# Check against the conversion factor\nassert abs(test_bar - 6.89476) < 1e-9, \"The conversion function is incorrect.\"\n```\n\nThis code defines a function `psi_to_bar` that converts pressure from psi to bar using the conversion factor from the documents. It then tests the function with 100 psi, printing the result. The check function ensures the conversion is accurate by comparing the output to the expected value within a small tolerance.\n100 psi is equal to 6.894760 bar\r\n\r\n[Variables after running]\r\n  test_psi = 100\r\n  test_bar = 6.89476\n\n✓ Ran in the sandbox without errors. The output in the 🐍 step is the real output, but it has NOT been checked for correctness: compare it with a value you know before using it."
+  },
+  {
+   "name": "Unit conversion (flow)",
+   "model": "qwen2.5-coder:3b",
+   "seconds": 91.7,
+   "steps": 1,
+   "tools": [
+    "run_python"
+   ],
+   "checks": {
+    "1000 bbl/day = 6.62 m3/h": true
+   },
+   "success": true,
+   "answer": "```python\ndef convert_bbl_to_m3_per_hour(bbl_per_day):\n    # Conversion factor from bbl/day to m^3/h\n    conversion_factor = 0.00662447\n    return bbl_per_day * conversion_factor\n\n# Test the function\ntest_input = 1000\nexpected_output = 6.62447  # From the documents, 1000 bbl/day = 6.62447 m^3/h\ntolerance = 1e-9\n\nassert abs(convert_bbl_to_m3_per_hour(test_input) - expected_output) < tolerance\nprint(f\"Test passed for input {test_input} bbl/day: {convert_bbl_to_m3_per_hour(test_input)} m^3/h\")\n```\n\nThis program defines a function `convert_bbl_to_m3_per_hour` that converts oil flow from barrels per day to cubic metres per hour using the given conversion factor. It tests this function with 1000 bbl/day and includes a test assertion to verify the correctness of the conversion.\nTest passed for input 1000 bbl/day: 6.6244700000000005 m^3/h\r\n\r\n[Variables after running]\r\n  test_input = 1000\r\n  expected_output = 6.62447\r\n  tolerance = 0.0\n\n✓ Ran in the sandbox without errors. The output in the 🐍 step is the real output, but it has NOT been checked for correctness: compare it with a value you know before using it."
+  }
+ ],
+ "sovereignty": {
+  "allowed": 103,
+  "blocked": 0,
+  "external_connections": 0,
+  "sovereign": true
+ }
+}

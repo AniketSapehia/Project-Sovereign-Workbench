@@ -1,0 +1,101 @@
+question,should_warn,category
+"Hey, can you go through what I've attached and pull out the action items?",yes,New phrasings
+Have a look at this and tell me what you think,yes,New phrasings
+What's wrong in the one I just uploaded?,yes,New phrasings
+Summarise the inspection report from this morning that I put here,yes,New phrasings
+Read through the vendor's quote and compare it with our budget,yes,New phrasings
+Is everything filled in correctly on the permit form I gave you?,yes,New phrasings
+Check the readings in my sheet against the SOP limits,yes,New phrasings
+Can you tell me what this image shows?,yes,New phrasings
+What do the numbers in my table add up to?,yes,New phrasings
+Go over the minutes I shared and list who owns each action,yes,New phrasings
+Find the serial number on the nameplate photo,yes,Photos and drawings
+Is the valve in the picture open or closed?,yes,Photos and drawings
+Trace the line in this P&ID from the pump to the tank,yes,Photos and drawings
+What does the handwritten note in the scan say?,yes,Photos and drawings
+Read the gauge in the photo I took,yes,Photos and drawings
+Look at my screenshot of the DCS and explain the alarm,yes,Photos and drawings
+Count the bolts on the flange in this photo,yes,Photos and drawings
+Which revision is shown in the title block of the drawing?,yes,Photos and drawings
+Summarize the doc,yes,Short and casual
+check this pls,yes,Short and casual
+what's in the file,yes,Short and casual
+read it and tell me,yes,Short and casual
+thoughts on the attached?,yes,Short and casual
+summary of the pdf pls,yes,Short and casual
+see attachment,yes,Short and casual
+translate the scan,yes,Short and casual
+"From the inspection sheet, which bearing is hottest?",yes,Questions about the file's content
+"In the vendor's letter, what is the delivery date?",yes,Questions about the file's content
+"On the second page, what reading is circled?",yes,Questions about the file's content
+Who signed off the report at the bottom?,yes,Questions about the file's content
+What is the total at the end of the invoice?,yes,Questions about the file's content
+"According to the memo, when does the shutdown start?",yes,Questions about the file's content
+Does the attached datasheet list the seal type?,yes,Questions about the file's content
+What does row 12 of the spreadsheet say?,yes,Questions about the file's content
+Use the data in my Excel to make a chart,yes,Doing work with the file
+Turn the scanned report into an approval note,yes,Doing work with the file
+Fill the template with values from the PDF,yes,Doing work with the file
+Rewrite my draft letter in formal English,yes,Doing work with the file
+Make a table of everything in the photo of the whiteboard,yes,Doing work with the file
+Proofread the report I'm sending you,yes,Doing work with the file
+Shorten the document to one page,yes,Doing work with the file
+Extract the vibration readings from the uploaded inspection sheet,yes,Doing work with the file
+"Bhai, attached file dekh ke batao kya problem hai",yes,Hinglish
+Ye report padh ke summary bana do,yes,Hinglish
+Photo mein gauge ki reading kya hai?,yes,Hinglish
+Maine jo PDF bheji usme total kya hai?,yes,Hinglish
+Is sheet mein galti dhundho,yes,Hinglish
+Upload kiya hua scan check karo,yes,Hinglish
+Document ka translation English mein kar do,yes,Hinglish
+Meri file dekh ke approval note bana do,yes,Hinglish
+What is the bearing temperature alarm limit in our SOP?,no,Knowledge-base questions
+Which SOP talks about gas testing?,no,Knowledge-base questions
+What did the seal failure memo recommend?,no,Knowledge-base questions
+Show me the delegation limits from SOP-ADM-002,no,Knowledge-base questions
+What does our reference sheet say about bar to psi?,no,Knowledge-base questions
+Is there anything in the SOPs about fire watch duration?,no,Knowledge-base questions
+Search our documents for laser alignment,no,Knowledge-base questions
+What does the vibration SOP say about standby pumps?,no,Knowledge-base questions
+Write a new report on bearing failures this year,no,Making something new
+Create a spreadsheet to track seal changes,no,Making something new
+Draft a letter to the vendor about the late delivery,no,Making something new
+Make a template for daily inspection notes,no,Making something new
+Prepare a document listing all safety rules for contractors,no,Making something new
+Create a photo checklist for site walkdowns,no,Making something new
+Generate a PDF-style summary of today's work,no,Making something new
+Write me an inspection sheet format,no,Making something new
+How do I attach a scanned report?,no,About files in general
+Can the workbench read handwriting?,no,About files in general
+What is the best resolution for scanning drawings?,no,About files in general
+How big a PDF can I upload?,no,About files in general
+Where are the Word files you create saved?,no,About files in general
+Do you support Excel and CSV files?,no,About files in general
+How do I take a good photo of a nameplate?,no,About files in general
+What should a good inspection report include?,no,About files in general
+Is this okay: 6.9 mm/s on a critical pump?,no,'This' about a value or idea
+What does this mean: soft foot?,no,'This' about a value or idea
+"Is this the right approach: change the seal, then align?",no,'This' about a value or idea
+Check this calculation: 9.1 minus 8.0 divided by 0.29,no,'This' about a value or idea
+Is this enough: 2 days of fire watch?,no,'This' about a value or idea
+Rewrite this sentence: pump was repaired by us,no,'This' about a value or idea
+Translate this: the pump is under maintenance,no,'This' about a value or idea
+Is this amount within the GM's power: 30 lakh?,no,'This' about a value or idea
+"Good morning, how are you?",no,Everyday questions
+What is NPSH?,no,Everyday questions
+Calculate 12 percent of 4.5 lakh,no,Everyday questions
+Write a Python function for corrosion rate,no,Everyday questions
+Who approves 8 lakh of spending?,no,Everyday questions
+Why do pumps cavitate?,no,Everyday questions
+Give me a hot work checklist,no,Everyday questions
+What is the next step after Zone C?,no,Everyday questions
+"Bhai, NPSH kya hota hai?",no,Hinglish
+Zone C mein kya karna padta hai?,no,Hinglish
+20 lakh kaun approve karega?,no,Hinglish
+Hot work ke rules batao,no,Hinglish
+Ek naya report format bana do,no,Hinglish
+Seal kyun fail hoti hai?,no,Hinglish
+Gas test kitni der mein repeat karna hai?,no,Hinglish
+Python mein zone wala function likh do,no,Hinglish
+What should I write in an approval note?,no,Everyday questions
+Explain the difference between Zone B and C,no,Everyday questions

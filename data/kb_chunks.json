@@ -1,12 +1,18 @@
 {
  "meta": {
-  "built_at": "2026-10-29 14:49:13",
+  "built_at": "2026-11-04 11:36:03",
   "embedding_model": "nomic-embed-text",
   "files": [
    {
     "name": "MEMO-2026-031 Seal failures on P-2105.txt",
     "pages": 1,
     "chunks": 2,
+    "ocr_pages": 0
+   },
+   {
+    "name": "REF-ENG-001 Units and Conversion Factors.md",
+    "pages": 1,
+    "chunks": 8,
     "ocr_pages": 0
    },
    {
@@ -49,6 +55,62 @@
    "source": "MEMO-2026-031 Seal failures on P-2105.txt",
    "page": 1,
    "section": "",
+   "method": "text"
+  },
+  {
+   "text": "# REF-ENG-001: Units and Conversion Factors\n\nSAMPLE DOCUMENT — fictional \"Sample Refinery Ltd.\" reference data sheet, created for demonstrating the Sovereign Workbench prototype. The conversion factors themselves are standard values.\n\nRevision: 1 | Effective date: 01-11-2026 | Owner: Technical Services",
+   "source": "REF-ENG-001 Units and Conversion Factors.md",
+   "page": 1,
+   "section": "REF-ENG-001: Units and Conversion Factors",
+   "method": "text"
+  },
+  {
+   "text": "## 1. Purpose\n\nStandard conversion factors to be used in all engineering calculations, reports and software, so that every department uses the same values.",
+   "source": "REF-ENG-001 Units and Conversion Factors.md",
+   "page": 1,
+   "section": "1. Purpose",
+   "method": "text"
+  },
+  {
+   "text": "## 2. Pressure\n\n1 bar = 100 kPa = 14.5038 psi = 1.01972 kg/cm²\n1 psi = 0.0689476 bar = 6.89476 kPa\nTo convert psi to bar: bar = psi × 0.0689476 (or psi ÷ 14.5038). Check: 14.5038 psi = 1 bar; 100 psi = 6.89476 bar.\nTo convert bar to psi: psi = bar × 14.5038. Check: 1 bar = 14.5038 psi.\n1 kg/cm² = 0.980665 bar = 14.2233 psi\n1 MPa = 10 bar = 145.038 psi\n1 atm = 1.01325 bar = 14.6959 psi\nGauge and absolute pressure: bar(a) = bar(g) + 1.01325 at standard atmosphere.",
+   "source": "REF-ENG-001 Units and Conversion Factors.md",
+   "page": 1,
+   "section": "2. Pressure",
+   "method": "text"
+  },
+  {
+   "text": "## 3. Temperature\n\n°F = °C × 9/5 + 32. Check: 100 °C = 212 °F.\n°C = (°F − 32) × 5/9. Check: 32 °F = 0 °C.\nK = °C + 273.15",
+   "source": "REF-ENG-001 Units and Conversion Factors.md",
+   "page": 1,
+   "section": "3. Temperature",
+   "method": "text"
+  },
+  {
+   "text": "## 4. Flow and volume\n\n1 m³/h = 4.40287 US gpm (US gallons per minute)\n1 US gallon = 3.78541 litres\n1 barrel (oil, bbl) = 158.987 litres = 42 US gallons\n1 bbl/day = 0.00662447 m³/h. Check: 1000 bbl/day = 6.62447 m³/h.",
+   "source": "REF-ENG-001 Units and Conversion Factors.md",
+   "page": 1,
+   "section": "4. Flow and volume",
+   "method": "text"
+  },
+  {
+   "text": "## 5. Length and mass\n\n1 inch = 25.4 mm. 1 foot = 0.3048 m.\n1 kg = 2.20462 lb. 1 lb = 0.453592 kg.",
+   "source": "REF-ENG-001 Units and Conversion Factors.md",
+   "page": 1,
+   "section": "5. Length and mass",
+   "method": "text"
+  },
+  {
+   "text": "## 6. Power and energy\n\n1 kW = 1.34102 hp. 1 hp = 0.745700 kW.\n1 kcal = 4.1868 kJ. 1 BTU = 1.05506 kJ.",
+   "source": "REF-ENG-001 Units and Conversion Factors.md",
+   "page": 1,
+   "section": "6. Power and energy",
+   "method": "text"
+  },
+  {
+   "text": "## 7. Vibration velocity\n\n1 in/s = 25.4 mm/s. Vibration limits in SOP-MECH-004 are in mm/s RMS.",
+   "source": "REF-ENG-001 Units and Conversion Factors.md",
+   "page": 1,
+   "section": "7. Vibration velocity",
    "method": "text"
   },
   {

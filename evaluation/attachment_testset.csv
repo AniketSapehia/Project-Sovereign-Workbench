@@ -1,0 +1,101 @@
+question,should_warn,category
+Summarise this report in five points,yes,Direct mentions (this/attached/uploaded + file word)
+What does the attached document say about seals?,yes,Direct mentions (this/attached/uploaded + file word)
+Check this PDF for missing signatures,yes,Direct mentions (this/attached/uploaded + file word)
+Read the uploaded scan and list the readings,yes,Direct mentions (this/attached/uploaded + file word)
+Describe what is in this photo,yes,Direct mentions (this/attached/uploaded + file word)
+Is this drawing the latest revision?,yes,Direct mentions (this/attached/uploaded + file word)
+Extract the cost table from the attached file,yes,Direct mentions (this/attached/uploaded + file word)
+What is the date on this document?,yes,Direct mentions (this/attached/uploaded + file word)
+Translate this PDF into Hindi,yes,Direct mentions (this/attached/uploaded + file word)
+Find the highest reading in the uploaded report,yes,Direct mentions (this/attached/uploaded + file word)
+Who signed this report?,yes,Direct mentions (this/attached/uploaded + file word)
+Are there any errors in this scan?,yes,Direct mentions (this/attached/uploaded + file word)
+Compare these documents and list the differences,yes,Direct mentions (this/attached/uploaded + file word)
+What pump is shown in this picture?,yes,Direct mentions (this/attached/uploaded + file word)
+Check the attachment for the approval limit,yes,Direct mentions (this/attached/uploaded + file word)
+What does this memo say about the seal failures?,yes,"Other document words (memo, sheet, letter...)"
+Check this spreadsheet for wrong totals,yes,"Other document words (memo, sheet, letter...)"
+Summarise this letter from the vendor,yes,"Other document words (memo, sheet, letter...)"
+Find the due date in this invoice,yes,"Other document words (memo, sheet, letter...)"
+What is the conclusion of this inspection sheet?,yes,"Other document words (memo, sheet, letter...)"
+List the actions in these minutes,yes,"Other document words (memo, sheet, letter...)"
+Is this quotation within the budget?,yes,"Other document words (memo, sheet, letter...)"
+Proofread this note before I send it,yes,"Other document words (memo, sheet, letter...)"
+Check this permit for missing fields,yes,"Other document words (memo, sheet, letter...)"
+What equipment is listed in this datasheet?,yes,"Other document words (memo, sheet, letter...)"
+Extract the readings from this log sheet,yes,"Other document words (memo, sheet, letter...)"
+Check this purchase order for errors,yes,"Other document words (memo, sheet, letter...)"
+Summarise the report I just sent,yes,Possessive or past-tense references
+What did my file say about bearing temperatures?,yes,Possessive or past-tense references
+Go through the document I uploaded and find the costs,yes,Possessive or past-tense references
+Can you read the PDF I shared?,yes,Possessive or past-tense references
+Check my spreadsheet for errors,yes,Possessive or past-tense references
+What does my inspection report recommend?,yes,Possessive or past-tense references
+Look at the photo I sent and tell me if there is corrosion,yes,Possessive or past-tense references
+Use the file I gave you to draft the note,yes,Possessive or past-tense references
+Read my scanned report and tell me the zone,yes,Possessive or past-tense references
+Is the drawing I sent up to date?,yes,Possessive or past-tense references
+Summarise it in three lines,yes,Pronoun or indirect references
+What does the report on my desk say? I've added it here,yes,Pronoun or indirect references
+"Here is the report, what is the highest reading?",yes,Pronoun or indirect references
+See the attached and tell me the total cost,yes,Pronoun or indirect references
+Please go through the enclosed and suggest actions,yes,Pronoun or indirect references
+"Based on the file above, who should approve this?",yes,Pronoun or indirect references
+"From the screenshot, what is the alarm value?",yes,Pronoun or indirect references
+"In the image, which valve is open?",yes,Pronoun or indirect references
+Pull the table out of the document,yes,Pronoun or indirect references
+"Check the scan, is the NDE row readable?",yes,Pronoun or indirect references
+"According to the report, when was P-2105B last inspected?",yes,Pronoun or indirect references
+What is written on page 2 of the document?,yes,Pronoun or indirect references
+Read the readings from the picture,yes,Pronoun or indirect references
+What does SOP-MECH-004 say about Zone C?,no,Questions about SOPs and the knowledge base
+What is the gas test limit before welding?,no,Questions about SOPs and the knowledge base
+Who can approve 20 lakh rupees?,no,Questions about SOPs and the knowledge base
+Can a hot work permit be extended to a second shift?,no,Questions about SOPs and the knowledge base
+What are the temperature limits for pump bearings?,no,Questions about SOPs and the knowledge base
+What does MEMO-2026-031 say about the seals?,no,Questions about SOPs and the knowledge base
+Which SOP covers ultrasonic thickness inspection?,no,Questions about SOPs and the knowledge base
+What does the knowledge base say about cavitation?,no,Questions about SOPs and the knowledge base
+What records must be kept after a thickness survey?,no,Questions about SOPs and the knowledge base
+List the sections of an approval note,no,Questions about SOPs and the knowledge base
+Write a report on pump vibration trends,no,Writing new documents (no attachment needed)
+Draft a document describing the shutdown plan,no,Writing new documents (no attachment needed)
+Create a report template for monthly inspections,no,Writing new documents (no attachment needed)
+Write a memo about the new gas test rules,no,Writing new documents (no attachment needed)
+Prepare a letter to the vendor about the delay,no,Writing new documents (no attachment needed)
+Make a spreadsheet for recording readings,no,Writing new documents (no attachment needed)
+Write an inspection report format for pressure vessels,no,Writing new documents (no attachment needed)
+Draft a note asking the team to upload their reports,no,Writing new documents (no attachment needed)
+Write a short document on bearing lubrication,no,Writing new documents (no attachment needed)
+Prepare a presentation outline on seal failures,no,Writing new documents (no attachment needed)
+What should an inspection report contain?,no,Questions about documents in general
+How do I attach a file here?,no,Questions about documents in general
+Which file formats can I upload?,no,Questions about documents in general
+How long should a report summary be?,no,Questions about documents in general
+What is the difference between a memo and a letter?,no,Questions about documents in general
+How should I name my scanned reports?,no,Questions about documents in general
+What is a good structure for an incident report?,no,Questions about documents in general
+Can you read photos of handwritten notes?,no,Questions about documents in general
+How do I scan a report so the text is readable?,no,Questions about documents in general
+Where are uploaded files stored?,no,Questions about documents in general
+Is this reading acceptable: 6.2 mm/s?,no,'This/that' about things that are not files
+What does this term mean: NPSH?,no,'This/that' about things that are not files
+Is this approach correct: replace the seal before the bearing?,no,'This/that' about things that are not files
+Explain this formula: rate = (t0 - t1) / years,no,'This/that' about things that are not files
+Does this sound right: Zone C needs action in 30 days?,no,'This/that' about things that are not files
+What zone is this: 4.8 mm/s?,no,'This/that' about things that are not files
+Is this amount within the GM's limit: 18 lakh?,no,'This/that' about things that are not files
+Can you explain this word: soft foot?,no,'This/that' about things that are not files
+What does this error mean: KeyError 'thickness'?,no,'This/that' about things that are not files
+Is this temperature normal: 76 degrees?,no,'This/that' about things that are not files
+"Calculate the remaining life for 9.1 mm, minimum 8 mm, 0.29 mm per year",no,Calculations and general questions
+Convert 100 psi to bar,no,Calculations and general questions
+Explain why pumps cavitate,no,Calculations and general questions
+Draft a reminder to the planners about overdue work orders,no,Calculations and general questions
+What is laser alignment?,no,Calculations and general questions
+How do I reduce bearing temperature?,no,Calculations and general questions
+Give me a checklist for hot work,no,Calculations and general questions
+What causes high axial vibration?,no,Calculations and general questions
+Who approves spending above one crore?,no,Calculations and general questions
+What is the next step after a Zone D reading?,no,Calculations and general questions

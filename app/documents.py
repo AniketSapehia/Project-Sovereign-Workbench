@@ -41,6 +41,12 @@ OCR_TARGET_WIDTH = 2480
 # as "uncertain" and reported to the user.
 LOW_CONFIDENCE = 60
 
+# Phase 6.13: when True, each OCR'd page also carries "ocr_words": every word
+# with Tesseract's confidence, so the evaluation can check how well the
+# confidence predicts real errors (and whether LOW_CONFIDENCE = 60 is a good
+# cut-off). Off in normal use, so saved uploads stay small.
+KEEP_OCR_WORDS = False
+
 
 # ===========================================================================
 # 1. OCR (reading text out of images)
@@ -150,14 +156,29 @@ def ocr_image(image: Image.Image) -> dict:
     # The dictionary keeps insertion order, which is Tesseract's reading order.
     lines = {}           # (block, paragraph, line) -> [words]
     confidences = []
+    word_list = []       # Phase 6.13: (word, confidence) in reading order
     for i, word in enumerate(data["text"]):
         if not word.strip():
             continue
+        # Phase 5: a "word" made only of symbols (e.g. "><—" or "—x—") is
+        # almost always a piece of a drawn line or valve symbol that OCR
+        # mistook for text. It carries no information, so it is dropped.
+        # (A few single symbols do carry meaning, e.g. "DE + NDE", so they are kept.)
+        if not any(character.isalnum() for character in word) and word not in {"+", "&", "%", "="}:
+            continue
         key = (data["block_num"][i], data["par_num"][i], data["line_num"][i])
-        lines.setdefault(key, []).append(word)
         conf = float(data["conf"][i])
         if conf >= 0:                 # -1 means "no confidence available"
             confidences.append(conf)
+            word_list.append({"word": word, "conf": conf})
+        # Phase 3.7: a word Tesseract was unsure about is marked in the text
+        # itself, e.g. "[unclear: aya]". In testing, OCR misread one table
+        # row and the model filled in plausible-looking but WRONG numbers.
+        # With the marker, the model (and the user) can see which values
+        # must be checked on the original document.
+        if 0 <= conf < LOW_CONFIDENCE:
+            word = f"[unclear: {word}]"
+        lines.setdefault(key, []).append(word)
 
     # Join words into lines; put a blank line between paragraphs.
     output = []
@@ -173,7 +194,8 @@ def ocr_image(image: Image.Image) -> dict:
     # A good average can hide a few badly read words (e.g. one smudged table
     # row). We count words Tesseract was unsure about so the page can warn.
     uncertain = sum(1 for c in confidences if c < LOW_CONFIDENCE)
-    return {"text": "\n".join(output), "confidence": confidence, "uncertain_words": uncertain}
+    return {"text": "\n".join(output), "confidence": confidence, "uncertain_words": uncertain,
+            "words": word_list}
 
 
 # ===========================================================================
@@ -207,7 +229,8 @@ def _extract_pdf(path: Path) -> list:
         result = ocr_image(bitmap.to_pil())
         pages.append({"page": index + 1, "text": result["text"], "method": "ocr",
                       "ocr_confidence": result["confidence"],
-                      "uncertain_words": result["uncertain_words"]})
+                      "uncertain_words": result["uncertain_words"],
+                      **({"ocr_words": result["words"]} if KEEP_OCR_WORDS else {})})
 
     if pdf_images is not None:
         pdf_images.close()
@@ -263,7 +286,8 @@ def _extract_image(path: Path) -> list:
         result = ocr_image(image)
     return [{"page": 1, "text": result["text"], "method": "ocr",
              "ocr_confidence": result["confidence"],
-             "uncertain_words": result["uncertain_words"]}]
+             "uncertain_words": result["uncertain_words"],
+                      **({"ocr_words": result["words"]} if KEEP_OCR_WORDS else {})}]
 
 
 def extract(path: Path) -> list:

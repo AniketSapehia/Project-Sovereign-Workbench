@@ -1,0 +1,4 @@
+The highest vibration reading is 6.4 mm/s RMS, which falls within Zone C. According to SOP-MECH-004, the corrective actions required are:
+1. Common causes of high vibration are unbalance, misalignment, bearing wear, looseness, cavitation and pipe strain. The spectrum analysis report must identify the most likely cause before parts are ordered.
+2. Bearing replacement must be done together with a laser alignment check of the pump-motor coupling.
+3. After any corrective work the pump must return to Zone A or Zone B.

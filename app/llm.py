@@ -12,6 +12,7 @@ Two safety features live in this file:
 """
 
 import json
+import re
 from typing import AsyncIterator
 
 import httpx               # a modern HTTP client that supports streaming
@@ -54,12 +55,80 @@ def _make_client() -> httpx.AsyncClient:
     )
 
 
+
+# ---------------------------------------------------------------------------
+# Thinking models (Phase 3.8)
+# ---------------------------------------------------------------------------
+def _think_setting(role: str):
+    """The model's "think" setting from config.py (None = don't send it)."""
+    return config.MODELS[role].get("think")
+
+
+class ThinkFilter:
+    """
+    Some models (e.g. qwen3) can write hidden reasoning between <think> and
+    </think> before their answer. Even with thinking switched off, an empty
+    "<think></think>" may appear. This removes those blocks from a stream of
+    text pieces, so they never show up as the answer or confuse the parser.
+    """
+    def __init__(self):
+        self.buffer = ""
+        self.inside = False
+
+    def feed(self, piece: str) -> str:
+        self.buffer += piece
+        out = ""
+        while self.buffer:
+            if self.inside:
+                end = self.buffer.find("</think>")
+                if end == -1:
+                    self.buffer = self.buffer[-8:]      # keep a possible partial tag
+                    return out
+                self.buffer = self.buffer[end + len("</think>"):]
+                self.inside = False
+            else:
+                start = self.buffer.find("<think>")
+                if start == -1:
+                    # Hold back a possible partial "<think" at the end.
+                    keep = next((n for n in range(6, 0, -1) if self.buffer.endswith("<think>"[:n])), 0)
+                    out += self.buffer[:len(self.buffer) - keep]
+                    self.buffer = self.buffer[len(self.buffer) - keep:]
+                    return out
+                out += self.buffer[:start]
+                self.buffer = self.buffer[start + len("<think>"):]
+                self.inside = True
+        return out
+
+    def flush(self) -> str:
+        rest = "" if self.inside else self.buffer
+        self.buffer = ""
+        return rest
+
 # ---------------------------------------------------------------------------
 # Helper: which model name belongs to a role?
 # ---------------------------------------------------------------------------
 def model_for_role(role: str) -> str:
     """Look up the Ollama model name for a role such as 'general'."""
     return config.MODELS[role]["name"]
+
+
+# ---------------------------------------------------------------------------
+# Which models are downloaded? (used by the health check and the router)
+# ---------------------------------------------------------------------------
+async def installed_models() -> set:
+    """Names of all models Ollama has downloaded (GET /api/tags). Empty set on error."""
+    try:
+        async with _make_client() as client:
+            response = await client.get("/api/tags")
+            response.raise_for_status()
+            return {m["name"] for m in response.json().get("models", [])}
+    except Exception:
+        return set()
+
+
+def is_installed(name: str, installed: set) -> bool:
+    """Ollama sometimes reports "name" and sometimes "name:latest"; accept both."""
+    return name in installed or f"{name}:latest" in installed
 
 
 # ---------------------------------------------------------------------------
@@ -87,12 +156,14 @@ async def check_health() -> dict:
     for role, name, purpose in wanted:
         # Ollama sometimes reports "qwen2.5:3b" and sometimes adds ":latest"
         # for models without a tag, so we accept both forms.
-        present = name in installed or f"{name}:latest" in installed
         models.append({
             "role": role,
             "name": name,
             "purpose": purpose,
-            "installed": present,
+            "installed": is_installed(name, installed),
+            # Phase 4: optional models (e.g. "code") may be missing; the
+            # router then falls back to the general model.
+            "required": role in config.REQUIRED_ROLES or role == "embedding",
         })
 
     return {"ollama_running": True, "models": models}
@@ -124,7 +195,8 @@ async def embed(texts: list) -> list:
 # ---------------------------------------------------------------------------
 # Chat: send the conversation and STREAM the answer back word by word
 # ---------------------------------------------------------------------------
-async def chat_stream(messages: list, role: str = config.DEFAULT_ROLE) -> AsyncIterator[str]:
+async def chat_stream(messages: list, role: str = config.DEFAULT_ROLE,
+                      system_prompt: str = None) -> AsyncIterator[str]:
     """
     Send the conversation to the model and yield the reply piece by piece.
 
@@ -137,7 +209,9 @@ async def chat_stream(messages: list, role: str = config.DEFAULT_ROLE) -> AsyncI
          {"role": "user", "content": "Explain NPSH"}]
     """
     # Put the hidden system prompt in front of the user's conversation.
-    full_messages = [{"role": "system", "content": config.SYSTEM_PROMPT}] + messages
+    # (Phase 5: the vision path passes its own system prompt.)
+    # A message may also carry "images": [base64 strings] for vision models.
+    full_messages = [{"role": "system", "content": system_prompt or config.SYSTEM_PROMPT}] + messages
 
     payload = {
         "model": model_for_role(role),
@@ -147,6 +221,9 @@ async def chat_stream(messages: list, role: str = config.DEFAULT_ROLE) -> AsyncI
         # Phase 2 needs more room, because document excerpts are added.
         "options": {"num_ctx": config.CONTEXT_TOKENS},
     }
+    if _think_setting(role) is not None:
+        payload["think"] = _think_setting(role)
+    think_filter = ThinkFilter()
 
     async with _make_client() as client:
         # client.stream(...) keeps the connection open while pieces arrive.
@@ -165,8 +242,115 @@ async def chat_stream(messages: list, role: str = config.DEFAULT_ROLE) -> AsyncI
                 piece = json.loads(line)
                 if "error" in piece:
                     raise RuntimeError(piece["error"])
-                text = piece.get("message", {}).get("content", "")
+                text = think_filter.feed(piece.get("message", {}).get("content", ""))
                 if text:
                     yield text
                 if piece.get("done"):
                     break
+    rest = think_filter.flush()
+    if rest:
+        yield rest
+
+
+# ---------------------------------------------------------------------------
+# Chat WITH TOOLS (NEW IN PHASE 3): used by the agent
+# ---------------------------------------------------------------------------
+async def chat_with_tools(messages: list, tools: list, role: str = config.DEFAULT_ROLE,
+                          temperature: float = None):
+    """
+    Send the conversation plus the list of available tools, and stream back:
+        ("token", "text piece")        while the model writes
+        ("tool_calls", [ ... ])        if the model asks to use tools
+        ("stats", {...})               how many tokens it generated, why it stopped
+        ("content", "full text")       always last: everything it wrote
+
+    How tool calling works: Ollama shows the model the tool descriptions.
+    If the model decides a tool is needed, instead of normal text it returns
+    a structured request: {"function": {"name": ..., "arguments": {...}}}.
+    We pass that back to the agent, which runs the tool.
+    """
+    options = {"num_ctx": config.CONTEXT_TOKENS}
+    if temperature is not None:
+        options["temperature"] = temperature
+    payload = {
+        "model": model_for_role(role),
+        "messages": messages,
+        "stream": True,
+        "options": options,
+    }
+    if tools:
+        payload["tools"] = tools
+    if _think_setting(role) is not None:
+        payload["think"] = _think_setting(role)
+
+    content, tool_calls, stats = "", [], {}
+    think_filter = ThinkFilter()
+    async with _make_client() as client:
+        async with client.stream("POST", "/api/chat", json=payload) as response:
+            if response.status_code != 200:
+                body = (await response.aread()).decode(errors="replace")
+                raise RuntimeError(f"Ollama returned {response.status_code}: {body}")
+            async for line in response.aiter_lines():
+                if not line.strip():
+                    continue
+                piece = json.loads(line)
+                if "error" in piece:
+                    raise RuntimeError(piece["error"])
+                message = piece.get("message", {})
+                text = think_filter.feed(message.get("content") or "")
+                if text:
+                    content += text
+                    yield ("token", text)
+                if message.get("tool_calls"):
+                    tool_calls.extend(message["tool_calls"])
+                if piece.get("done"):
+                    # The last piece carries statistics. eval_count = number of
+                    # tokens the model generated. If it is large but we got no
+                    # text and no tool call, the reply was lost in parsing.
+                    stats = {"eval_count": piece.get("eval_count"),
+                             "done_reason": piece.get("done_reason"),
+                             "seconds": round((piece.get("total_duration") or 0) / 1e9, 1)}
+                    break
+
+    rest = think_filter.flush()
+    if rest:
+        content += rest
+        yield ("token", rest)
+    if tool_calls:
+        yield ("tool_calls", tool_calls)
+    yield ("stats", stats)
+    yield ("content", content)
+
+
+# ---------------------------------------------------------------------------
+# Structured output (NEW IN PHASE 6): make the model fill in a fixed form
+# ---------------------------------------------------------------------------
+async def chat_json(messages: list, schema: dict, role: str = config.DEFAULT_ROLE,
+                    system_prompt: str = None) -> dict:
+    """
+    Ask the model to answer as JSON that MATCHES `schema` (a JSON Schema).
+
+    Ollama's "structured outputs" feature (the "format" setting) forces the
+    model's output to follow the schema: it literally cannot write anything
+    else. For a small model this is far more reliable than asking nicely for
+    JSON in the prompt, and the result can be checked by code.
+
+    temperature 0 = always pick the most likely word: best for copying values.
+    """
+    full = ([{"role": "system", "content": system_prompt}] if system_prompt else []) + messages
+    payload = {
+        "model": model_for_role(role),
+        "messages": full,
+        "stream": False,
+        "format": schema,
+        "options": {"num_ctx": config.CONTEXT_TOKENS, "temperature": 0},
+    }
+    if _think_setting(role) is not None:
+        payload["think"] = _think_setting(role)
+    async with _make_client() as client:
+        response = await client.post("/api/chat", json=payload)
+        if response.status_code != 200:
+            raise RuntimeError(f"Ollama returned {response.status_code}: {response.text}")
+        content = response.json().get("message", {}).get("content", "")
+    content = re.sub(r"<think>.*?</think>", "", content, flags=re.DOTALL).strip()
+    return json.loads(content)

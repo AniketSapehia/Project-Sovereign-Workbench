@@ -43,6 +43,18 @@
       <div class="panel-head">
         <h2>Assistant</h2>
         <div class="head-actions">
+          <!-- Phase 4: which model? "Auto" lets the router decide -->
+          <label class="toggle" title="Auto = the router picks the best model for each task">
+            Model
+            <select id="model-choice">
+              <option value="auto">Auto</option>
+            </select>
+          </label>
+          <!-- Phase 3: let the model plan and use tools -->
+          <label class="toggle" title="Let the assistant use tools: calculations, Python, Word and Excel files">
+            <input type="checkbox" id="agent-mode" checked>
+            Agent mode
+          </label>
           <!-- Phase 2: switch knowledge-base search on/off -->
           <label class="toggle" title="Search the knowledge base for every question">
             <input type="checkbox" id="use-kb" checked>
@@ -57,6 +69,7 @@
         <div class="empty-hint">
           Ask anything, or attach a document with <strong>📎</strong>.<br>
           Try: <em>"What is the vibration limit for centrifugal pumps, and what must be done if it is exceeded?"</em><br>
+          In <strong>Agent mode</strong> the assistant can also calculate, run Python and create Word / Excel files.<br>
           The first answer is slower because the model has to load into memory.
         </div>
       </div>
@@ -86,6 +99,15 @@
         </div>
         <p class="muted small" id="kb-summary">—</p>
         <ul id="kb-files" class="log"></ul>
+      </aside>
+
+      <!-- ---------- Files created by the agent (Phase 3) ---------- -->
+      <aside class="panel files-panel">
+        <div class="panel-head">
+          <h2>Output Files</h2>
+          <span class="muted small">workspace folder</span>
+        </div>
+        <ul id="file-list" class="log"></ul>
       </aside>
 
       <!-- ---------- Network monitor (Phase 1) ---------- -->

@@ -60,8 +60,11 @@ def record_request(method: str, url: str) -> bool:
     host = urlparse(url).hostname or ""
     allowed = is_allowed_host(host)
 
+    now = datetime.now().strftime("%H:%M:%S")
     entry = {
-        "time": datetime.now().strftime("%H:%M:%S"),
+        "time": now,           # when this request (or the last repeat) happened
+        "first_time": now,     # when the first request of a repeated group happened
+        "count": 1,            # how many identical requests in a row
         "method": method,
         # We only store the host and path, never the request body,
         # so the log itself never contains confidential text.
@@ -70,7 +73,24 @@ def record_request(method: str, url: str) -> bool:
     }
 
     with _log_lock:                    # only one thread may write at a time
-        _request_log.appendleft(entry)  # newest first
+        newest = _request_log[0] if _request_log else None
+
+        # GROUPING (Phase 2.1): the page checks model status every 15 s,
+        # which used to fill the log with identical "GET /api/tags" lines
+        # and push the interesting ones (embed, chat) out of view.
+        # If this request is identical to the newest entry, we increase that
+        # entry's counter instead of adding a new line. NOTHING is hidden:
+        # every request is still counted, and a different request (or a
+        # blocked one) always starts a new line.
+        if (newest is not None
+                and newest["method"] == entry["method"]
+                and newest["target"] == entry["target"]
+                and newest["allowed"] == entry["allowed"]):
+            newest["count"] += 1
+            newest["time"] = now
+        else:
+            _request_log.appendleft(entry)  # newest first
+
         _totals["allowed" if allowed else "blocked"] += 1
 
     return allowed
@@ -94,10 +114,20 @@ def _watched_processes() -> dict:
     Find the processes we want to watch. Returns {process_id: process_name}.
 
     - Always our own Python process (os.getpid()).
+    - Its child processes (the Phase 3 sandbox).
     - Every process whose name contains a keyword from config,
       e.g. "ollama.exe" and "ollama app.exe".
     """
     watched = {os.getpid(): "workbench (python)"}
+
+    # Phase 3: the Python sandbox runs AI-written code in a CHILD process of
+    # the workbench. We watch those too, so even code the AI wrote is
+    # covered by the monitor.
+    try:
+        for child in psutil.Process(os.getpid()).children(recursive=True):
+            watched[child.pid] = "sandbox (python)"
+    except psutil.Error:
+        pass
 
     for proc in psutil.process_iter(["pid", "name"]):
         name = (proc.info.get("name") or "").lower()
@@ -165,7 +195,9 @@ def get_report() -> dict:
     external = [c for c in connections if c.get("external")]
 
     with _log_lock:
-        log_copy = list(_request_log)
+        # dict(e) makes a copy of each entry, so the page never sees an
+        # entry that is half-way through being updated.
+        log_copy = [dict(e) for e in _request_log]
         totals_copy = dict(_totals)
 
     return {

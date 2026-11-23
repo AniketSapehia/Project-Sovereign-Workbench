@@ -1,0 +1,6 @@
+The highest vibration reading is 6.4 mm/s, which falls into Zone B. The corrective actions required by SOP-MECH-004 for Zone B are:
+1. Increase monitoring to weekly
+2. Carry out spectrum analysis to find the cause
+3. Plan corrective maintenance within 30 days
+
+This information is based on the provided data and the provided excerpts from SOP-MECH-004.

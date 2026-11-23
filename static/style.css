@@ -253,3 +253,85 @@ button.ghost {
   .panel-head { gap: 8px; flex-wrap: wrap; }
   .kb-panel { max-height: none; }
 }
+
+/* Phase 2.1: warning shown when the server stops before asking the model */
+.warning-text {
+  color: #8a5a00;
+  background: #fff4dc;
+  border-left: 3px solid #d99a00;
+  padding: 6px 10px;
+  border-radius: 4px;
+  white-space: pre-wrap;
+}
+@media (prefers-color-scheme: dark) {
+  .warning-text { color: #ffd27a; background: #3a2e12; border-left-color: #d9a400; }
+}
+
+/* =====================================================================
+   Phase 3 additions: agent steps, file links, output files panel
+   ===================================================================== */
+.steps-box {
+  white-space: normal;
+  border: 1px solid var(--line); border-radius: 8px;
+  padding: 6px 10px; margin-bottom: 10px; background: var(--bg);
+  font-size: 13px;
+}
+.steps-box > summary { cursor: pointer; font-weight: 600; color: var(--muted); font-size: 12px; }
+.step-note { color: var(--muted); font-style: italic; margin: 6px 0; white-space: pre-wrap; }
+.step { margin: 5px 0; border-left: 3px solid var(--line); padding-left: 8px; }
+.step.running { border-left-color: var(--muted); }
+.step.ok { border-left-color: var(--good); }
+.step.failed { border-left-color: var(--bad); }
+.step summary { cursor: pointer; display: flex; justify-content: space-between; gap: 10px; }
+.step-state { color: var(--muted); font-size: 12px; white-space: nowrap; }
+.step.ok .step-state { color: var(--good); }
+.step.failed .step-state { color: var(--bad); }
+.step-label { font-size: 11px; font-weight: 600; color: var(--muted); margin-top: 6px; }
+.step pre {
+  white-space: pre-wrap; font-family: var(--mono); font-size: 11.5px;
+  background: var(--panel); border: 1px solid var(--line);
+  border-radius: 6px; padding: 8px; margin: 4px 0; max-height: 240px; overflow-y: auto;
+}
+
+.files-box { white-space: normal; margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.files-box .sources-title { width: 100%; }
+.file-link {
+  display: inline-block; font-size: 13px; font-weight: 600;
+  padding: 5px 10px; border-radius: 8px;
+  background: var(--good-bg); color: var(--accent); text-decoration: none;
+}
+.file-link:hover { text-decoration: underline; }
+
+.files-panel { flex: 0 0 auto; max-height: 22%; overflow-y: auto; }
+.files-panel .log li { font-family: inherit; display: flex; justify-content: space-between; align-items: center; }
+.files-panel .file-link { background: transparent; padding: 0; }
+
+/* =====================================================================
+   Phase 4 additions: model menu, router badge, amber "warn" pill
+   ===================================================================== */
+.pill-warn { background: #fff4dc; color: #8a5a00; }
+@media (prefers-color-scheme: dark) { .pill-warn { background: #3a2e12; color: #ffd27a; } }
+
+select {
+  font: inherit; font-size: 12px; color: var(--ink);
+  background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 2px 4px;
+}
+
+.route-badge {
+  white-space: normal; font-size: 12.5px;
+  margin-bottom: 8px; padding: 5px 9px;
+  border-radius: 6px; background: var(--good-bg);
+}
+.route-badge summary { cursor: pointer; }
+.route-badge.fallback { background: #fff4dc; }
+@media (prefers-color-scheme: dark) { .route-badge.fallback { background: #3a2e12; } }
+.route-scores { font-family: var(--mono); font-size: 11.5px; color: var(--muted); margin-top: 4px; }
+
+/* Phase 5: preview of an attached image */
+.upload-preview {
+  display: block; max-width: 260px; max-height: 200px;
+  border: 1px solid var(--line); border-radius: 6px; margin-bottom: 8px;
+}
+
+/* Phase 6: flagship workflow button */
+.workflow-btn { font-size: 12.5px; padding: 5px 12px; }

@@ -1,0 +1,18 @@
+SAMPLE — FICTIONAL DOCUMENT FOR PROTOTYPE DEMONSTRATION ONLY
+INSPECTION REPORT No. IR-2026-118 (continued)
+4. Recommendations
+1) Change over to standby pump P-2105A after confirming its
+condition, and replace DE and NDE bearings of P-2105B.
+2) Carry out laser alignment of pump and motor after bearing job.
+3) Replace lubricating oil and send old oil for analysis.
+4) Increase vibration monitoring of P-2105B to weekly until
+readings return to Zone B or better.
+5. Estimated cost
+Item Amount (Rs)
+Bearings (1 set, DE + NDE) 65,000
+Laser alignment + labour 48,000
+Lubricating oil + analysis 12,000
+Total 1,25,000
+Condition Monitoring Engineer Area Maintenance Engineer
+(signed) (signed)
+Page 2 of 2

@@ -1,0 +1,8321 @@
+{
+ "date": "2026-11-05 20:04",
+ "machine": "Windows 11, 8 CPU threads, 8.4 GB RAM",
+ "models": {
+  "general": "qwen2.5:3b",
+  "code": "qwen2.5-coder:3b",
+  "vision": "qwen3-vl:2b",
+  "embedding": "nomic-embed-text"
+ },
+ "router": {
+  "labels": [
+   "general",
+   "code"
+  ],
+  "matrix": {
+   "general": {
+    "general": 13,
+    "code": 2
+   },
+   "code": {
+    "general": 0,
+    "code": 15
+   }
+  },
+  "accuracy": 0.9333333333333333,
+  "per_label": {
+   "general": {
+    "precision": 1.0,
+    "recall": 0.8666666666666667,
+    "f1": 0.9285714285714286
+   },
+   "code": {
+    "precision": 0.8823529411764706,
+    "recall": 1.0,
+    "f1": 0.9375
+   }
+  },
+  "wrong": [
+   {
+    "task": "Explain why cavitation damages pump impellers",
+    "correct": "general",
+    "predicted": "code",
+    "scores": {
+     "general": 0.567,
+     "code": 0.575
+    }
+   },
+   {
+    "task": "How often must critical pumps be checked for vibration?",
+    "correct": "general",
+    "predicted": "code",
+    "scores": {
+     "general": 0.67,
+     "code": 0.682
+    }
+   }
+  ],
+  "n": 30,
+  "rows": [
+   {
+    "task": "Summarise the attached maintenance memo in five bullet points",
+    "correct": "general",
+    "predicted": "general",
+    "scores": {
+     "general": 0.574,
+     "code": 0.484
+    },
+    "margin": -0.09
+   },
+   {
+    "task": "What is the minimum oxygen level allowed before hot work can start?",
+    "correct": "general",
+    "predicted": "general",
+    "scores": {
+     "general": 0.659,
+     "code": 0.524
+    },
+    "margin": -0.135
+   },
+   {
+    "task": "Draft a letter to the vendor asking for a revised quotation",
+    "correct": "general",
+    "predicted": "general",
+    "scores": {
+     "general": 0.747,
+     "code": 0.549
+    },
+    "margin": -0.198
+   },
+   {
+    "task": "Who approves maintenance spending of 12 lakh rupees?",
+    "correct": "general",
+    "predicted": "general",
+    "scores": {
+     "general": 0.853,
+     "code": 0.508
+    },
+    "margin": -0.345
+   },
+   {
+    "task": "Explain why cavitation damages pump impellers",
+    "correct": "general",
+    "predicted": "code",
+    "scores": {
+     "general": 0.567,
+     "code": 0.575
+    },
+    "margin": 0.008
+   },
+   {
+    "task": "List the responsibilities of the condition monitoring engineer",
+    "correct": "general",
+    "predicted": "general",
+    "scores": {
+     "general": 0.591,
+     "code": 0.537
+    },
+    "margin": -0.054
+   },
+   {
+    "task": "How often must critical pumps be checked for vibration?",
+    "correct": "general",
+    "predicted": "code",
+    "scores": {
+     "general": 0.67,
+     "code": 0.682
+    },
+    "margin": 0.012
+   },
+   {
+    "task": "Calculate the remaining life of a shell that is 10.2 mm thick",
+    "correct": "general",
+    "predicted": "general",
+    "scores": {
+     "general": 0.727,
+     "code": 0.542
+    },
+    "margin": -0.185
+   },
+   {
+    "task": "Prepare a short note on the seal failures of P-2105A",
+    "correct": "general",
+    "predicted": "general",
+    "scores": {
+     "general": 0.541,
+     "code": 0.518
+    },
+    "margin": -0.023
+   },
+   {
+    "task": "What does a bearing temperature of 92 degrees mean for the pump?",
+    "correct": "general",
+    "predicted": "general",
+    "scores": {
+     "general": 0.729,
+     "code": 0.591
+    },
+    "margin": -0.138
+   },
+   {
+    "task": "Create a table of the cost items in the inspection report",
+    "correct": "general",
+    "predicted": "general",
+    "scores": {
+     "general": 0.73,
+     "code": 0.601
+    },
+    "margin": -0.129
+   },
+   {
+    "task": "Translate the safety precautions into simple language for contractors",
+    "correct": "general",
+    "predicted": "general",
+    "scores": {
+     "general": 0.562,
+     "code": 0.542
+    },
+    "margin": -0.02
+   },
+   {
+    "task": "Is a reading of 3.9 mm/s acceptable for long-term operation?",
+    "correct": "general",
+    "predicted": "general",
+    "scores": {
+     "general": 0.61,
+     "code": 0.533
+    },
+    "margin": -0.077
+   },
+   {
+    "task": "Compare the hot work permit rules with the approval note rules",
+    "correct": "general",
+    "predicted": "general",
+    "scores": {
+     "general": 0.646,
+     "code": 0.525
+    },
+    "margin": -0.121
+   },
+   {
+    "task": "What records must be kept after an ultrasonic thickness survey?",
+    "correct": "general",
+    "predicted": "general",
+    "scores": {
+     "general": 0.587,
+     "code": 0.557
+    },
+    "margin": -0.03
+   },
+   {
+    "task": "Write a Python script that reads vibration readings from a CSV file",
+    "correct": "code",
+    "predicted": "code",
+    "scores": {
+     "general": 0.699,
+     "code": 1.014
+    },
+    "margin": 0.315
+   },
+   {
+    "task": "My function returns None instead of the zone, can you debug it?",
+    "correct": "code",
+    "predicted": "code",
+    "scores": {
+     "general": 0.615,
+     "code": 0.783
+    },
+    "margin": 0.168
+   },
+   {
+    "task": "Write a regex that extracts equipment tags like P-2105B from text",
+    "correct": "code",
+    "predicted": "code",
+    "scores": {
+     "general": 0.57,
+     "code": 0.774
+    },
+    "margin": 0.204
+   },
+   {
+    "task": "Add unit tests for the corrosion rate function",
+    "correct": "code",
+    "predicted": "code",
+    "scores": {
+     "general": 0.727,
+     "code": 0.928
+    },
+    "margin": 0.201
+   },
+   {
+    "task": "Convert this formula into a Python function: rate = (t0 - t1) / years",
+    "correct": "code",
+    "predicted": "code",
+    "scores": {
+     "general": 0.654,
+     "code": 0.913
+    },
+    "margin": 0.259
+   },
+   {
+    "task": "Why does my script throw a ZeroDivisionError?",
+    "correct": "code",
+    "predicted": "code",
+    "scores": {
+     "general": 0.51,
+     "code": 0.75
+    },
+    "margin": 0.24
+   },
+   {
+    "task": "Write SQL to list all pumps with more than three seal failures",
+    "correct": "code",
+    "predicted": "code",
+    "scores": {
+     "general": 0.619,
+     "code": 0.901
+    },
+    "margin": 0.282
+   },
+   {
+    "task": "Refactor this loop to use a list comprehension",
+    "correct": "code",
+    "predicted": "code",
+    "scores": {
+     "general": 0.565,
+     "code": 0.857
+    },
+    "margin": 0.292
+   },
+   {
+    "task": "Write a program that converts degrees Celsius to Fahrenheit",
+    "correct": "code",
+    "predicted": "code",
+    "scores": {
+     "general": 0.659,
+     "code": 0.875
+    },
+    "margin": 0.216
+   },
+   {
+    "task": "Explain this Python traceback: IndexError list index out of range",
+    "correct": "code",
+    "predicted": "code",
+    "scores": {
+     "general": 0.539,
+     "code": 0.824
+    },
+    "margin": 0.285
+   },
+   {
+    "task": "Make my pandas code faster, it takes ten minutes on a big file",
+    "correct": "code",
+    "predicted": "code",
+    "scores": {
+     "general": 0.537,
+     "code": 0.823
+    },
+    "margin": 0.286
+   },
+   {
+    "task": "Write a JavaScript function that formats rupees with commas",
+    "correct": "code",
+    "predicted": "code",
+    "scores": {
+     "general": 0.619,
+     "code": 0.759
+    },
+    "margin": 0.14
+   },
+   {
+    "task": "Fix the bug in this code that reads the wrong column",
+    "correct": "code",
+    "predicted": "code",
+    "scores": {
+     "general": 0.608,
+     "code": 0.935
+    },
+    "margin": 0.327
+   },
+   {
+    "task": "Create a Python class to store pump inspection data",
+    "correct": "code",
+    "predicted": "code",
+    "scores": {
+     "general": 0.633,
+     "code": 0.839
+    },
+    "margin": 0.206
+   },
+   {
+    "task": "Write a script to rename all PDF reports in a folder by date",
+    "correct": "code",
+    "predicted": "code",
+    "scores": {
+     "general": 0.646,
+     "code": 0.776
+    },
+    "margin": 0.13
+   }
+  ],
+  "roc": {
+   "auc": 1.0,
+   "points": [
+    {
+     "cutoff": null,
+     "fpr": 0.0,
+     "tpr": 0.0
+    },
+    {
+     "cutoff": 0.327,
+     "fpr": 0.0,
+     "tpr": 0.0
+    },
+    {
+     "cutoff": 0.315,
+     "fpr": 0.0,
+     "tpr": 0.0667
+    },
+    {
+     "cutoff": 0.292,
+     "fpr": 0.0,
+     "tpr": 0.1333
+    },
+    {
+     "cutoff": 0.286,
+     "fpr": 0.0,
+     "tpr": 0.2
+    },
+    {
+     "cutoff": 0.285,
+     "fpr": 0.0,
+     "tpr": 0.2667
+    },
+    {
+     "cutoff": 0.282,
+     "fpr": 0.0,
+     "tpr": 0.3333
+    },
+    {
+     "cutoff": 0.259,
+     "fpr": 0.0,
+     "tpr": 0.4
+    },
+    {
+     "cutoff": 0.24,
+     "fpr": 0.0,
+     "tpr": 0.4667
+    },
+    {
+     "cutoff": 0.216,
+     "fpr": 0.0,
+     "tpr": 0.5333
+    },
+    {
+     "cutoff": 0.206,
+     "fpr": 0.0,
+     "tpr": 0.6
+    },
+    {
+     "cutoff": 0.204,
+     "fpr": 0.0,
+     "tpr": 0.6667
+    },
+    {
+     "cutoff": 0.201,
+     "fpr": 0.0,
+     "tpr": 0.7333
+    },
+    {
+     "cutoff": 0.168,
+     "fpr": 0.0,
+     "tpr": 0.8
+    },
+    {
+     "cutoff": 0.14,
+     "fpr": 0.0,
+     "tpr": 0.8667
+    },
+    {
+     "cutoff": 0.13,
+     "fpr": 0.0,
+     "tpr": 0.9333
+    },
+    {
+     "cutoff": 0.012,
+     "fpr": 0.0,
+     "tpr": 1.0
+    },
+    {
+     "cutoff": 0.008,
+     "fpr": 0.0667,
+     "tpr": 1.0
+    },
+    {
+     "cutoff": -0.02,
+     "fpr": 0.1333,
+     "tpr": 1.0
+    },
+    {
+     "cutoff": -0.023,
+     "fpr": 0.2,
+     "tpr": 1.0
+    },
+    {
+     "cutoff": -0.03,
+     "fpr": 0.2667,
+     "tpr": 1.0
+    },
+    {
+     "cutoff": -0.054,
+     "fpr": 0.3333,
+     "tpr": 1.0
+    },
+    {
+     "cutoff": -0.077,
+     "fpr": 0.4,
+     "tpr": 1.0
+    },
+    {
+     "cutoff": -0.09,
+     "fpr": 0.4667,
+     "tpr": 1.0
+    },
+    {
+     "cutoff": -0.121,
+     "fpr": 0.5333,
+     "tpr": 1.0
+    },
+    {
+     "cutoff": -0.129,
+     "fpr": 0.6,
+     "tpr": 1.0
+    },
+    {
+     "cutoff": -0.135,
+     "fpr": 0.6667,
+     "tpr": 1.0
+    },
+    {
+     "cutoff": -0.138,
+     "fpr": 0.7333,
+     "tpr": 1.0
+    },
+    {
+     "cutoff": -0.185,
+     "fpr": 0.8,
+     "tpr": 1.0
+    },
+    {
+     "cutoff": -0.198,
+     "fpr": 0.8667,
+     "tpr": 1.0
+    },
+    {
+     "cutoff": -0.345,
+     "fpr": 0.9333,
+     "tpr": 1.0
+    },
+    {
+     "cutoff": null,
+     "fpr": 1.0,
+     "tpr": 1.0
+    }
+   ],
+   "router_cutoff_0": {
+    "fpr": 0.13333333333333333,
+    "tpr": 1.0
+   }
+  }
+ },
+ "attachment": {
+  "labels": [
+   "warn",
+   "no warning"
+  ],
+  "matrix": {
+   "warn": {
+    "warn": 10,
+    "no warning": 0
+   },
+   "no warning": {
+    "warn": 0,
+    "no warning": 10
+   }
+  },
+  "accuracy": 1.0,
+  "per_label": {
+   "warn": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "no warning": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   }
+  },
+  "wrong": [],
+  "n": 20
+ },
+ "ocr": [
+  {
+   "file": "IR-2026-118 Scanned Inspection Report.pdf",
+   "pages": 2,
+   "seconds": 20.9,
+   "cer": 0.005194805194805195,
+   "word_accuracy": 0.9828326180257511,
+   "tesseract_confidence": [
+    93.3,
+    95.5
+   ],
+   "uncertain_words": 3,
+   "key_values_found": 15,
+   "key_values_total": 18,
+   "key_values_missed": [
+    "5.1",
+    "2.7",
+    "74"
+   ],
+   "words": [
+    {
+     "conf": 93.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 92.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 93.0,
+     "correct": true
+    },
+    {
+     "conf": 90.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 93.0,
+     "correct": true
+    },
+    {
+     "conf": 92.0,
+     "correct": true
+    },
+    {
+     "conf": 92.0,
+     "correct": true
+    },
+    {
+     "conf": 92.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 45.0,
+     "correct": false
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 0.0,
+     "correct": false
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 71.0,
+     "correct": true
+    },
+    {
+     "conf": 27.0,
+     "correct": true
+    },
+    {
+     "conf": 64.0,
+     "correct": false
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 93.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 88.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 92.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 94.0,
+     "correct": true
+    },
+    {
+     "conf": 94.0,
+     "correct": true
+    },
+    {
+     "conf": 89.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 93.0,
+     "correct": true
+    },
+    {
+     "conf": 92.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 93.0,
+     "correct": true
+    },
+    {
+     "conf": 90.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 93.0,
+     "correct": true
+    },
+    {
+     "conf": 92.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 97.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 97.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 93.0,
+     "correct": true
+    },
+    {
+     "conf": 92.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 93.0,
+     "correct": true
+    },
+    {
+     "conf": 93.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 93.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 92.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    }
+   ],
+   "calibration": {
+    "words": 232,
+    "wrong_words": 3,
+    "cutoff": 60,
+    "flagged": 3,
+    "flagged_and_wrong": 2,
+    "share_of_errors_flagged": 0.6666666666666666,
+    "share_of_flags_that_were_errors": 0.6666666666666666,
+    "auc": 0.9970887918486172,
+    "bins": [
+     {
+      "from": 0,
+      "to": 10,
+      "words": 1,
+      "accuracy": 0.0
+     },
+     {
+      "from": 10,
+      "to": 20,
+      "words": 0,
+      "accuracy": null
+     },
+     {
+      "from": 20,
+      "to": 30,
+      "words": 1,
+      "accuracy": 1.0
+     },
+     {
+      "from": 30,
+      "to": 40,
+      "words": 0,
+      "accuracy": null
+     },
+     {
+      "from": 40,
+      "to": 50,
+      "words": 1,
+      "accuracy": 0.0
+     },
+     {
+      "from": 50,
+      "to": 60,
+      "words": 0,
+      "accuracy": null
+     },
+     {
+      "from": 60,
+      "to": 70,
+      "words": 1,
+      "accuracy": 0.0
+     },
+     {
+      "from": 70,
+      "to": 80,
+      "words": 1,
+      "accuracy": 1.0
+     },
+     {
+      "from": 80,
+      "to": 90,
+      "words": 2,
+      "accuracy": 1.0
+     },
+     {
+      "from": 90,
+      "to": 100,
+      "words": 225,
+      "accuracy": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "file": "IR-2026-118 page1 photo.jpg",
+   "pages": 1,
+   "seconds": 6.1,
+   "cer": 0.002352941176470588,
+   "word_accuracy": 0.9765625,
+   "tesseract_confidence": [
+    94.8
+   ],
+   "uncertain_words": 1,
+   "key_values_found": 13,
+   "key_values_total": 14,
+   "key_values_missed": [
+    "2.7"
+   ],
+   "words": [
+    {
+     "conf": 93.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 92.0,
+     "correct": true
+    },
+    {
+     "conf": 94.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 93.0,
+     "correct": true
+    },
+    {
+     "conf": 90.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 94.0,
+     "correct": true
+    },
+    {
+     "conf": 94.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 93.0,
+     "correct": true
+    },
+    {
+     "conf": 92.0,
+     "correct": true
+    },
+    {
+     "conf": 91.0,
+     "correct": true
+    },
+    {
+     "conf": 92.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 94.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 92.0,
+     "correct": true
+    },
+    {
+     "conf": 91.0,
+     "correct": false
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 94.0,
+     "correct": true
+    },
+    {
+     "conf": 94.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 90.0,
+     "correct": true
+    },
+    {
+     "conf": 90.0,
+     "correct": true
+    },
+    {
+     "conf": 56.0,
+     "correct": false
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 93.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 77.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 93.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 96.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    },
+    {
+     "conf": 95.0,
+     "correct": true
+    }
+   ],
+   "calibration": {
+    "words": 127,
+    "wrong_words": 2,
+    "cutoff": 60,
+    "flagged": 1,
+    "flagged_and_wrong": 1,
+    "share_of_errors_flagged": 0.5,
+    "share_of_flags_that_were_errors": 1.0,
+    "auc": 0.982,
+    "bins": [
+     {
+      "from": 0,
+      "to": 10,
+      "words": 0,
+      "accuracy": null
+     },
+     {
+      "from": 10,
+      "to": 20,
+      "words": 0,
+      "accuracy": null
+     },
+     {
+      "from": 20,
+      "to": 30,
+      "words": 0,
+      "accuracy": null
+     },
+     {
+      "from": 30,
+      "to": 40,
+      "words": 0,
+      "accuracy": null
+     },
+     {
+      "from": 40,
+      "to": 50,
+      "words": 0,
+      "accuracy": null
+     },
+     {
+      "from": 50,
+      "to": 60,
+      "words": 1,
+      "accuracy": 0.0
+     },
+     {
+      "from": 60,
+      "to": 70,
+      "words": 0,
+      "accuracy": null
+     },
+     {
+      "from": 70,
+      "to": 80,
+      "words": 1,
+      "accuracy": 1.0
+     },
+     {
+      "from": 80,
+      "to": 90,
+      "words": 0,
+      "accuracy": null
+     },
+     {
+      "from": 90,
+      "to": 100,
+      "words": 125,
+      "accuracy": 0.992
+     }
+    ]
+   }
+  }
+ ],
+ "retrieval": {
+  "rows": [
+   {
+    "question": "What action is required when vibration exceeds 7.1 mm/s?",
+    "expected": "SOP-MECH-004 / Vibration Severity",
+    "rank": 2,
+    "top": "REF-ENG-001 Units and Co / 7. Vibration velocity"
+   },
+   {
+    "question": "How often are critical pumps monitored?",
+    "expected": "SOP-MECH-004 / Frequency",
+    "rank": 1,
+    "top": "SOP-MECH-004 Centrifugal / 4. Measurement Frequency"
+   },
+   {
+    "question": "What is the alarm limit for bearing housing temperature?",
+    "expected": "SOP-MECH-004 / Temperature",
+    "rank": 1,
+    "top": "SOP-MECH-004 Centrifugal / 6. Bearing Temperature Limits"
+   },
+   {
+    "question": "Who plans corrective maintenance after a limit is exceeded?",
+    "expected": "SOP-MECH-004 / Responsibilities",
+    "rank": 1,
+    "top": "SOP-MECH-004 Centrifugal / 3. Responsibilities"
+   },
+   {
+    "question": "How is the remaining life of a pressure vessel calculated?",
+    "expected": "SOP-INSP-011 / Remaining Life",
+    "rank": 1,
+    "top": "SOP-INSP-011 Pressure Ve / 5. Remaining Life Calculation"
+   },
+   {
+    "question": "When is the next thickness inspection due?",
+    "expected": "SOP-INSP-011 / Next Inspection",
+    "rank": 1,
+    "top": "SOP-INSP-011 Pressure Ve / 6. Next Inspection Date"
+   },
+   {
+    "question": "What happens if actual thickness is below the minimum required?",
+    "expected": "SOP-INSP-011 / Acceptance",
+    "rank": 3,
+    "top": "SOP-INSP-011 Pressure Ve / 3. Key Definitions"
+   },
+   {
+    "question": "Who can approve spending of 20 lakh rupees?",
+    "expected": "SOP-ADM-002 / Delegation",
+    "rank": 1,
+    "top": "SOP-ADM-002 Approval Not / 3. Delegation of Financial Pow"
+   },
+   {
+    "question": "What sections must an approval note contain?",
+    "expected": "SOP-ADM-002 / Format",
+    "rank": 1,
+    "top": "SOP-ADM-002 Approval Not / 2. Standard Format of an Appro"
+   },
+   {
+    "question": "What gas test limits apply before welding?",
+    "expected": "SOP-SAFE-007 / Gas Test",
+    "rank": 1,
+    "top": "SOP-SAFE-007 Hot Work Pe / 3. Gas Test Before Work"
+   },
+   {
+    "question": "How long is a hot work permit valid?",
+    "expected": "SOP-SAFE-007 / Validity",
+    "rank": 1,
+    "top": "SOP-SAFE-007 Hot Work Pe / 5. Validity"
+   },
+   {
+    "question": "Why did the seal of the crude charge pump keep failing?",
+    "expected": "MEMO-2026-031 / (any)",
+    "rank": 1,
+    "top": "MEMO-2026-031 Seal failu / "
+   }
+  ],
+  "hit@1": 0.8333333333333334,
+  "hit@k": 1.0,
+  "k": 4,
+  "mrr": 0.9027777777777778,
+  "scores": [
+   {
+    "question": 0,
+    "score": 0.5719,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.6888,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 0,
+    "score": 0.5456,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.5266,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.586,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.4969,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.5312,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.5722,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.5262,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.7691,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 0,
+    "score": 0.5506,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.5144,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.5228,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.6158,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.5306,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.5939,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.5821,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.5929,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.5499,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.5797,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.5083,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.5443,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.6179,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.541,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.5643,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.6435,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.616,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.6374,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.6021,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.7586,
+    "relevant": true,
+    "in_top_k": true
+   },
+   {
+    "question": 0,
+    "score": 0.6201,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.7341,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 0,
+    "score": 0.5706,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.5752,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.5648,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.5913,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.6079,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.5952,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 0,
+    "score": 0.5794,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.6462,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 1,
+    "score": 0.6579,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 1,
+    "score": 0.53,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.4137,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.4914,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.4046,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.5708,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.4403,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.4319,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.4366,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.4901,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.3992,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.4065,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.5438,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.4399,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.5425,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.4911,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.571,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.4668,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.5288,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.4974,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.608,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.5934,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.5083,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.6652,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 1,
+    "score": 0.5896,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.636,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.6124,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.8452,
+    "relevant": true,
+    "in_top_k": true
+   },
+   {
+    "question": 1,
+    "score": 0.5735,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.5627,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.534,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.5854,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.5083,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.4732,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.4539,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.6013,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.5973,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 1,
+    "score": 0.5655,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.6136,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.6591,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 2,
+    "score": 0.5573,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.4674,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.4852,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.5727,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.5179,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.4847,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.4397,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.5641,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.5405,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.4334,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.4902,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.5508,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.4983,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.5725,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.5184,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.5731,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.5351,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.5468,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.5007,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.5713,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.6109,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.5491,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.5643,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.5804,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.5566,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.6156,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 2,
+    "score": 0.6036,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.6776,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 2,
+    "score": 0.861,
+    "relevant": true,
+    "in_top_k": true
+   },
+   {
+    "question": 2,
+    "score": 0.5971,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.5619,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.5902,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.5478,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.5533,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.6147,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.6153,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 2,
+    "score": 0.5982,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.6124,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.6042,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.5304,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.4538,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.409,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.3949,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.4672,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.4018,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.3864,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.4556,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.6002,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.5407,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.5021,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.6456,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 3,
+    "score": 0.5061,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.538,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.5096,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.5634,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.5223,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.5339,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.5502,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.6184,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.6721,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 3,
+    "score": 0.5812,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.6002,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.5631,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.5644,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.7212,
+    "relevant": true,
+    "in_top_k": true
+   },
+   {
+    "question": 3,
+    "score": 0.5969,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.565,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.5451,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.6195,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.6348,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 3,
+    "score": 0.5669,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.5813,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.58,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.5707,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.5847,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 3,
+    "score": 0.5633,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.5905,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.6013,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.5707,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.4809,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.5896,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.5475,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.6292,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.5391,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.5298,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.5183,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.5492,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.4802,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.4835,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.5722,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.5015,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.6217,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.6773,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 4,
+    "score": 0.6363,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.6278,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.6446,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 4,
+    "score": 0.7936,
+    "relevant": true,
+    "in_top_k": true
+   },
+   {
+    "question": 4,
+    "score": 0.6303,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.7155,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 4,
+    "score": 0.5568,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.5912,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.5952,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.571,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.5541,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.6073,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.5466,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.5635,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.4848,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.5938,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.546,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.5134,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.4794,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.5709,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.6211,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 4,
+    "score": 0.5433,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.6068,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.5964,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.577,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.4667,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.4405,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.4607,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.5017,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.478,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.3969,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.4921,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.5782,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.496,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.5249,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.5548,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.5132,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.7092,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 5,
+    "score": 0.6379,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.7128,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 5,
+    "score": 0.6649,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.5685,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.5066,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.7535,
+    "relevant": true,
+    "in_top_k": true
+   },
+   {
+    "question": 5,
+    "score": 0.6832,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 5,
+    "score": 0.6757,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.604,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.5206,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.5097,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.6153,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.6037,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.583,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.5685,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.5285,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.5264,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.5719,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.4832,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.4905,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.5643,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.5493,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 5,
+    "score": 0.515,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.5814,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.6135,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.554,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.4963,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.499,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.5301,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.5524,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.5159,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.4536,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.5432,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.5252,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.5123,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.5275,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.5645,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.5331,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.627,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 6,
+    "score": 0.627,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.7049,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 6,
+    "score": 0.7554,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 6,
+    "score": 0.5757,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.5843,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.587,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.6764,
+    "relevant": true,
+    "in_top_k": true
+   },
+   {
+    "question": 6,
+    "score": 0.5429,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.5497,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.5604,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.56,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.6115,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.5675,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.5741,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.6163,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.5378,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.5011,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.5243,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.5136,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.5211,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.6072,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.5766,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 6,
+    "score": 0.5521,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.5309,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.6149,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 7,
+    "score": 0.5348,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.4377,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.4809,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.4542,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.5066,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.4836,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.4677,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.4902,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.6259,
+    "relevant": true,
+    "in_top_k": true
+   },
+   {
+    "question": 7,
+    "score": 0.6092,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 7,
+    "score": 0.5956,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.7209,
+    "relevant": true,
+    "in_top_k": true
+   },
+   {
+    "question": 7,
+    "score": 0.5587,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.5326,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.4811,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.4988,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.5097,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.4799,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.4743,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.5341,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.5803,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.5374,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.5118,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.4738,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.5298,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.474,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.5006,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.4826,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.4893,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.4772,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.4893,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.5695,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.465,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.4976,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.5219,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.5275,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 7,
+    "score": 0.5233,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.5187,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.5387,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.5774,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.5004,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.4773,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.4423,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.4762,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.4603,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.4215,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.4743,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.6988,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 8,
+    "score": 0.6988,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 8,
+    "score": 0.8464,
+    "relevant": true,
+    "in_top_k": true
+   },
+   {
+    "question": 8,
+    "score": 0.572,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.7605,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 8,
+    "score": 0.584,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.5057,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.5452,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.5521,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.4931,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.4872,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.5528,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.6316,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.6489,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.5398,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.5055,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.5001,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.5499,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.4945,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.5308,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.4839,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.5039,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.557,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.5989,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.4827,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.5548,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.5272,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.5318,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 8,
+    "score": 0.518,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.6223,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.6158,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.605,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.4871,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.5321,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.4896,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.569,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.4422,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.4798,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.5758,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.6079,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.483,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.4937,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.5767,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.4933,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.6274,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.5747,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.5999,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.5839,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.5634,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.5626,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.5764,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.6559,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.5584,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.6188,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.5977,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.6384,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.609,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.6099,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.6113,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.6657,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 9,
+    "score": 0.5512,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.5458,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.6609,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.6759,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 9,
+    "score": 0.6214,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.8232,
+    "relevant": true,
+    "in_top_k": true
+   },
+   {
+    "question": 9,
+    "score": 0.6631,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 9,
+    "score": 0.7123,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 10,
+    "score": 0.5361,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.5574,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.5128,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.4302,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.5029,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.5231,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.4824,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.4444,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.4424,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.4764,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.5531,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.4742,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.4854,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.5517,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.511,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.5316,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.4998,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.5022,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.4851,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.5542,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.491,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.5849,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.6197,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.5304,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.5001,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.5124,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.5357,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.5255,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.5816,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.5517,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.6186,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.467,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.5696,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.7168,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 10,
+    "score": 0.5472,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.6926,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 10,
+    "score": 0.6282,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 10,
+    "score": 0.6167,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 10,
+    "score": 0.9008,
+    "relevant": true,
+    "in_top_k": true
+   },
+   {
+    "question": 11,
+    "score": 0.8175,
+    "relevant": true,
+    "in_top_k": true
+   },
+   {
+    "question": 11,
+    "score": 0.6588,
+    "relevant": true,
+    "in_top_k": true
+   },
+   {
+    "question": 11,
+    "score": 0.5178,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.4071,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.4542,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.3508,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.5137,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.3999,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.4069,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.3817,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.5149,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.4403,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.4187,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.4743,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.4158,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.5483,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.5117,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.5104,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.4682,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.4853,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.477,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.5146,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.5345,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.4628,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.607,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 11,
+    "score": 0.5445,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.5524,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.5177,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.591,
+    "relevant": false,
+    "in_top_k": true
+   },
+   {
+    "question": 11,
+    "score": 0.4848,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.5252,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.5595,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.4985,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.5413,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.5236,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.4754,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.5112,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.5485,
+    "relevant": false,
+    "in_top_k": false
+   },
+   {
+    "question": 11,
+    "score": 0.4953,
+    "relevant": false,
+    "in_top_k": false
+   }
+  ],
+  "score_summary": {
+   "cutoff": 0.45,
+   "relevant": 14,
+   "other": 454,
+   "relevant_below_cutoff": 0,
+   "other_above_cutoff": 423,
+   "other_given_to_model": 34,
+   "lowest_relevant": 0.6259,
+   "highest_other": 0.7691,
+   "auc": 0.9837948395217118
+  }
+ },
+ "speed": {
+  "calls": [
+   {
+    "role": "general",
+    "model": "qwen2.5:3b",
+    "call": "1st call",
+    "load_s": 25.2192136,
+    "prompt_tokens": 44,
+    "prompt_s": 5.925583,
+    "output_tokens": 35,
+    "output_s": 12.723978,
+    "total_s": 43.9223167
+   },
+   {
+    "role": "general",
+    "model": "qwen2.5:3b",
+    "call": "2nd call",
+    "load_s": 0.0223413,
+    "prompt_tokens": 44,
+    "prompt_s": 0.24878,
+    "output_tokens": 35,
+    "output_s": 11.446554,
+    "total_s": 11.7354127
+   },
+   {
+    "role": "code",
+    "model": "qwen2.5-coder:3b",
+    "call": "1st call",
+    "load_s": 21.9595668,
+    "prompt_tokens": 44,
+    "prompt_s": 5.73784,
+    "output_tokens": 64,
+    "output_s": 27.14094,
+    "total_s": 54.8839848
+   },
+   {
+    "role": "code",
+    "model": "qwen2.5-coder:3b",
+    "call": "2nd call",
+    "load_s": 0.0405421,
+    "prompt_tokens": 44,
+    "prompt_s": 0.521706,
+    "output_tokens": 76,
+    "output_s": 30.252576,
+    "total_s": 30.8470299
+   }
+  ],
+  "embedding_seconds": [
+   5.354703399993014,
+   0.7698120999993989,
+   1.5124575000081677,
+   0.6195316000084858,
+   1.5866715000011027,
+   0.6713964999944437,
+   1.5191635000082897,
+   0.6720034000027226,
+   1.499215500007267,
+   0.6323934999963967,
+   1.551258699997561,
+   0.6324828000069829
+  ]
+ },
+ "workflow": {
+  "seconds": 550.7,
+  "checks": {
+   "highest reading 6.4 mm/s found": true,
+   "classified as Zone C": true,
+   "approver = Department Head": true,
+   "DE bearing temperature flagged (ALARM)": true,
+   "Word file created": true,
+   "no invented value used unflagged": true
+  },
+  "steps": {
+   "w1": "IR-2026-118 Scanned Inspection Report.pdf: 2 page(s), 3 hard-to-read word(s)",
+   "w2": "2 vibration row(s), 2 temperature row(s), 4 cost item(s)",
+   "w3": "11 verified, 2 unclear, 1 NOT in source",
+   "w4": "3 of 3 rule sets ready",
+   "w5": "3 rule result(s)",
+   "w6": "written by AI (rewritten: first draft had 12,500)",
+   "w7": "created Approval_Note_P-2105B (7).docx"
+  },
+  "files": [
+   "Approval_Note_P-2105B (7).docx"
+  ],
+  "values": [
+   {
+    "what": "Vibration DE bearing horizontal",
+    "location": "DE bearing",
+    "value": 6.4,
+    "status": "verified",
+    "really_right": true
+   },
+   {
+    "what": "Vibration DE bearing vertical",
+    "location": "DE bearing",
+    "value": 4.1,
+    "status": "verified",
+    "really_right": true
+   },
+   {
+    "what": "Vibration DE bearing axial",
+    "location": "DE bearing",
+    "value": 3.2,
+    "status": "verified",
+    "really_right": true
+   },
+   {
+    "what": "Vibration NDE bearing horizontal",
+    "location": "NDE bearing",
+    "value": null,
+    "status": "unclear",
+    "really_right": null
+   },
+   {
+    "what": "Vibration NDE bearing vertical",
+    "location": "NDE bearing",
+    "value": 3.6,
+    "status": "verified",
+    "really_right": true
+   },
+   {
+    "what": "Vibration NDE bearing axial",
+    "location": "NDE bearing",
+    "value": null,
+    "status": "unclear",
+    "really_right": null
+   },
+   {
+    "what": "Temperature DE bearing previous",
+    "location": "DE bearing",
+    "value": 68,
+    "status": "verified",
+    "really_right": true
+   },
+   {
+    "what": "Temperature DE bearing current",
+    "location": "DE bearing",
+    "value": 86,
+    "status": "verified",
+    "really_right": true
+   },
+   {
+    "what": "Temperature NDE bearing previous",
+    "location": "NDE bearing",
+    "value": 65,
+    "status": "verified",
+    "really_right": true
+   },
+   {
+    "what": "Temperature NDE bearing current",
+    "location": "NDE bearing",
+    "value": 71,
+    "status": "not found",
+    "really_right": false
+   },
+   {
+    "what": "Cost: Bearings (1 set, DE + NDE)",
+    "location": "",
+    "value": 65000,
+    "status": "verified",
+    "really_right": true
+   },
+   {
+    "what": "Cost: Laser alignment + labour",
+    "location": "",
+    "value": 48000,
+    "status": "verified",
+    "really_right": true
+   },
+   {
+    "what": "Cost: Lubricating oil + analysis",
+    "location": "",
+    "value": 12000,
+    "status": "verified",
+    "really_right": true
+   },
+   {
+    "what": "Total cost",
+    "location": "",
+    "value": 125000,
+    "status": "verified",
+    "really_right": true
+   }
+  ],
+  "narrative_source": "AI (rewritten: first draft had 12,500)",
+  "runs": [
+   {
+    "seconds": 550.7,
+    "checks": {
+     "highest reading 6.4 mm/s found": true,
+     "classified as Zone C": true,
+     "approver = Department Head": true,
+     "DE bearing temperature flagged (ALARM)": true,
+     "Word file created": true,
+     "no invented value used unflagged": true
+    },
+    "steps": {
+     "w1": "IR-2026-118 Scanned Inspection Report.pdf: 2 page(s), 3 hard-to-read word(s)",
+     "w2": "2 vibration row(s), 2 temperature row(s), 4 cost item(s)",
+     "w3": "11 verified, 2 unclear, 1 NOT in source",
+     "w4": "3 of 3 rule sets ready",
+     "w5": "3 rule result(s)",
+     "w6": "written by AI (rewritten: first draft had 12,500)",
+     "w7": "created Approval_Note_P-2105B (7).docx"
+    },
+    "files": [
+     "Approval_Note_P-2105B (7).docx"
+    ],
+    "values": [
+     {
+      "what": "Vibration DE bearing horizontal",
+      "location": "DE bearing",
+      "value": 6.4,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Vibration DE bearing vertical",
+      "location": "DE bearing",
+      "value": 4.1,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Vibration DE bearing axial",
+      "location": "DE bearing",
+      "value": 3.2,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Vibration NDE bearing horizontal",
+      "location": "NDE bearing",
+      "value": null,
+      "status": "unclear",
+      "really_right": null
+     },
+     {
+      "what": "Vibration NDE bearing vertical",
+      "location": "NDE bearing",
+      "value": 3.6,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Vibration NDE bearing axial",
+      "location": "NDE bearing",
+      "value": null,
+      "status": "unclear",
+      "really_right": null
+     },
+     {
+      "what": "Temperature DE bearing previous",
+      "location": "DE bearing",
+      "value": 68,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Temperature DE bearing current",
+      "location": "DE bearing",
+      "value": 86,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Temperature NDE bearing previous",
+      "location": "NDE bearing",
+      "value": 65,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Temperature NDE bearing current",
+      "location": "NDE bearing",
+      "value": 71,
+      "status": "not found",
+      "really_right": false
+     },
+     {
+      "what": "Cost: Bearings (1 set, DE + NDE)",
+      "location": "",
+      "value": 65000,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Cost: Laser alignment + labour",
+      "location": "",
+      "value": 48000,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Cost: Lubricating oil + analysis",
+      "location": "",
+      "value": 12000,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Total cost",
+      "location": "",
+      "value": 125000,
+      "status": "verified",
+      "really_right": true
+     }
+    ],
+    "narrative_source": "AI (rewritten: first draft had 12,500)"
+   },
+   {
+    "seconds": 332.2,
+    "checks": {
+     "highest reading 6.4 mm/s found": true,
+     "classified as Zone C": true,
+     "approver = Department Head": true,
+     "DE bearing temperature flagged (ALARM)": true,
+     "Word file created": true,
+     "no invented value used unflagged": true
+    },
+    "steps": {
+     "w1": "IR-2026-118 Scanned Inspection Report.pdf: 2 page(s), 3 hard-to-read word(s)",
+     "w2": "2 vibration row(s), 2 temperature row(s), 4 cost item(s)",
+     "w3": "11 verified, 2 unclear, 1 NOT in source",
+     "w4": "3 of 3 rule sets ready",
+     "w5": "3 rule result(s)",
+     "w6": "written by AI",
+     "w7": "created Approval_Note_P-2105B (8).docx"
+    },
+    "files": [
+     "Approval_Note_P-2105B (8).docx"
+    ],
+    "values": [
+     {
+      "what": "Vibration DE bearing horizontal",
+      "location": "DE bearing",
+      "value": 6.4,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Vibration DE bearing vertical",
+      "location": "DE bearing",
+      "value": 4.1,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Vibration DE bearing axial",
+      "location": "DE bearing",
+      "value": 3.2,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Vibration NDE bearing horizontal",
+      "location": "NDE bearing",
+      "value": null,
+      "status": "unclear",
+      "really_right": null
+     },
+     {
+      "what": "Vibration NDE bearing vertical",
+      "location": "NDE bearing",
+      "value": 3.6,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Vibration NDE bearing axial",
+      "location": "NDE bearing",
+      "value": null,
+      "status": "unclear",
+      "really_right": null
+     },
+     {
+      "what": "Temperature DE bearing previous",
+      "location": "DE bearing",
+      "value": 68,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Temperature DE bearing current",
+      "location": "DE bearing",
+      "value": 86,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Temperature NDE bearing previous",
+      "location": "NDE bearing",
+      "value": 65,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Temperature NDE bearing current",
+      "location": "NDE bearing",
+      "value": 71,
+      "status": "not found",
+      "really_right": false
+     },
+     {
+      "what": "Cost: Bearings (1 set, DE + NDE)",
+      "location": "",
+      "value": 65000,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Cost: Laser alignment + labour",
+      "location": "",
+      "value": 48000,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Cost: Lubricating oil + analysis",
+      "location": "",
+      "value": 12000,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Total cost",
+      "location": "",
+      "value": 125000,
+      "status": "verified",
+      "really_right": true
+     }
+    ],
+    "narrative_source": "AI"
+   },
+   {
+    "seconds": 311.8,
+    "checks": {
+     "highest reading 6.4 mm/s found": true,
+     "classified as Zone C": true,
+     "approver = Department Head": true,
+     "DE bearing temperature flagged (ALARM)": true,
+     "Word file created": true,
+     "no invented value used unflagged": true
+    },
+    "steps": {
+     "w1": "IR-2026-118 Scanned Inspection Report.pdf: 2 page(s), 3 hard-to-read word(s)",
+     "w2": "2 vibration row(s), 2 temperature row(s), 4 cost item(s)",
+     "w3": "11 verified, 2 unclear, 1 NOT in source",
+     "w4": "3 of 3 rule sets ready",
+     "w5": "3 rule result(s)",
+     "w6": "written by AI",
+     "w7": "created Approval_Note_P-2105B (9).docx"
+    },
+    "files": [
+     "Approval_Note_P-2105B (9).docx"
+    ],
+    "values": [
+     {
+      "what": "Vibration DE bearing horizontal",
+      "location": "DE bearing",
+      "value": 6.4,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Vibration DE bearing vertical",
+      "location": "DE bearing",
+      "value": 4.1,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Vibration DE bearing axial",
+      "location": "DE bearing",
+      "value": 3.2,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Vibration NDE bearing horizontal",
+      "location": "NDE bearing",
+      "value": null,
+      "status": "unclear",
+      "really_right": null
+     },
+     {
+      "what": "Vibration NDE bearing vertical",
+      "location": "NDE bearing",
+      "value": 3.6,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Vibration NDE bearing axial",
+      "location": "NDE bearing",
+      "value": null,
+      "status": "unclear",
+      "really_right": null
+     },
+     {
+      "what": "Temperature DE bearing previous",
+      "location": "DE bearing",
+      "value": 68,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Temperature DE bearing current",
+      "location": "DE bearing",
+      "value": 86,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Temperature NDE bearing previous",
+      "location": "NDE bearing",
+      "value": 65,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Temperature NDE bearing current",
+      "location": "NDE bearing",
+      "value": 71,
+      "status": "not found",
+      "really_right": false
+     },
+     {
+      "what": "Cost: Bearings (1 set, DE + NDE)",
+      "location": "",
+      "value": 65000,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Cost: Laser alignment + labour",
+      "location": "",
+      "value": 48000,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Cost: Lubricating oil + analysis",
+      "location": "",
+      "value": 12000,
+      "status": "verified",
+      "really_right": true
+     },
+     {
+      "what": "Total cost",
+      "location": "",
+      "value": 125000,
+      "status": "verified",
+      "really_right": true
+     }
+    ],
+    "narrative_source": "AI"
+   }
+  ]
+ },
+ "resources": {
+  "total_gb": 8.362713088,
+  "samples": [
+   {
+    "t": 0.6,
+    "used_gb": 6.513,
+    "ollama_gb": 0.206,
+    "cpu": 0.0
+   },
+   {
+    "t": 3.5,
+    "used_gb": 6.503,
+    "ollama_gb": 0.208,
+    "cpu": 45.0
+   },
+   {
+    "t": 6.5,
+    "used_gb": 6.505,
+    "ollama_gb": 0.209,
+    "cpu": 38.5
+   },
+   {
+    "t": 10.7,
+    "used_gb": 6.792,
+    "ollama_gb": 0.209,
+    "cpu": 66.1
+   },
+   {
+    "t": 15.5,
+    "used_gb": 6.88,
+    "ollama_gb": 0.21,
+    "cpu": 99.2
+   },
+   {
+    "t": 19.7,
+    "used_gb": 6.883,
+    "ollama_gb": 0.21,
+    "cpu": 84.0
+   },
+   {
+    "t": 23.9,
+    "used_gb": 6.868,
+    "ollama_gb": 0.211,
+    "cpu": 84.9
+   },
+   {
+    "t": 27.3,
+    "used_gb": 6.869,
+    "ollama_gb": 0.211,
+    "cpu": 51.5
+   },
+   {
+    "t": 29.7,
+    "used_gb": 6.845,
+    "ollama_gb": 0.211,
+    "cpu": 40.0
+   },
+   {
+    "t": 32.1,
+    "used_gb": 6.834,
+    "ollama_gb": 0.211,
+    "cpu": 31.6
+   },
+   {
+    "t": 34.3,
+    "used_gb": 6.837,
+    "ollama_gb": 0.21,
+    "cpu": 27.9
+   },
+   {
+    "t": 36.5,
+    "used_gb": 6.847,
+    "ollama_gb": 0.21,
+    "cpu": 30.1
+   },
+   {
+    "t": 38.9,
+    "used_gb": 6.813,
+    "ollama_gb": 0.21,
+    "cpu": 36.9
+   },
+   {
+    "t": 41.4,
+    "used_gb": 6.819,
+    "ollama_gb": 0.21,
+    "cpu": 35.2
+   },
+   {
+    "t": 43.7,
+    "used_gb": 6.833,
+    "ollama_gb": 0.21,
+    "cpu": 29.1
+   },
+   {
+    "t": 46.0,
+    "used_gb": 6.826,
+    "ollama_gb": 0.21,
+    "cpu": 28.7
+   },
+   {
+    "t": 48.3,
+    "used_gb": 6.801,
+    "ollama_gb": 0.21,
+    "cpu": 30.0
+   },
+   {
+    "t": 50.5,
+    "used_gb": 6.814,
+    "ollama_gb": 0.21,
+    "cpu": 27.2
+   },
+   {
+    "t": 52.8,
+    "used_gb": 6.814,
+    "ollama_gb": 0.21,
+    "cpu": 31.5
+   },
+   {
+    "t": 55.1,
+    "used_gb": 6.803,
+    "ollama_gb": 0.21,
+    "cpu": 29.5
+   },
+   {
+    "t": 57.3,
+    "used_gb": 6.806,
+    "ollama_gb": 0.21,
+    "cpu": 28.0
+   },
+   {
+    "t": 59.6,
+    "used_gb": 6.781,
+    "ollama_gb": 0.21,
+    "cpu": 31.0
+   },
+   {
+    "t": 61.9,
+    "used_gb": 6.778,
+    "ollama_gb": 0.21,
+    "cpu": 29.5
+   },
+   {
+    "t": 64.3,
+    "used_gb": 6.735,
+    "ollama_gb": 0.21,
+    "cpu": 40.7
+   },
+   {
+    "t": 66.7,
+    "used_gb": 6.742,
+    "ollama_gb": 0.21,
+    "cpu": 33.6
+   },
+   {
+    "t": 69.0,
+    "used_gb": 6.702,
+    "ollama_gb": 0.21,
+    "cpu": 38.2
+   },
+   {
+    "t": 71.3,
+    "used_gb": 6.714,
+    "ollama_gb": 0.21,
+    "cpu": 29.2
+   },
+   {
+    "t": 73.7,
+    "used_gb": 6.702,
+    "ollama_gb": 0.21,
+    "cpu": 31.9
+   },
+   {
+    "t": 75.9,
+    "used_gb": 6.699,
+    "ollama_gb": 0.21,
+    "cpu": 28.6
+   },
+   {
+    "t": 78.2,
+    "used_gb": 6.703,
+    "ollama_gb": 0.21,
+    "cpu": 28.1
+   },
+   {
+    "t": 80.6,
+    "used_gb": 6.722,
+    "ollama_gb": 0.211,
+    "cpu": 32.1
+   },
+   {
+    "t": 82.9,
+    "used_gb": 6.726,
+    "ollama_gb": 0.211,
+    "cpu": 30.0
+   },
+   {
+    "t": 85.2,
+    "used_gb": 6.723,
+    "ollama_gb": 0.211,
+    "cpu": 30.4
+   },
+   {
+    "t": 87.5,
+    "used_gb": 6.703,
+    "ollama_gb": 0.21,
+    "cpu": 30.0
+   },
+   {
+    "t": 89.8,
+    "used_gb": 6.704,
+    "ollama_gb": 0.21,
+    "cpu": 30.4
+   },
+   {
+    "t": 92.5,
+    "used_gb": 6.984,
+    "ollama_gb": 0.21,
+    "cpu": 36.5
+   },
+   {
+    "t": 95.2,
+    "used_gb": 6.98,
+    "ollama_gb": 0.211,
+    "cpu": 44.4
+   },
+   {
+    "t": 99.1,
+    "used_gb": 6.751,
+    "ollama_gb": 0.211,
+    "cpu": 73.5
+   },
+   {
+    "t": 102.1,
+    "used_gb": 6.729,
+    "ollama_gb": 0.211,
+    "cpu": 38.6
+   },
+   {
+    "t": 104.4,
+    "used_gb": 6.79,
+    "ollama_gb": 0.211,
+    "cpu": 30.8
+   },
+   {
+    "t": 106.8,
+    "used_gb": 6.867,
+    "ollama_gb": 0.211,
+    "cpu": 28.2
+   },
+   {
+    "t": 109.2,
+    "used_gb": 6.712,
+    "ollama_gb": 0.211,
+    "cpu": 28.9
+   },
+   {
+    "t": 111.3,
+    "used_gb": 6.715,
+    "ollama_gb": 0.21,
+    "cpu": 29.1
+   },
+   {
+    "t": 113.6,
+    "used_gb": 6.975,
+    "ollama_gb": 0.21,
+    "cpu": 28.3
+   },
+   {
+    "t": 116.0,
+    "used_gb": 6.636,
+    "ollama_gb": 0.21,
+    "cpu": 31.1
+   },
+   {
+    "t": 118.1,
+    "used_gb": 6.707,
+    "ollama_gb": 0.21,
+    "cpu": 29.4
+   },
+   {
+    "t": 120.3,
+    "used_gb": 6.653,
+    "ollama_gb": 0.21,
+    "cpu": 28.3
+   },
+   {
+    "t": 122.6,
+    "used_gb": 6.625,
+    "ollama_gb": 0.211,
+    "cpu": 37.0
+   },
+   {
+    "t": 125.0,
+    "used_gb": 6.61,
+    "ollama_gb": 0.211,
+    "cpu": 39.6
+   },
+   {
+    "t": 127.2,
+    "used_gb": 6.607,
+    "ollama_gb": 0.211,
+    "cpu": 35.1
+   },
+   {
+    "t": 129.4,
+    "used_gb": 6.589,
+    "ollama_gb": 0.211,
+    "cpu": 36.7
+   },
+   {
+    "t": 131.7,
+    "used_gb": 6.591,
+    "ollama_gb": 0.211,
+    "cpu": 37.7
+   },
+   {
+    "t": 134.0,
+    "used_gb": 6.561,
+    "ollama_gb": 0.211,
+    "cpu": 41.7
+   },
+   {
+    "t": 136.3,
+    "used_gb": 6.561,
+    "ollama_gb": 0.211,
+    "cpu": 42.1
+   },
+   {
+    "t": 138.5,
+    "used_gb": 6.539,
+    "ollama_gb": 0.211,
+    "cpu": 42.7
+   },
+   {
+    "t": 140.7,
+    "used_gb": 6.539,
+    "ollama_gb": 0.211,
+    "cpu": 40.4
+   },
+   {
+    "t": 142.9,
+    "used_gb": 6.521,
+    "ollama_gb": 0.211,
+    "cpu": 44.4
+   },
+   {
+    "t": 145.7,
+    "used_gb": 6.574,
+    "ollama_gb": 0.211,
+    "cpu": 53.1
+   },
+   {
+    "t": 148.1,
+    "used_gb": 6.556,
+    "ollama_gb": 0.211,
+    "cpu": 45.2
+   },
+   {
+    "t": 150.4,
+    "used_gb": 6.525,
+    "ollama_gb": 0.211,
+    "cpu": 34.8
+   },
+   {
+    "t": 153.0,
+    "used_gb": 6.401,
+    "ollama_gb": 0.211,
+    "cpu": 44.5
+   },
+   {
+    "t": 156.6,
+    "used_gb": 6.706,
+    "ollama_gb": 0.211,
+    "cpu": 60.3
+   },
+   {
+    "t": 160.0,
+    "used_gb": 7.002,
+    "ollama_gb": 0.211,
+    "cpu": 59.4
+   },
+   {
+    "t": 163.2,
+    "used_gb": 7.257,
+    "ollama_gb": 0.211,
+    "cpu": 60.4
+   },
+   {
+    "t": 166.8,
+    "used_gb": 7.534,
+    "ollama_gb": 0.211,
+    "cpu": 65.8
+   },
+   {
+    "t": 170.7,
+    "used_gb": 7.909,
+    "ollama_gb": 0.21,
+    "cpu": 76.1
+   },
+   {
+    "t": 175.5,
+    "used_gb": 7.993,
+    "ollama_gb": 0.209,
+    "cpu": 91.0
+   },
+   {
+    "t": 179.7,
+    "used_gb": 7.866,
+    "ollama_gb": 0.208,
+    "cpu": 96.6
+   },
+   {
+    "t": 183.5,
+    "used_gb": 7.612,
+    "ollama_gb": 0.208,
+    "cpu": 84.9
+   },
+   {
+    "t": 187.2,
+    "used_gb": 7.612,
+    "ollama_gb": 0.208,
+    "cpu": 75.0
+   },
+   {
+    "t": 190.7,
+    "used_gb": 7.617,
+    "ollama_gb": 0.208,
+    "cpu": 76.3
+   },
+   {
+    "t": 194.4,
+    "used_gb": 7.621,
+    "ollama_gb": 0.208,
+    "cpu": 79.6
+   },
+   {
+    "t": 197.2,
+    "used_gb": 7.618,
+    "ollama_gb": 0.208,
+    "cpu": 40.3
+   },
+   {
+    "t": 200.6,
+    "used_gb": 7.614,
+    "ollama_gb": 0.208,
+    "cpu": 75.6
+   },
+   {
+    "t": 204.0,
+    "used_gb": 7.616,
+    "ollama_gb": 0.208,
+    "cpu": 78.7
+   },
+   {
+    "t": 207.6,
+    "used_gb": 7.617,
+    "ollama_gb": 0.208,
+    "cpu": 80.3
+   },
+   {
+    "t": 210.3,
+    "used_gb": 7.612,
+    "ollama_gb": 0.208,
+    "cpu": 56.9
+   },
+   {
+    "t": 212.8,
+    "used_gb": 5.35,
+    "ollama_gb": 0.208,
+    "cpu": 43.7
+   },
+   {
+    "t": 216.0,
+    "used_gb": 5.765,
+    "ollama_gb": 0.208,
+    "cpu": 51.7
+   },
+   {
+    "t": 219.3,
+    "used_gb": 6.103,
+    "ollama_gb": 0.208,
+    "cpu": 59.5
+   },
+   {
+    "t": 223.0,
+    "used_gb": 6.466,
+    "ollama_gb": 0.208,
+    "cpu": 77.9
+   },
+   {
+    "t": 226.6,
+    "used_gb": 6.821,
+    "ollama_gb": 0.209,
+    "cpu": 69.7
+   },
+   {
+    "t": 229.9,
+    "used_gb": 7.311,
+    "ollama_gb": 0.209,
+    "cpu": 56.8
+   },
+   {
+    "t": 233.6,
+    "used_gb": 7.485,
+    "ollama_gb": 0.209,
+    "cpu": 80.4
+   },
+   {
+    "t": 237.9,
+    "used_gb": 7.545,
+    "ollama_gb": 0.209,
+    "cpu": 90.0
+   },
+   {
+    "t": 242.1,
+    "used_gb": 7.538,
+    "ollama_gb": 0.209,
+    "cpu": 83.8
+   },
+   {
+    "t": 246.5,
+    "used_gb": 7.536,
+    "ollama_gb": 0.209,
+    "cpu": 92.8
+   },
+   {
+    "t": 251.3,
+    "used_gb": 7.568,
+    "ollama_gb": 0.209,
+    "cpu": 95.2
+   },
+   {
+    "t": 255.4,
+    "used_gb": 7.568,
+    "ollama_gb": 0.209,
+    "cpu": 90.3
+   },
+   {
+    "t": 259.3,
+    "used_gb": 7.539,
+    "ollama_gb": 0.209,
+    "cpu": 82.9
+   },
+   {
+    "t": 263.0,
+    "used_gb": 7.548,
+    "ollama_gb": 0.209,
+    "cpu": 86.0
+   },
+   {
+    "t": 266.5,
+    "used_gb": 7.551,
+    "ollama_gb": 0.21,
+    "cpu": 68.0
+   },
+   {
+    "t": 269.6,
+    "used_gb": 7.552,
+    "ollama_gb": 0.21,
+    "cpu": 33.7
+   },
+   {
+    "t": 273.3,
+    "used_gb": 7.549,
+    "ollama_gb": 0.21,
+    "cpu": 79.4
+   },
+   {
+    "t": 277.0,
+    "used_gb": 7.546,
+    "ollama_gb": 0.21,
+    "cpu": 77.8
+   },
+   {
+    "t": 280.8,
+    "used_gb": 7.492,
+    "ollama_gb": 0.21,
+    "cpu": 84.3
+   },
+   {
+    "t": 284.7,
+    "used_gb": 7.386,
+    "ollama_gb": 0.209,
+    "cpu": 88.4
+   },
+   {
+    "t": 289.0,
+    "used_gb": 7.275,
+    "ollama_gb": 0.208,
+    "cpu": 90.0
+   },
+   {
+    "t": 292.8,
+    "used_gb": 7.277,
+    "ollama_gb": 0.208,
+    "cpu": 89.2
+   },
+   {
+    "t": 296.5,
+    "used_gb": 7.295,
+    "ollama_gb": 0.208,
+    "cpu": 79.2
+   },
+   {
+    "t": 300.2,
+    "used_gb": 7.287,
+    "ollama_gb": 0.208,
+    "cpu": 76.5
+   },
+   {
+    "t": 303.0,
+    "used_gb": 7.291,
+    "ollama_gb": 0.208,
+    "cpu": 39.1
+   },
+   {
+    "t": 305.8,
+    "used_gb": 5.614,
+    "ollama_gb": 0.208,
+    "cpu": 45.9
+   },
+   {
+    "t": 308.0,
+    "used_gb": 5.605,
+    "ollama_gb": 0.209,
+    "cpu": 31.2
+   },
+   {
+    "t": 310.3,
+    "used_gb": 5.604,
+    "ollama_gb": 0.209,
+    "cpu": 41.5
+   },
+   {
+    "t": 312.5,
+    "used_gb": 5.604,
+    "ollama_gb": 0.209,
+    "cpu": 32.4
+   },
+   {
+    "t": 314.7,
+    "used_gb": 5.601,
+    "ollama_gb": 0.209,
+    "cpu": 34.6
+   },
+   {
+    "t": 316.8,
+    "used_gb": 5.598,
+    "ollama_gb": 0.209,
+    "cpu": 42.3
+   },
+   {
+    "t": 319.5,
+    "used_gb": 5.906,
+    "ollama_gb": 0.209,
+    "cpu": 42.5
+   },
+   {
+    "t": 321.8,
+    "used_gb": 5.826,
+    "ollama_gb": 0.209,
+    "cpu": 31.3
+   },
+   {
+    "t": 324.2,
+    "used_gb": 5.664,
+    "ollama_gb": 0.209,
+    "cpu": 40.3
+   },
+   {
+    "t": 326.5,
+    "used_gb": 5.635,
+    "ollama_gb": 0.209,
+    "cpu": 27.8
+   },
+   {
+    "t": 328.7,
+    "used_gb": 5.888,
+    "ollama_gb": 0.21,
+    "cpu": 28.3
+   },
+   {
+    "t": 330.8,
+    "used_gb": 5.678,
+    "ollama_gb": 0.21,
+    "cpu": 27.5
+   },
+   {
+    "t": 333.8,
+    "used_gb": 5.576,
+    "ollama_gb": 0.21,
+    "cpu": 59.3
+   },
+   {
+    "t": 336.4,
+    "used_gb": 5.302,
+    "ollama_gb": 0.21,
+    "cpu": 37.4
+   },
+   {
+    "t": 339.2,
+    "used_gb": 5.729,
+    "ollama_gb": 0.21,
+    "cpu": 38.5
+   },
+   {
+    "t": 342.6,
+    "used_gb": 6.082,
+    "ollama_gb": 0.21,
+    "cpu": 56.1
+   },
+   {
+    "t": 345.9,
+    "used_gb": 6.407,
+    "ollama_gb": 0.211,
+    "cpu": 56.0
+   },
+   {
+    "t": 349.4,
+    "used_gb": 6.771,
+    "ollama_gb": 0.211,
+    "cpu": 58.2
+   },
+   {
+    "t": 352.8,
+    "used_gb": 7.286,
+    "ollama_gb": 0.211,
+    "cpu": 55.7
+   },
+   {
+    "t": 357.5,
+    "used_gb": 7.661,
+    "ollama_gb": 0.231,
+    "cpu": 85.0
+   },
+   {
+    "t": 361.9,
+    "used_gb": 7.69,
+    "ollama_gb": 0.21,
+    "cpu": 97.7
+   },
+   {
+    "t": 366.1,
+    "used_gb": 7.685,
+    "ollama_gb": 0.21,
+    "cpu": 92.8
+   },
+   {
+    "t": 369.6,
+    "used_gb": 7.68,
+    "ollama_gb": 0.21,
+    "cpu": 83.1
+   },
+   {
+    "t": 373.0,
+    "used_gb": 7.683,
+    "ollama_gb": 0.21,
+    "cpu": 76.5
+   },
+   {
+    "t": 376.7,
+    "used_gb": 7.686,
+    "ollama_gb": 0.209,
+    "cpu": 77.8
+   },
+   {
+    "t": 380.4,
+    "used_gb": 7.671,
+    "ollama_gb": 0.209,
+    "cpu": 78.2
+   },
+   {
+    "t": 384.3,
+    "used_gb": 7.643,
+    "ollama_gb": 0.209,
+    "cpu": 80.4
+   },
+   {
+    "t": 387.9,
+    "used_gb": 7.654,
+    "ollama_gb": 0.209,
+    "cpu": 79.0
+   },
+   {
+    "t": 391.7,
+    "used_gb": 7.624,
+    "ollama_gb": 0.209,
+    "cpu": 81.9
+   },
+   {
+    "t": 395.3,
+    "used_gb": 7.584,
+    "ollama_gb": 0.209,
+    "cpu": 80.7
+   },
+   {
+    "t": 398.7,
+    "used_gb": 7.587,
+    "ollama_gb": 0.209,
+    "cpu": 76.1
+   },
+   {
+    "t": 402.1,
+    "used_gb": 7.592,
+    "ollama_gb": 0.209,
+    "cpu": 76.8
+   },
+   {
+    "t": 405.4,
+    "used_gb": 7.579,
+    "ollama_gb": 0.209,
+    "cpu": 74.7
+   },
+   {
+    "t": 408.7,
+    "used_gb": 7.581,
+    "ollama_gb": 0.209,
+    "cpu": 72.6
+   },
+   {
+    "t": 411.8,
+    "used_gb": 7.594,
+    "ollama_gb": 0.209,
+    "cpu": 73.2
+   },
+   {
+    "t": 415.0,
+    "used_gb": 7.599,
+    "ollama_gb": 0.209,
+    "cpu": 75.5
+   },
+   {
+    "t": 418.2,
+    "used_gb": 7.595,
+    "ollama_gb": 0.209,
+    "cpu": 74.1
+   },
+   {
+    "t": 421.7,
+    "used_gb": 7.589,
+    "ollama_gb": 0.209,
+    "cpu": 76.3
+   },
+   {
+    "t": 425.3,
+    "used_gb": 7.564,
+    "ollama_gb": 0.209,
+    "cpu": 76.0
+   },
+   {
+    "t": 429.2,
+    "used_gb": 7.585,
+    "ollama_gb": 0.208,
+    "cpu": 85.1
+   },
+   {
+    "t": 434.1,
+    "used_gb": 7.613,
+    "ollama_gb": 0.208,
+    "cpu": 88.6
+   },
+   {
+    "t": 438.0,
+    "used_gb": 7.657,
+    "ollama_gb": 0.208,
+    "cpu": 90.2
+   },
+   {
+    "t": 441.7,
+    "used_gb": 7.649,
+    "ollama_gb": 0.208,
+    "cpu": 75.4
+   },
+   {
+    "t": 445.7,
+    "used_gb": 7.662,
+    "ollama_gb": 0.208,
+    "cpu": 88.2
+   },
+   {
+    "t": 450.3,
+    "used_gb": 7.665,
+    "ollama_gb": 0.208,
+    "cpu": 96.1
+   },
+   {
+    "t": 454.5,
+    "used_gb": 7.681,
+    "ollama_gb": 0.208,
+    "cpu": 87.0
+   },
+   {
+    "t": 458.0,
+    "used_gb": 7.692,
+    "ollama_gb": 0.208,
+    "cpu": 78.6
+   },
+   {
+    "t": 462.6,
+    "used_gb": 7.688,
+    "ollama_gb": 0.208,
+    "cpu": 88.4
+   },
+   {
+    "t": 466.7,
+    "used_gb": 7.639,
+    "ollama_gb": 0.208,
+    "cpu": 85.2
+   },
+   {
+    "t": 470.7,
+    "used_gb": 7.659,
+    "ollama_gb": 0.208,
+    "cpu": 82.8
+   },
+   {
+    "t": 474.3,
+    "used_gb": 7.668,
+    "ollama_gb": 0.208,
+    "cpu": 77.5
+   },
+   {
+    "t": 478.1,
+    "used_gb": 7.675,
+    "ollama_gb": 0.208,
+    "cpu": 82.0
+   },
+   {
+    "t": 481.9,
+    "used_gb": 7.67,
+    "ollama_gb": 0.208,
+    "cpu": 75.8
+   },
+   {
+    "t": 485.6,
+    "used_gb": 7.676,
+    "ollama_gb": 0.208,
+    "cpu": 78.7
+   },
+   {
+    "t": 489.5,
+    "used_gb": 7.622,
+    "ollama_gb": 0.208,
+    "cpu": 82.5
+   },
+   {
+    "t": 492.9,
+    "used_gb": 7.627,
+    "ollama_gb": 0.208,
+    "cpu": 74.7
+   },
+   {
+    "t": 496.6,
+    "used_gb": 7.633,
+    "ollama_gb": 0.207,
+    "cpu": 77.8
+   },
+   {
+    "t": 500.3,
+    "used_gb": 7.627,
+    "ollama_gb": 0.207,
+    "cpu": 76.3
+   },
+   {
+    "t": 503.6,
+    "used_gb": 7.619,
+    "ollama_gb": 0.207,
+    "cpu": 75.3
+   },
+   {
+    "t": 507.0,
+    "used_gb": 7.633,
+    "ollama_gb": 0.207,
+    "cpu": 76.0
+   },
+   {
+    "t": 510.5,
+    "used_gb": 7.635,
+    "ollama_gb": 0.207,
+    "cpu": 76.7
+   },
+   {
+    "t": 514.1,
+    "used_gb": 7.633,
+    "ollama_gb": 0.208,
+    "cpu": 75.4
+   },
+   {
+    "t": 517.5,
+    "used_gb": 7.631,
+    "ollama_gb": 0.207,
+    "cpu": 74.0
+   },
+   {
+    "t": 520.9,
+    "used_gb": 7.59,
+    "ollama_gb": 0.207,
+    "cpu": 78.0
+   },
+   {
+    "t": 524.5,
+    "used_gb": 7.602,
+    "ollama_gb": 0.207,
+    "cpu": 78.8
+   },
+   {
+    "t": 528.0,
+    "used_gb": 7.575,
+    "ollama_gb": 0.207,
+    "cpu": 76.3
+   },
+   {
+    "t": 531.8,
+    "used_gb": 7.452,
+    "ollama_gb": 0.206,
+    "cpu": 83.3
+   },
+   {
+    "t": 535.9,
+    "used_gb": 7.359,
+    "ollama_gb": 0.228,
+    "cpu": 92.3
+   },
+   {
+    "t": 539.7,
+    "used_gb": 7.369,
+    "ollama_gb": 0.206,
+    "cpu": 80.0
+   },
+   {
+    "t": 543.3,
+    "used_gb": 7.349,
+    "ollama_gb": 0.205,
+    "cpu": 81.4
+   },
+   {
+    "t": 547.1,
+    "used_gb": 7.346,
+    "ollama_gb": 0.205,
+    "cpu": 81.2
+   },
+   {
+    "t": 550.7,
+    "used_gb": 7.346,
+    "ollama_gb": 0.205,
+    "cpu": 76.6
+   },
+   {
+    "t": 554.1,
+    "used_gb": 7.344,
+    "ollama_gb": 0.205,
+    "cpu": 73.6
+   },
+   {
+    "t": 557.3,
+    "used_gb": 7.346,
+    "ollama_gb": 0.205,
+    "cpu": 77.3
+   },
+   {
+    "t": 560.9,
+    "used_gb": 7.314,
+    "ollama_gb": 0.205,
+    "cpu": 82.0
+   },
+   {
+    "t": 564.6,
+    "used_gb": 7.276,
+    "ollama_gb": 0.205,
+    "cpu": 79.4
+   },
+   {
+    "t": 568.2,
+    "used_gb": 7.275,
+    "ollama_gb": 0.205,
+    "cpu": 75.7
+   },
+   {
+    "t": 571.5,
+    "used_gb": 7.274,
+    "ollama_gb": 0.205,
+    "cpu": 72.6
+   },
+   {
+    "t": 574.8,
+    "used_gb": 7.274,
+    "ollama_gb": 0.205,
+    "cpu": 73.9
+   },
+   {
+    "t": 578.4,
+    "used_gb": 7.25,
+    "ollama_gb": 0.204,
+    "cpu": 78.3
+   },
+   {
+    "t": 581.6,
+    "used_gb": 7.259,
+    "ollama_gb": 0.204,
+    "cpu": 76.1
+   },
+   {
+    "t": 585.3,
+    "used_gb": 7.284,
+    "ollama_gb": 0.204,
+    "cpu": 77.9
+   },
+   {
+    "t": 589.1,
+    "used_gb": 7.269,
+    "ollama_gb": 0.204,
+    "cpu": 81.6
+   },
+   {
+    "t": 592.4,
+    "used_gb": 7.264,
+    "ollama_gb": 0.204,
+    "cpu": 74.1
+   },
+   {
+    "t": 595.8,
+    "used_gb": 7.272,
+    "ollama_gb": 0.204,
+    "cpu": 79.0
+   },
+   {
+    "t": 599.7,
+    "used_gb": 7.296,
+    "ollama_gb": 0.204,
+    "cpu": 78.7
+   },
+   {
+    "t": 604.4,
+    "used_gb": 7.377,
+    "ollama_gb": 0.204,
+    "cpu": 97.4
+   },
+   {
+    "t": 608.1,
+    "used_gb": 7.385,
+    "ollama_gb": 0.204,
+    "cpu": 75.1
+   },
+   {
+    "t": 611.5,
+    "used_gb": 7.381,
+    "ollama_gb": 0.204,
+    "cpu": 75.8
+   },
+   {
+    "t": 614.8,
+    "used_gb": 7.382,
+    "ollama_gb": 0.204,
+    "cpu": 73.8
+   },
+   {
+    "t": 618.2,
+    "used_gb": 7.335,
+    "ollama_gb": 0.204,
+    "cpu": 78.7
+   },
+   {
+    "t": 621.3,
+    "used_gb": 7.336,
+    "ollama_gb": 0.205,
+    "cpu": 73.2
+   },
+   {
+    "t": 624.5,
+    "used_gb": 7.337,
+    "ollama_gb": 0.205,
+    "cpu": 73.5
+   },
+   {
+    "t": 628.7,
+    "used_gb": 7.409,
+    "ollama_gb": 0.204,
+    "cpu": 86.0
+   },
+   {
+    "t": 632.0,
+    "used_gb": 7.411,
+    "ollama_gb": 0.205,
+    "cpu": 75.9
+   },
+   {
+    "t": 635.7,
+    "used_gb": 7.364,
+    "ollama_gb": 0.205,
+    "cpu": 78.9
+   },
+   {
+    "t": 639.1,
+    "used_gb": 7.356,
+    "ollama_gb": 0.205,
+    "cpu": 72.6
+   },
+   {
+    "t": 642.6,
+    "used_gb": 7.322,
+    "ollama_gb": 0.205,
+    "cpu": 78.5
+   },
+   {
+    "t": 645.8,
+    "used_gb": 7.347,
+    "ollama_gb": 0.204,
+    "cpu": 74.9
+   },
+   {
+    "t": 649.0,
+    "used_gb": 7.339,
+    "ollama_gb": 0.205,
+    "cpu": 73.3
+   },
+   {
+    "t": 652.2,
+    "used_gb": 7.353,
+    "ollama_gb": 0.204,
+    "cpu": 73.3
+   },
+   {
+    "t": 655.4,
+    "used_gb": 7.354,
+    "ollama_gb": 0.205,
+    "cpu": 66.5
+   },
+   {
+    "t": 658.5,
+    "used_gb": 7.353,
+    "ollama_gb": 0.206,
+    "cpu": 56.8
+   },
+   {
+    "t": 661.8,
+    "used_gb": 7.353,
+    "ollama_gb": 0.206,
+    "cpu": 75.0
+   },
+   {
+    "t": 665.0,
+    "used_gb": 7.347,
+    "ollama_gb": 0.206,
+    "cpu": 73.1
+   },
+   {
+    "t": 668.3,
+    "used_gb": 7.363,
+    "ollama_gb": 0.206,
+    "cpu": 77.0
+   },
+   {
+    "t": 671.7,
+    "used_gb": 7.322,
+    "ollama_gb": 0.206,
+    "cpu": 81.7
+   },
+   {
+    "t": 675.0,
+    "used_gb": 7.323,
+    "ollama_gb": 0.206,
+    "cpu": 75.6
+   },
+   {
+    "t": 678.4,
+    "used_gb": 7.319,
+    "ollama_gb": 0.205,
+    "cpu": 74.1
+   },
+   {
+    "t": 681.6,
+    "used_gb": 7.319,
+    "ollama_gb": 0.205,
+    "cpu": 71.7
+   },
+   {
+    "t": 684.6,
+    "used_gb": 7.323,
+    "ollama_gb": 0.205,
+    "cpu": 75.8
+   },
+   {
+    "t": 687.9,
+    "used_gb": 7.337,
+    "ollama_gb": 0.205,
+    "cpu": 76.2
+   },
+   {
+    "t": 695.3,
+    "used_gb": 7.487,
+    "ollama_gb": 0.205,
+    "cpu": 95.9
+   },
+   {
+    "t": 700.2,
+    "used_gb": 7.494,
+    "ollama_gb": 0.205,
+    "cpu": 97.8
+   },
+   {
+    "t": 704.3,
+    "used_gb": 7.484,
+    "ollama_gb": 0.205,
+    "cpu": 80.9
+   },
+   {
+    "t": 708.3,
+    "used_gb": 7.486,
+    "ollama_gb": 0.205,
+    "cpu": 82.0
+   },
+   {
+    "t": 712.3,
+    "used_gb": 7.489,
+    "ollama_gb": 0.205,
+    "cpu": 79.2
+   },
+   {
+    "t": 716.2,
+    "used_gb": 7.502,
+    "ollama_gb": 0.205,
+    "cpu": 87.5
+   },
+   {
+    "t": 720.1,
+    "used_gb": 7.444,
+    "ollama_gb": 0.205,
+    "cpu": 78.3
+   },
+   {
+    "t": 723.7,
+    "used_gb": 7.44,
+    "ollama_gb": 0.205,
+    "cpu": 83.4
+   },
+   {
+    "t": 727.3,
+    "used_gb": 7.434,
+    "ollama_gb": 0.205,
+    "cpu": 76.1
+   },
+   {
+    "t": 730.8,
+    "used_gb": 7.435,
+    "ollama_gb": 0.205,
+    "cpu": 73.0
+   },
+   {
+    "t": 734.4,
+    "used_gb": 7.44,
+    "ollama_gb": 0.205,
+    "cpu": 77.6
+   },
+   {
+    "t": 738.0,
+    "used_gb": 7.436,
+    "ollama_gb": 0.205,
+    "cpu": 74.6
+   },
+   {
+    "t": 741.7,
+    "used_gb": 7.402,
+    "ollama_gb": 0.205,
+    "cpu": 79.9
+   },
+   {
+    "t": 745.4,
+    "used_gb": 7.408,
+    "ollama_gb": 0.205,
+    "cpu": 78.3
+   },
+   {
+    "t": 749.0,
+    "used_gb": 7.41,
+    "ollama_gb": 0.205,
+    "cpu": 73.9
+   },
+   {
+    "t": 752.5,
+    "used_gb": 7.411,
+    "ollama_gb": 0.205,
+    "cpu": 74.8
+   },
+   {
+    "t": 756.5,
+    "used_gb": 7.41,
+    "ollama_gb": 0.205,
+    "cpu": 81.4
+   },
+   {
+    "t": 760.2,
+    "used_gb": 7.411,
+    "ollama_gb": 0.206,
+    "cpu": 74.8
+   },
+   {
+    "t": 763.6,
+    "used_gb": 7.412,
+    "ollama_gb": 0.206,
+    "cpu": 73.6
+   },
+   {
+    "t": 767.0,
+    "used_gb": 7.411,
+    "ollama_gb": 0.206,
+    "cpu": 75.2
+   },
+   {
+    "t": 770.6,
+    "used_gb": 7.418,
+    "ollama_gb": 0.206,
+    "cpu": 77.8
+   },
+   {
+    "t": 774.1,
+    "used_gb": 7.42,
+    "ollama_gb": 0.206,
+    "cpu": 72.6
+   },
+   {
+    "t": 776.4,
+    "used_gb": 7.424,
+    "ollama_gb": 0.206,
+    "cpu": 36.7
+   },
+   {
+    "t": 779.6,
+    "used_gb": 7.422,
+    "ollama_gb": 0.206,
+    "cpu": 71.2
+   },
+   {
+    "t": 782.7,
+    "used_gb": 7.417,
+    "ollama_gb": 0.206,
+    "cpu": 72.4
+   },
+   {
+    "t": 786.4,
+    "used_gb": 7.419,
+    "ollama_gb": 0.206,
+    "cpu": 80.8
+   },
+   {
+    "t": 790.6,
+    "used_gb": 7.405,
+    "ollama_gb": 0.206,
+    "cpu": 91.3
+   },
+   {
+    "t": 794.4,
+    "used_gb": 7.42,
+    "ollama_gb": 0.206,
+    "cpu": 85.4
+   },
+   {
+    "t": 798.4,
+    "used_gb": 7.429,
+    "ollama_gb": 0.206,
+    "cpu": 87.1
+   },
+   {
+    "t": 802.2,
+    "used_gb": 7.409,
+    "ollama_gb": 0.206,
+    "cpu": 77.7
+   },
+   {
+    "t": 805.8,
+    "used_gb": 7.42,
+    "ollama_gb": 0.206,
+    "cpu": 75.3
+   },
+   {
+    "t": 809.4,
+    "used_gb": 7.431,
+    "ollama_gb": 0.206,
+    "cpu": 78.9
+   },
+   {
+    "t": 813.7,
+    "used_gb": 7.385,
+    "ollama_gb": 0.206,
+    "cpu": 82.3
+   },
+   {
+    "t": 817.4,
+    "used_gb": 7.4,
+    "ollama_gb": 0.206,
+    "cpu": 77.9
+   },
+   {
+    "t": 821.1,
+    "used_gb": 7.388,
+    "ollama_gb": 0.206,
+    "cpu": 75.7
+   },
+   {
+    "t": 824.6,
+    "used_gb": 7.415,
+    "ollama_gb": 0.206,
+    "cpu": 80.6
+   },
+   {
+    "t": 828.1,
+    "used_gb": 7.433,
+    "ollama_gb": 0.206,
+    "cpu": 77.9
+   },
+   {
+    "t": 831.6,
+    "used_gb": 7.431,
+    "ollama_gb": 0.206,
+    "cpu": 77.4
+   },
+   {
+    "t": 834.9,
+    "used_gb": 7.421,
+    "ollama_gb": 0.206,
+    "cpu": 74.2
+   },
+   {
+    "t": 838.3,
+    "used_gb": 7.421,
+    "ollama_gb": 0.206,
+    "cpu": 75.0
+   },
+   {
+    "t": 842.1,
+    "used_gb": 7.401,
+    "ollama_gb": 0.206,
+    "cpu": 82.9
+   },
+   {
+    "t": 845.5,
+    "used_gb": 7.415,
+    "ollama_gb": 0.206,
+    "cpu": 74.2
+   },
+   {
+    "t": 849.2,
+    "used_gb": 7.413,
+    "ollama_gb": 0.206,
+    "cpu": 77.6
+   },
+   {
+    "t": 852.9,
+    "used_gb": 7.408,
+    "ollama_gb": 0.206,
+    "cpu": 75.3
+   },
+   {
+    "t": 856.7,
+    "used_gb": 7.373,
+    "ollama_gb": 0.206,
+    "cpu": 83.3
+   },
+   {
+    "t": 860.6,
+    "used_gb": 7.355,
+    "ollama_gb": 0.211,
+    "cpu": 82.0
+   },
+   {
+    "t": 864.0,
+    "used_gb": 7.344,
+    "ollama_gb": 0.211,
+    "cpu": 77.5
+   },
+   {
+    "t": 867.5,
+    "used_gb": 7.348,
+    "ollama_gb": 0.211,
+    "cpu": 76.4
+   },
+   {
+    "t": 872.5,
+    "used_gb": 7.401,
+    "ollama_gb": 0.211,
+    "cpu": 86.7
+   },
+   {
+    "t": 875.9,
+    "used_gb": 7.414,
+    "ollama_gb": 0.211,
+    "cpu": 77.3
+   },
+   {
+    "t": 880.1,
+    "used_gb": 7.372,
+    "ollama_gb": 0.211,
+    "cpu": 85.7
+   },
+   {
+    "t": 883.6,
+    "used_gb": 7.38,
+    "ollama_gb": 0.211,
+    "cpu": 61.4
+   },
+   {
+    "t": 886.1,
+    "used_gb": 7.394,
+    "ollama_gb": 0.211,
+    "cpu": 39.9
+   },
+   {
+    "t": 889.6,
+    "used_gb": 7.422,
+    "ollama_gb": 0.212,
+    "cpu": 80.7
+   },
+   {
+    "t": 893.0,
+    "used_gb": 7.402,
+    "ollama_gb": 0.212,
+    "cpu": 76.5
+   },
+   {
+    "t": 896.7,
+    "used_gb": 7.42,
+    "ollama_gb": 0.212,
+    "cpu": 82.2
+   },
+   {
+    "t": 900.7,
+    "used_gb": 7.418,
+    "ollama_gb": 0.212,
+    "cpu": 83.8
+   },
+   {
+    "t": 904.6,
+    "used_gb": 7.424,
+    "ollama_gb": 0.212,
+    "cpu": 78.7
+   },
+   {
+    "t": 908.3,
+    "used_gb": 7.419,
+    "ollama_gb": 0.212,
+    "cpu": 78.4
+   },
+   {
+    "t": 913.9,
+    "used_gb": 7.472,
+    "ollama_gb": 0.212,
+    "cpu": 87.8
+   },
+   {
+    "t": 921.7,
+    "used_gb": 7.587,
+    "ollama_gb": 0.212,
+    "cpu": 96.8
+   },
+   {
+    "t": 925.5,
+    "used_gb": 7.492,
+    "ollama_gb": 0.211,
+    "cpu": 87.2
+   },
+   {
+    "t": 929.4,
+    "used_gb": 7.496,
+    "ollama_gb": 0.211,
+    "cpu": 78.6
+   },
+   {
+    "t": 933.1,
+    "used_gb": 7.495,
+    "ollama_gb": 0.211,
+    "cpu": 74.1
+   },
+   {
+    "t": 936.5,
+    "used_gb": 7.513,
+    "ollama_gb": 0.211,
+    "cpu": 74.4
+   },
+   {
+    "t": 940.1,
+    "used_gb": 7.499,
+    "ollama_gb": 0.211,
+    "cpu": 78.2
+   },
+   {
+    "t": 943.6,
+    "used_gb": 7.488,
+    "ollama_gb": 0.211,
+    "cpu": 76.9
+   },
+   {
+    "t": 947.1,
+    "used_gb": 7.488,
+    "ollama_gb": 0.211,
+    "cpu": 73.3
+   },
+   {
+    "t": 950.5,
+    "used_gb": 7.49,
+    "ollama_gb": 0.211,
+    "cpu": 73.4
+   },
+   {
+    "t": 953.8,
+    "used_gb": 7.484,
+    "ollama_gb": 0.211,
+    "cpu": 73.6
+   },
+   {
+    "t": 957.2,
+    "used_gb": 7.487,
+    "ollama_gb": 0.211,
+    "cpu": 76.0
+   },
+   {
+    "t": 962.1,
+    "used_gb": 7.499,
+    "ollama_gb": 0.211,
+    "cpu": 82.4
+   },
+   {
+    "t": 967.3,
+    "used_gb": 7.504,
+    "ollama_gb": 0.211,
+    "cpu": 92.2
+   },
+   {
+    "t": 973.4,
+    "used_gb": 7.498,
+    "ollama_gb": 0.211,
+    "cpu": 94.5
+   },
+   {
+    "t": 978.9,
+    "used_gb": 7.667,
+    "ollama_gb": 0.208,
+    "cpu": 99.7
+   },
+   {
+    "t": 982.8,
+    "used_gb": 7.594,
+    "ollama_gb": 0.208,
+    "cpu": 92.0
+   },
+   {
+    "t": 986.3,
+    "used_gb": 7.556,
+    "ollama_gb": 0.208,
+    "cpu": 81.5
+   },
+   {
+    "t": 989.9,
+    "used_gb": 7.561,
+    "ollama_gb": 0.208,
+    "cpu": 78.2
+   },
+   {
+    "t": 993.6,
+    "used_gb": 7.545,
+    "ollama_gb": 0.208,
+    "cpu": 77.9
+   },
+   {
+    "t": 996.9,
+    "used_gb": 7.55,
+    "ollama_gb": 0.208,
+    "cpu": 74.1
+   },
+   {
+    "t": 1000.4,
+    "used_gb": 7.559,
+    "ollama_gb": 0.208,
+    "cpu": 77.6
+   },
+   {
+    "t": 1004.2,
+    "used_gb": 7.55,
+    "ollama_gb": 0.208,
+    "cpu": 78.7
+   },
+   {
+    "t": 1007.6,
+    "used_gb": 7.553,
+    "ollama_gb": 0.208,
+    "cpu": 75.4
+   },
+   {
+    "t": 1011.0,
+    "used_gb": 7.561,
+    "ollama_gb": 0.209,
+    "cpu": 77.1
+   },
+   {
+    "t": 1014.5,
+    "used_gb": 7.553,
+    "ollama_gb": 0.209,
+    "cpu": 76.3
+   },
+   {
+    "t": 1018.0,
+    "used_gb": 7.554,
+    "ollama_gb": 0.209,
+    "cpu": 74.6
+   },
+   {
+    "t": 1021.4,
+    "used_gb": 7.563,
+    "ollama_gb": 0.209,
+    "cpu": 73.9
+   },
+   {
+    "t": 1024.7,
+    "used_gb": 7.565,
+    "ollama_gb": 0.209,
+    "cpu": 72.9
+   },
+   {
+    "t": 1028.0,
+    "used_gb": 7.568,
+    "ollama_gb": 0.209,
+    "cpu": 74.1
+   },
+   {
+    "t": 1031.2,
+    "used_gb": 7.565,
+    "ollama_gb": 0.208,
+    "cpu": 75.1
+   },
+   {
+    "t": 1034.7,
+    "used_gb": 7.578,
+    "ollama_gb": 0.208,
+    "cpu": 75.6
+   },
+   {
+    "t": 1038.3,
+    "used_gb": 7.574,
+    "ollama_gb": 0.208,
+    "cpu": 76.0
+   },
+   {
+    "t": 1042.0,
+    "used_gb": 7.547,
+    "ollama_gb": 0.208,
+    "cpu": 80.4
+   },
+   {
+    "t": 1046.2,
+    "used_gb": 7.562,
+    "ollama_gb": 0.208,
+    "cpu": 84.2
+   },
+   {
+    "t": 1049.7,
+    "used_gb": 7.573,
+    "ollama_gb": 0.207,
+    "cpu": 80.7
+   },
+   {
+    "t": 1053.3,
+    "used_gb": 7.574,
+    "ollama_gb": 0.207,
+    "cpu": 78.1
+   },
+   {
+    "t": 1056.9,
+    "used_gb": 7.527,
+    "ollama_gb": 0.207,
+    "cpu": 81.1
+   },
+   {
+    "t": 1060.1,
+    "used_gb": 7.529,
+    "ollama_gb": 0.207,
+    "cpu": 71.8
+   },
+   {
+    "t": 1063.2,
+    "used_gb": 7.536,
+    "ollama_gb": 0.207,
+    "cpu": 75.7
+   },
+   {
+    "t": 1067.1,
+    "used_gb": 7.577,
+    "ollama_gb": 0.207,
+    "cpu": 88.1
+   },
+   {
+    "t": 1071.1,
+    "used_gb": 7.63,
+    "ollama_gb": 0.207,
+    "cpu": 91.9
+   },
+   {
+    "t": 1075.3,
+    "used_gb": 7.572,
+    "ollama_gb": 0.206,
+    "cpu": 97.7
+   },
+   {
+    "t": 1079.6,
+    "used_gb": 7.578,
+    "ollama_gb": 0.206,
+    "cpu": 94.3
+   },
+   {
+    "t": 1083.7,
+    "used_gb": 7.593,
+    "ollama_gb": 0.206,
+    "cpu": 96.5
+   },
+   {
+    "t": 1087.6,
+    "used_gb": 7.587,
+    "ollama_gb": 0.206,
+    "cpu": 91.0
+   },
+   {
+    "t": 1091.8,
+    "used_gb": 7.589,
+    "ollama_gb": 0.206,
+    "cpu": 96.2
+   },
+   {
+    "t": 1095.9,
+    "used_gb": 7.602,
+    "ollama_gb": 0.206,
+    "cpu": 94.2
+   },
+   {
+    "t": 1100.1,
+    "used_gb": 7.605,
+    "ollama_gb": 0.206,
+    "cpu": 98.3
+   },
+   {
+    "t": 1104.2,
+    "used_gb": 7.557,
+    "ollama_gb": 0.206,
+    "cpu": 95.0
+   },
+   {
+    "t": 1107.7,
+    "used_gb": 7.571,
+    "ollama_gb": 0.206,
+    "cpu": 82.8
+   },
+   {
+    "t": 1112.0,
+    "used_gb": 7.584,
+    "ollama_gb": 0.206,
+    "cpu": 85.7
+   },
+   {
+    "t": 1119.2,
+    "used_gb": 7.655,
+    "ollama_gb": 0.206,
+    "cpu": 99.9
+   },
+   {
+    "t": 1123.8,
+    "used_gb": 7.61,
+    "ollama_gb": 0.206,
+    "cpu": 100.0
+   },
+   {
+    "t": 1127.7,
+    "used_gb": 7.465,
+    "ollama_gb": 0.205,
+    "cpu": 93.4
+   },
+   {
+    "t": 1131.3,
+    "used_gb": 7.462,
+    "ollama_gb": 0.205,
+    "cpu": 76.5
+   },
+   {
+    "t": 1134.8,
+    "used_gb": 7.473,
+    "ollama_gb": 0.205,
+    "cpu": 66.2
+   },
+   {
+    "t": 1138.2,
+    "used_gb": 7.515,
+    "ollama_gb": 0.206,
+    "cpu": 41.1
+   },
+   {
+    "t": 1141.9,
+    "used_gb": 7.491,
+    "ollama_gb": 0.206,
+    "cpu": 78.2
+   },
+   {
+    "t": 1145.4,
+    "used_gb": 7.485,
+    "ollama_gb": 0.206,
+    "cpu": 75.1
+   },
+   {
+    "t": 1148.7,
+    "used_gb": 7.494,
+    "ollama_gb": 0.206,
+    "cpu": 75.0
+   },
+   {
+    "t": 1152.2,
+    "used_gb": 7.495,
+    "ollama_gb": 0.206,
+    "cpu": 77.9
+   },
+   {
+    "t": 1155.8,
+    "used_gb": 7.496,
+    "ollama_gb": 0.206,
+    "cpu": 74.4
+   },
+   {
+    "t": 1159.0,
+    "used_gb": 7.5,
+    "ollama_gb": 0.207,
+    "cpu": 72.7
+   },
+   {
+    "t": 1162.6,
+    "used_gb": 7.503,
+    "ollama_gb": 0.207,
+    "cpu": 79.7
+   },
+   {
+    "t": 1166.1,
+    "used_gb": 7.496,
+    "ollama_gb": 0.207,
+    "cpu": 76.5
+   },
+   {
+    "t": 1169.4,
+    "used_gb": 7.484,
+    "ollama_gb": 0.207,
+    "cpu": 74.8
+   },
+   {
+    "t": 1172.9,
+    "used_gb": 7.498,
+    "ollama_gb": 0.207,
+    "cpu": 75.8
+   },
+   {
+    "t": 1176.5,
+    "used_gb": 7.501,
+    "ollama_gb": 0.207,
+    "cpu": 78.8
+   },
+   {
+    "t": 1180.0,
+    "used_gb": 7.504,
+    "ollama_gb": 0.207,
+    "cpu": 74.8
+   },
+   {
+    "t": 1183.2,
+    "used_gb": 7.5,
+    "ollama_gb": 0.206,
+    "cpu": 73.2
+   },
+   {
+    "t": 1186.7,
+    "used_gb": 7.505,
+    "ollama_gb": 0.206,
+    "cpu": 78.6
+   },
+   {
+    "t": 1190.1,
+    "used_gb": 7.501,
+    "ollama_gb": 0.206,
+    "cpu": 75.7
+   },
+   {
+    "t": 1194.5,
+    "used_gb": 7.471,
+    "ollama_gb": 0.207,
+    "cpu": 88.3
+   },
+   {
+    "t": 1198.5,
+    "used_gb": 7.469,
+    "ollama_gb": 0.207,
+    "cpu": 86.7
+   },
+   {
+    "t": 1202.3,
+    "used_gb": 7.471,
+    "ollama_gb": 0.207,
+    "cpu": 86.2
+   },
+   {
+    "t": 1206.5,
+    "used_gb": 7.504,
+    "ollama_gb": 0.207,
+    "cpu": 90.3
+   },
+   {
+    "t": 1210.4,
+    "used_gb": 7.51,
+    "ollama_gb": 0.207,
+    "cpu": 78.7
+   },
+   {
+    "t": 1214.0,
+    "used_gb": 7.517,
+    "ollama_gb": 0.207,
+    "cpu": 78.1
+   },
+   {
+    "t": 1216.8,
+    "used_gb": 7.493,
+    "ollama_gb": 0.207,
+    "cpu": 48.2
+   },
+   {
+    "t": 1220.5,
+    "used_gb": 7.514,
+    "ollama_gb": 0.207,
+    "cpu": 74.5
+   },
+   {
+    "t": 1224.1,
+    "used_gb": 7.521,
+    "ollama_gb": 0.207,
+    "cpu": 75.7
+   },
+   {
+    "t": 1227.6,
+    "used_gb": 7.51,
+    "ollama_gb": 0.207,
+    "cpu": 73.8
+   },
+   {
+    "t": 1231.1,
+    "used_gb": 7.522,
+    "ollama_gb": 0.228,
+    "cpu": 75.3
+   },
+   {
+    "t": 1234.5,
+    "used_gb": 7.509,
+    "ollama_gb": 0.207,
+    "cpu": 74.7
+   },
+   {
+    "t": 1237.9,
+    "used_gb": 7.506,
+    "ollama_gb": 0.207,
+    "cpu": 77.1
+   },
+   {
+    "t": 1241.7,
+    "used_gb": 7.51,
+    "ollama_gb": 0.207,
+    "cpu": 75.3
+   },
+   {
+    "t": 1245.2,
+    "used_gb": 7.51,
+    "ollama_gb": 0.207,
+    "cpu": 76.9
+   },
+   {
+    "t": 1249.3,
+    "used_gb": 7.486,
+    "ollama_gb": 0.207,
+    "cpu": 83.8
+   },
+   {
+    "t": 1252.8,
+    "used_gb": 7.494,
+    "ollama_gb": 0.207,
+    "cpu": 75.5
+   },
+   {
+    "t": 1256.5,
+    "used_gb": 7.488,
+    "ollama_gb": 0.207,
+    "cpu": 76.4
+   },
+   {
+    "t": 1259.9,
+    "used_gb": 7.493,
+    "ollama_gb": 0.207,
+    "cpu": 74.4
+   },
+   {
+    "t": 1263.3,
+    "used_gb": 7.497,
+    "ollama_gb": 0.207,
+    "cpu": 73.9
+   },
+   {
+    "t": 1266.8,
+    "used_gb": 7.492,
+    "ollama_gb": 0.207,
+    "cpu": 77.2
+   },
+   {
+    "t": 1270.5,
+    "used_gb": 7.478,
+    "ollama_gb": 0.207,
+    "cpu": 79.2
+   },
+   {
+    "t": 1274.3,
+    "used_gb": 7.437,
+    "ollama_gb": 0.207,
+    "cpu": 81.4
+   },
+   {
+    "t": 1278.0,
+    "used_gb": 7.436,
+    "ollama_gb": 0.207,
+    "cpu": 75.6
+   },
+   {
+    "t": 1281.9,
+    "used_gb": 7.531,
+    "ollama_gb": 0.207,
+    "cpu": 84.6
+   },
+   {
+    "t": 1285.9,
+    "used_gb": 7.558,
+    "ollama_gb": 0.207,
+    "cpu": 90.2
+   },
+   {
+    "t": 1289.7,
+    "used_gb": 7.516,
+    "ollama_gb": 0.207,
+    "cpu": 84.0
+   },
+   {
+    "t": 1293.8,
+    "used_gb": 7.505,
+    "ollama_gb": 0.207,
+    "cpu": 82.8
+   },
+   {
+    "t": 1297.4,
+    "used_gb": 7.498,
+    "ollama_gb": 0.207,
+    "cpu": 77.4
+   },
+   {
+    "t": 1301.0,
+    "used_gb": 7.462,
+    "ollama_gb": 0.207,
+    "cpu": 78.9
+   },
+   {
+    "t": 1304.8,
+    "used_gb": 7.449,
+    "ollama_gb": 0.207,
+    "cpu": 88.0
+   },
+   {
+    "t": 1309.0,
+    "used_gb": 7.472,
+    "ollama_gb": 0.207,
+    "cpu": 89.5
+   },
+   {
+    "t": 1313.2,
+    "used_gb": 7.486,
+    "ollama_gb": 0.207,
+    "cpu": 95.0
+   },
+   {
+    "t": 1317.6,
+    "used_gb": 7.538,
+    "ollama_gb": 0.207,
+    "cpu": 96.9
+   },
+   {
+    "t": 1321.8,
+    "used_gb": 7.506,
+    "ollama_gb": 0.207,
+    "cpu": 97.1
+   },
+   {
+    "t": 1325.9,
+    "used_gb": 7.504,
+    "ollama_gb": 0.207,
+    "cpu": 96.1
+   },
+   {
+    "t": 1329.8,
+    "used_gb": 7.508,
+    "ollama_gb": 0.207,
+    "cpu": 92.6
+   },
+   {
+    "t": 1333.7,
+    "used_gb": 7.517,
+    "ollama_gb": 0.207,
+    "cpu": 90.3
+   },
+   {
+    "t": 1338.2,
+    "used_gb": 7.53,
+    "ollama_gb": 0.207,
+    "cpu": 85.6
+   },
+   {
+    "t": 1342.0,
+    "used_gb": 7.535,
+    "ollama_gb": 0.207,
+    "cpu": 77.7
+   },
+   {
+    "t": 1345.8,
+    "used_gb": 7.485,
+    "ollama_gb": 0.207,
+    "cpu": 76.6
+   },
+   {
+    "t": 1349.1,
+    "used_gb": 7.48,
+    "ollama_gb": 0.207,
+    "cpu": 75.9
+   },
+   {
+    "t": 1352.4,
+    "used_gb": 7.486,
+    "ollama_gb": 0.207,
+    "cpu": 72.8
+   },
+   {
+    "t": 1355.6,
+    "used_gb": 7.483,
+    "ollama_gb": 0.207,
+    "cpu": 73.9
+   },
+   {
+    "t": 1359.0,
+    "used_gb": 7.484,
+    "ollama_gb": 0.207,
+    "cpu": 74.4
+   },
+   {
+    "t": 1362.6,
+    "used_gb": 7.487,
+    "ollama_gb": 0.207,
+    "cpu": 75.7
+   },
+   {
+    "t": 1366.0,
+    "used_gb": 7.487,
+    "ollama_gb": 0.207,
+    "cpu": 73.8
+   },
+   {
+    "t": 1369.7,
+    "used_gb": 7.494,
+    "ollama_gb": 0.207,
+    "cpu": 79.2
+   },
+   {
+    "t": 1373.4,
+    "used_gb": 7.458,
+    "ollama_gb": 0.207,
+    "cpu": 84.3
+   },
+   {
+    "t": 1377.0,
+    "used_gb": 7.463,
+    "ollama_gb": 0.207,
+    "cpu": 73.0
+   },
+   {
+    "t": 1380.6,
+    "used_gb": 7.466,
+    "ollama_gb": 0.207,
+    "cpu": 75.4
+   },
+   {
+    "t": 1384.1,
+    "used_gb": 7.464,
+    "ollama_gb": 0.207,
+    "cpu": 75.4
+   },
+   {
+    "t": 1387.5,
+    "used_gb": 7.451,
+    "ollama_gb": 0.207,
+    "cpu": 73.4
+   },
+   {
+    "t": 1391.0,
+    "used_gb": 7.457,
+    "ollama_gb": 0.206,
+    "cpu": 75.4
+   },
+   {
+    "t": 1394.6,
+    "used_gb": 7.427,
+    "ollama_gb": 0.206,
+    "cpu": 81.8
+   },
+   {
+    "t": 1399.0,
+    "used_gb": 7.438,
+    "ollama_gb": 0.206,
+    "cpu": 92.4
+   },
+   {
+    "t": 1403.4,
+    "used_gb": 7.49,
+    "ollama_gb": 0.205,
+    "cpu": 95.7
+   },
+   {
+    "t": 1407.5,
+    "used_gb": 7.505,
+    "ollama_gb": 0.205,
+    "cpu": 95.6
+   },
+   {
+    "t": 1411.7,
+    "used_gb": 7.494,
+    "ollama_gb": 0.205,
+    "cpu": 95.5
+   },
+   {
+    "t": 1415.8,
+    "used_gb": 7.506,
+    "ollama_gb": 0.205,
+    "cpu": 97.9
+   },
+   {
+    "t": 1419.9,
+    "used_gb": 7.517,
+    "ollama_gb": 0.205,
+    "cpu": 94.7
+   },
+   {
+    "t": 1424.1,
+    "used_gb": 7.511,
+    "ollama_gb": 0.205,
+    "cpu": 86.5
+   },
+   {
+    "t": 1427.9,
+    "used_gb": 7.475,
+    "ollama_gb": 0.204,
+    "cpu": 83.8
+   },
+   {
+    "t": 1431.5,
+    "used_gb": 7.476,
+    "ollama_gb": 0.204,
+    "cpu": 74.4
+   },
+   {
+    "t": 1434.8,
+    "used_gb": 7.425,
+    "ollama_gb": 0.204,
+    "cpu": 77.0
+   },
+   {
+    "t": 1438.3,
+    "used_gb": 7.427,
+    "ollama_gb": 0.204,
+    "cpu": 77.4
+   },
+   {
+    "t": 1441.6,
+    "used_gb": 7.43,
+    "ollama_gb": 0.204,
+    "cpu": 75.3
+   },
+   {
+    "t": 1445.0,
+    "used_gb": 7.422,
+    "ollama_gb": 0.204,
+    "cpu": 76.4
+   },
+   {
+    "t": 1448.2,
+    "used_gb": 7.42,
+    "ollama_gb": 0.204,
+    "cpu": 74.8
+   },
+   {
+    "t": 1451.5,
+    "used_gb": 7.41,
+    "ollama_gb": 0.204,
+    "cpu": 75.3
+   },
+   {
+    "t": 1454.9,
+    "used_gb": 7.424,
+    "ollama_gb": 0.204,
+    "cpu": 70.9
+   },
+   {
+    "t": 1457.8,
+    "used_gb": 7.457,
+    "ollama_gb": 0.205,
+    "cpu": 64.0
+   },
+   {
+    "t": 1461.5,
+    "used_gb": 7.47,
+    "ollama_gb": 0.205,
+    "cpu": 78.6
+   },
+   {
+    "t": 1465.1,
+    "used_gb": 7.434,
+    "ollama_gb": 0.205,
+    "cpu": 78.7
+   },
+   {
+    "t": 1468.4,
+    "used_gb": 7.436,
+    "ollama_gb": 0.205,
+    "cpu": 74.6
+   },
+   {
+    "t": 1471.6,
+    "used_gb": 7.432,
+    "ollama_gb": 0.205,
+    "cpu": 75.4
+   },
+   {
+    "t": 1475.2,
+    "used_gb": 7.45,
+    "ollama_gb": 0.205,
+    "cpu": 77.3
+   },
+   {
+    "t": 1478.8,
+    "used_gb": 7.443,
+    "ollama_gb": 0.205,
+    "cpu": 75.2
+   },
+   {
+    "t": 1482.1,
+    "used_gb": 7.436,
+    "ollama_gb": 0.205,
+    "cpu": 75.4
+   },
+   {
+    "t": 1485.3,
+    "used_gb": 7.436,
+    "ollama_gb": 0.205,
+    "cpu": 74.1
+   },
+   {
+    "t": 1488.8,
+    "used_gb": 7.435,
+    "ollama_gb": 0.205,
+    "cpu": 77.0
+   },
+   {
+    "t": 1492.4,
+    "used_gb": 7.432,
+    "ollama_gb": 0.205,
+    "cpu": 74.0
+   },
+   {
+    "t": 1495.7,
+    "used_gb": 7.434,
+    "ollama_gb": 0.205,
+    "cpu": 72.7
+   },
+   {
+    "t": 1499.5,
+    "used_gb": 7.395,
+    "ollama_gb": 0.205,
+    "cpu": 85.1
+   },
+   {
+    "t": 1503.0,
+    "used_gb": 7.387,
+    "ollama_gb": 0.205,
+    "cpu": 74.3
+   },
+   {
+    "t": 1506.3,
+    "used_gb": 7.395,
+    "ollama_gb": 0.205,
+    "cpu": 73.9
+   },
+   {
+    "t": 1509.5,
+    "used_gb": 7.395,
+    "ollama_gb": 0.205,
+    "cpu": 72.6
+   },
+   {
+    "t": 1512.9,
+    "used_gb": 7.395,
+    "ollama_gb": 0.205,
+    "cpu": 77.4
+   },
+   {
+    "t": 1516.4,
+    "used_gb": 7.393,
+    "ollama_gb": 0.205,
+    "cpu": 76.6
+   },
+   {
+    "t": 1519.8,
+    "used_gb": 7.397,
+    "ollama_gb": 0.205,
+    "cpu": 76.0
+   },
+   {
+    "t": 1523.1,
+    "used_gb": 7.407,
+    "ollama_gb": 0.205,
+    "cpu": 74.3
+   },
+   {
+    "t": 1526.7,
+    "used_gb": 7.421,
+    "ollama_gb": 0.205,
+    "cpu": 78.0
+   },
+   {
+    "t": 1529.0,
+    "used_gb": 7.415,
+    "ollama_gb": 0.205,
+    "cpu": 34.0
+   }
+  ],
+  "stages": [
+   {
+    "name": "router",
+    "start": 0.0,
+    "end": 90.4
+   },
+   {
+    "name": "attachment",
+    "start": 90.4,
+    "end": 90.4
+   },
+   {
+    "name": "OCR",
+    "start": 90.4,
+    "end": 118.6
+   },
+   {
+    "name": "search",
+    "start": 118.6,
+    "end": 148.2
+   },
+   {
+    "name": "model speed",
+    "start": 148.2,
+    "end": 317.5
+   },
+   {
+    "name": "workflow",
+    "start": 317.5,
+    "end": 1529.0
+   }
+  ]
+ },
+ "sovereignty": {
+  "allowed": 112,
+  "blocked": 0,
+  "external_connections": 0,
+  "sovereign": true
+ }
+}

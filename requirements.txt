@@ -16,3 +16,9 @@ pypdfium2>=4.20         # renders scanned PDF pages to images for OCR
 python-docx>=1.1        # reads Word .docx files
 pytesseract>=0.3.10     # connects Python to the Tesseract OCR program
 Pillow>=10.0            # opens and cleans up images before OCR
+
+# --- Phase 3: agent tools ---
+openpyxl>=3.1           # creates Excel (.xlsx) spreadsheets
+
+# --- Phase 6.16: trained classifiers (router + attachment check) ---
+scikit-learn>=1.5       # logistic regression, TF-IDF and cross-validation (includes joblib)

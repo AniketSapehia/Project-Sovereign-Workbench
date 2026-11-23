@@ -1,0 +1,297 @@
+{
+ "date": "2026-11-05 02:14",
+ "machine": "Windows 11, 8 CPU threads, 8.4 GB RAM",
+ "models": {
+  "general": "qwen2.5:3b",
+  "code": "qwen2.5-coder:3b",
+  "vision": "qwen3-vl:2b",
+  "embedding": "nomic-embed-text"
+ },
+ "router": {
+  "labels": [
+   "general",
+   "code"
+  ],
+  "matrix": {
+   "general": {
+    "general": 13,
+    "code": 2
+   },
+   "code": {
+    "general": 0,
+    "code": 15
+   }
+  },
+  "accuracy": 0.9333333333333333,
+  "per_label": {
+   "general": {
+    "precision": 1.0,
+    "recall": 0.8666666666666667,
+    "f1": 0.9285714285714286
+   },
+   "code": {
+    "precision": 0.8823529411764706,
+    "recall": 1.0,
+    "f1": 0.9375
+   }
+  },
+  "wrong": [
+   {
+    "task": "Explain why cavitation damages pump impellers",
+    "correct": "general",
+    "predicted": "code",
+    "scores": {
+     "general": 0.567,
+     "code": 0.575
+    }
+   },
+   {
+    "task": "How often must critical pumps be checked for vibration?",
+    "correct": "general",
+    "predicted": "code",
+    "scores": {
+     "general": 0.67,
+     "code": 0.682
+    }
+   }
+  ],
+  "n": 30
+ },
+ "attachment": {
+  "labels": [
+   "warn",
+   "no warning"
+  ],
+  "matrix": {
+   "warn": {
+    "warn": 10,
+    "no warning": 0
+   },
+   "no warning": {
+    "warn": 0,
+    "no warning": 10
+   }
+  },
+  "accuracy": 1.0,
+  "per_label": {
+   "warn": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "no warning": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   }
+  },
+  "wrong": [],
+  "n": 20
+ },
+ "ocr": [
+  {
+   "file": "IR-2026-118 Scanned Inspection Report.pdf",
+   "pages": 2,
+   "seconds": 10.5,
+   "cer": 0.005194805194805195,
+   "word_accuracy": 0.9828326180257511,
+   "tesseract_confidence": [
+    93.3,
+    95.5
+   ],
+   "uncertain_words": 3,
+   "key_values_found": 15,
+   "key_values_total": 18,
+   "key_values_missed": [
+    "5.1",
+    "2.7",
+    "74"
+   ]
+  },
+  {
+   "file": "IR-2026-118 page1 photo.jpg",
+   "pages": 1,
+   "seconds": 4.1,
+   "cer": 0.002352941176470588,
+   "word_accuracy": 0.9765625,
+   "tesseract_confidence": [
+    94.8
+   ],
+   "uncertain_words": 1,
+   "key_values_found": 13,
+   "key_values_total": 14,
+   "key_values_missed": [
+    "2.7"
+   ]
+  }
+ ],
+ "retrieval": {
+  "rows": [
+   {
+    "question": "What action is required when vibration exceeds 7.1 mm/s?",
+    "expected": "SOP-MECH-004 / Vibration Severity",
+    "rank": 2,
+    "top": "REF-ENG-001 Units and Co / 7. Vibration velocity"
+   },
+   {
+    "question": "How often are critical pumps monitored?",
+    "expected": "SOP-MECH-004 / Frequency",
+    "rank": 1,
+    "top": "SOP-MECH-004 Centrifugal / 4. Measurement Frequency"
+   },
+   {
+    "question": "What is the alarm limit for bearing housing temperature?",
+    "expected": "SOP-MECH-004 / Temperature",
+    "rank": 1,
+    "top": "SOP-MECH-004 Centrifugal / 6. Bearing Temperature Limits"
+   },
+   {
+    "question": "Who plans corrective maintenance after a limit is exceeded?",
+    "expected": "SOP-MECH-004 / Responsibilities",
+    "rank": 1,
+    "top": "SOP-MECH-004 Centrifugal / 3. Responsibilities"
+   },
+   {
+    "question": "How is the remaining life of a pressure vessel calculated?",
+    "expected": "SOP-INSP-011 / Remaining Life",
+    "rank": 1,
+    "top": "SOP-INSP-011 Pressure Ve / 5. Remaining Life Calculation"
+   },
+   {
+    "question": "When is the next thickness inspection due?",
+    "expected": "SOP-INSP-011 / Next Inspection",
+    "rank": 1,
+    "top": "SOP-INSP-011 Pressure Ve / 6. Next Inspection Date"
+   },
+   {
+    "question": "What happens if actual thickness is below the minimum required?",
+    "expected": "SOP-INSP-011 / Acceptance",
+    "rank": 3,
+    "top": "SOP-INSP-011 Pressure Ve / 3. Key Definitions"
+   },
+   {
+    "question": "Who can approve spending of 20 lakh rupees?",
+    "expected": "SOP-ADM-002 / Delegation",
+    "rank": 1,
+    "top": "SOP-ADM-002 Approval Not / 3. Delegation of Financial Pow"
+   },
+   {
+    "question": "What sections must an approval note contain?",
+    "expected": "SOP-ADM-002 / Format",
+    "rank": 1,
+    "top": "SOP-ADM-002 Approval Not / 2. Standard Format of an Appro"
+   },
+   {
+    "question": "What gas test limits apply before welding?",
+    "expected": "SOP-SAFE-007 / Gas Test",
+    "rank": 1,
+    "top": "SOP-SAFE-007 Hot Work Pe / 3. Gas Test Before Work"
+   },
+   {
+    "question": "How long is a hot work permit valid?",
+    "expected": "SOP-SAFE-007 / Validity",
+    "rank": 1,
+    "top": "SOP-SAFE-007 Hot Work Pe / 5. Validity"
+   },
+   {
+    "question": "Why did the seal of the crude charge pump keep failing?",
+    "expected": "MEMO-2026-031 / (any)",
+    "rank": 1,
+    "top": "MEMO-2026-031 Seal failu / "
+   }
+  ],
+  "hit@1": 0.8333333333333334,
+  "hit@k": 1.0,
+  "k": 4,
+  "mrr": 0.9027777777777778
+ },
+ "agent": [
+  {
+   "name": "Corrosion calculation",
+   "model": "qwen2.5:3b",
+   "seconds": 355.0,
+   "steps": 1,
+   "tools": [
+    "run_python"
+   ],
+   "checks": {
+    "rate 0.29": true,
+    "remaining life ~3.8": true,
+    "next inspection ~1.9": true
+   },
+   "success": true,
+   "answer": "\n(0.29000000000000004, 3.7931034482758603, 1.8965517241379302)\r\n\r\n[Variables after running]\r\n  original_thickness = 12.0\r\n  actual_thickness = 9.1\r\n  min_required_thickness = 8.0\r\n  years_in_service = 10\r\n  previous_survey_years = 10\r\n  long_term_corrosion_rate = 0.29\r\n  short_term_corrosion_rate = 0.29\r\n  corrosion_rate = 0.29\r\n  remaining_life = 3.793103\r\n  to_next_inspection = 1.896552\nTested code saved as inspection_calculations (2).py.The corrosion rate of the pressure vessel is approximately 0.29 mm/year. The remaining life is approximately 3.79 years. The next inspection date is within 1.89 years, which is the shorter of the remaining life and half of the remaining life.\n\nFor record-keeping, the corrosion rate, remaining life, and next inspection date are as follows:\n- Corrosion Rate: 0.29 mm/year\n- Remaining Life: 3.79 years\n- Next Inspection Date: Within 1.89 years\n\nThe results are saved in a Python script named `inspection_calculations.py`."
+  },
+  {
+   "name": "Coding task",
+   "model": "qwen2.5-coder:3b",
+   "seconds": 195.3,
+   "steps": 1,
+   "tools": [
+    "run_python"
+   ],
+   "checks": {
+    "4.5 -> B": true,
+    "6.4 -> C": true,
+    "7.5 -> D": true,
+    "tests passed, code saved": true
+   },
+   "success": true,
+   "answer": "```python\nimport math\n\ndef classify_vibration(vibration):\n    if vibration <= 2.8:\n        return \"Zone A\"\n    elif vibration <= 4.5:\n        return \"Zone B\"\n    elif vibration <= 7.1:\n        return \"Zone C\"\n    else:\n        return \"Zone D\"\n\n# Test the function with the given examples\nprint(classify_vibration(2.1))  # Expected: Zone A\nprint(classify_vibration(4.5))  # Expected: Zone B\nprint(classify_vibration(6.4))  # Expected: Zone C\nprint(classify_vibration(7.5))  # Expected: Zone D\n```\n\n**Explanation**: This function `classify_vibration` takes a vibration reading as input and classifies it into one of four zones based on the given thresholds. The function uses simple conditional statements to determine which zone the reading falls into and returns the corresponding zone name. The test cases at the end of the code demonstrate how the function works with the provided examples.\nZone A\r\nZone B\r\nZone C\r\nZone D\n\n✓ Ran in the sandbox without errors. The output in the 🐍 step is the real output, but it has NOT been checked for correctness: compare it with a value you know before using it."
+  },
+  {
+   "name": "Zone check on scanned report",
+   "model": "qwen2.5:3b",
+   "seconds": 873.1,
+   "steps": 1,
+   "tools": [
+    "write_text_file"
+   ],
+   "checks": {
+    "6.4 mm/s": true,
+    "Zone C": true,
+    "30 days": true
+   },
+   "success": true,
+   "answer": "To determine the highest vibration zone and what SOP-MECH-004 requires, we need to follow these steps:\n\n1. Identify the highest vibration reading from the report.\n2. Determine the vibration zone based on the highest reading.\n3. Find the corrective actions required by SOP-MECH-004 for that zone.\n\nFirst, let's extract the vibration readings from the report:\n\n[1] Source: IR-2026-118 Scanned Inspection Report.pdf, page 1\n1. Vibration readings (mm/s RMS)\n\nLocation Horizontal Vertical Axial\nDE bearing 6.4 4.1 3.2\nNDE bearing [unclear: yal] 3.6 [unclear: PAT]\n\nFrom this, we can see that the DE bearing has the highest reading of 6.4 mm/s RMS.\n\nNext, let's find the corresponding zone in SOP-MECH-004:\n\n[3] Source: SOP-MECH-004 Centrifugal Pump Condition Monitoring.md, page 1, section \"(whole document)\"\n## 5. Vibration Severity Zones\nZone A (up to 2.8 mm/s): Good. Newly commissioned machines normally fall in this zone. No action.\nZone B (above 2.8 and up to 4.5 mm/s): Acceptable for unrestricted long-term operation. Continue normal monitoring.\nZone C (above 4.5 and up to 7.1 mm/s): Not acceptable for long-term operation. Increase monitoring to weekly, carry out spectrum analysis to find the cause, and plan corrective maintenance within 30 days.\nZone D (above 7.1 mm/s): Danger. Vibration may cause damage. Inform the Shift In-charge immediately, change over to the standby pump, and stop the pump within 24 hours.\n\nThe highest reading of 6.4 mm/s RMS falls within Zone C.\n\nFinally, let's find the corrective actions required by SOP-MECH-004 for Zone C:\n\n[3] Source: SOP-MECH-004 Centrifugal Pump Condition Monitoring.md, page 1, section \"(whole document)\"\n## 7. Corrective Actions\nCommon causes of high vibration are unbalance, misalignment, bearing wear, looseness, cavitation and pipe strain. The spectrum analysis report must identify the most likely cause before parts are ordered. Bearing replacement must be done together with a laser alignment check of the pump-motor coupling. After any corrective work the pump must return to Zone A or Zone B.\n\nFor Zone C, the corrective actions are:\n- Common causes of high vibration are unbalance, misalignment, bearing wear, looseness, cavitation and pipe strain. The spectrum analysis report must identify the most likely cause before parts are ordered.\n- Bearing replacement must be done together with a laser alignment check of the pump-motor coupling.\n- After any corrective work the pump must return to Zone A or Zone B.\n\nNow, let's summarize the findings:\n- The highest vibration reading is 6.4 mm/s RMS, which falls within Zone C.\n- SOP-MECH-004 requires:\n  - Common causes of high vibration are unbalance, misalignment, bearing wear, looseness, cavitation and pipe strain. The spectrum analysis report must identify the most likely cause before parts are ordered.\n  - Bearing replacement must be done together with a laser alignment check of the pump-motor coupling.\n  - After any corrective work the pump must return to Zone A or Zone B.\n\nBased on the highest vibration reading and the corresponding zone, the highest vibration zone is Zone C, and the corrective actions required by SOP-MECH-004 are as stated above.\nThe highest vibration zone in the report is Zone C, and the corrective actions required by SOP-MECH-004 are as follows:\n\n1. Common causes of high vibration are unbalance, misalignment, bearing wear, looseness, cavitation, and pipe strain. The spectrum analysis report must identify the most likely cause before parts are ordered.\n2. Bearing replacement must be done together with a laser alignment check of the pump-motor coupling.\n3. After any corrective work the pump must return to Zone A or Zone B.\n\nThis information is documented in the report file `vibration_zone_report.txt`."
+  },
+  {
+   "name": "Unit conversion",
+   "model": "qwen2.5-coder:3b",
+   "seconds": 530.8,
+   "steps": 3,
+   "tools": [
+    "run_python",
+    "run_python",
+    "run_python"
+   ],
+   "checks": {
+    "100 psi = 6.89 bar": true,
+    "tests passed, code saved": false
+   },
+   "success": false,
+   "answer": "```python\ndef psi_to_bar(psi):\n    return psi * 0.0689476\n\n# Test the function\ntest_input = 100\ntest_output = psi_to_bar(test_input)\nprint(f\"{test_input} psi is equal to {test_output} bar.\")\n\n# Check function with known values\nassert abs(psi_to_bar(14.5038) - 1) < 1e-6  # 14.5038 psi should be exactly 1 bar\nassert abs(psi_to_bar(100) - 6.89476) < 1e-6  # 100 psi should be 6.89476 bar\n```\n100 psi is equal to 6.89476 bar.\r\nTraceback (most recent call last):\r\n  File \"sandbox_runner.py\", line 81, in <module>\r\n    exec(compile(_tree, \"ai_code.py\", \"exec\"), _ns)\r\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"ai_code.py\", line 10, in <module>\r\nAssertionErrorIt appears there is an issue with the expected value in the test. The expected value for 14.5038 psi should indeed be 1 bar, but the function returns 0.9999999999999999, which is close to 1 but not exactly 1 due to floating-point precision errors. Let's adjust the expected value to account for this.\n\nHere is the corrected code:\n\n```python\ndef psi_to_bar(psi):\n    return psi * 0.0689476\n\n# Test the function\ntest_input = 100\ntest_output = psi_to_bar(test_input)\nprint(f\"{test_input} psi is equal to {test_output} bar.\")\n\n# Check function with known values\nassert abs(psi_to_bar(14.5038) - 1) < 1e-6  # 14.5038 psi should be approximately 1 bar\nassert abs(psi_to_bar(100) - 6.89476) < 1e-6  # 100 psi should be approximately 6.89476 bar\n```\n\nThis should now correctly handle the conversion and test the function against the expected values.\n100 psi is equal to 6.89476 bar.\r\nTraceback (most recent call last):\r\n  File \"sandbox_runner.py\", line 81, in <module>\r\n    exec(compile(_tree, \"ai_code.py\", \"exec\"), _ns)\r\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"ai_code.py\", line 10, in <module>\r\nAssertionErrorThe issue is with the expected value in the test. The expected value for 14.5038 psi should be 1 bar, but the function returns 0.9999999999999999, which is close to 1 but not exactly 1 due to floating-point precision errors. Let's adjust the expected value to account for this.\n\nHere is the corrected code:\n\n```python\ndef psi_to_bar(psi):\n    return psi * 0.0689476\n\n# Test the function\ntest_input = 100\ntest_output = psi_to_bar(test_input)\nprint(f\"{test_input} psi is equal to {test_output} bar.\")\n\n# Check function with known values\nassert abs(psi_to_bar(14.5038) - 1) < 1e-6  # 14.5038 psi should be approximately 1 bar\nassert abs(psi_to_bar(100) - 6.89476) < 1e-6  # 100 psi should be approximately 6.89476 bar\n```\n\nThis should now correctly handle the conversion and test the function against the expected values.\n100 psi is equal to 6.89476 bar.\r\nTraceback (most recent call last):\r\n  File \"sandbox_runner.py\", line 81, in <module>\r\n    exec(compile(_tree, \"ai_code.py\", \"exec\"), _ns)\r\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"ai_code.py\", line 10, in <module>\r\nAssertionErrorThe code could not be made to run correctly in 3 attempts. The errors are shown in the steps above."
+  },
+  {
+   "name": "Unit conversion (flow)",
+   "model": "qwen2.5-coder:3b",
+   "seconds": 167.4,
+   "steps": 1,
+   "tools": [
+    "run_python"
+   ],
+   "checks": {
+    "1000 bbl/day = 6.62 m3/h": true,
+    "tests passed, code saved": true
+   },
+   "success": true,
+   "answer": "```python\ndef barrels_to_cubic_meters_per_hour(barrels_per_day):\n    # 1 barrel (oil, bbl) = 158.987 litres\n    # 1 m³/h = 4.40287 US gpm\n    # 1 barrel/day = 0.00662447 m³/h\n    return barrels_per_day * 0.00662447\n\n# Test the function with 1000 bbl/day\ncheck_input = 1000\ncheck_output = 6.62447\ntolerance = 1e-9\n\nassert abs(barrels_to_cubic_meters_per_hour(check_input) - check_output) < tolerance\n\nprint(f\"{check_input} bbl/day is equal to {barrels_to_cubic_meters_per_hour(check_input):.4f} m³/h\")\n```\n\nExplanation:\nThe function `barrels_to_cubic_meters_per_hour` converts barrels per day to cubic metres per hour using the given conversion factor. The test checks if the function's output is within a small tolerance of the expected value, confirming the conversion is accurate.\n1000 bbl/day is equal to 6.6245 m³/h\r\n\r\n[Variables after running]\r\n  check_input = 1000\r\n  check_output = 6.62447\r\n  tolerance = 1e-09\n\n✓ Ran in the sandbox without errors. The output in the 🐍 step is the real output, but it has NOT been checked for correctness: compare it with a value you know before using it."
+  }
+ ],
+ "sovereignty": {
+  "allowed": 99,
+  "blocked": 0,
+  "external_connections": 0,
+  "sovereign": true
+ }
+}

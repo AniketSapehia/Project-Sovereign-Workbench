@@ -1,0 +1,119 @@
+task,label,category
+The motor on P-3301B tripped twice last night on overload. What should the electrician check first?,general,Two-sentence requests
+We have a turnaround in March. Help me list the long-lead items to order now.,general,Two-sentence requests
+Our cooling tower fan is vibrating at 5.2 mm/s. Is that a problem?,general,Two-sentence requests
+I need to brief new trainees tomorrow. What are the five most important hot work rules?,general,Two-sentence requests
+The vendor quoted 14 lakh for an impeller. Who has to approve that?,general,Two-sentence requests
+Our UT readings dropped 0.4 mm in two years. How worried should we be?,general,Two-sentence requests
+The pressure gauge on the discharge reads zero. What could cause that?,general,Two-sentence requests
+A contractor wants to weld near the tank farm today. What has to happen first?,general,Two-sentence requests
+Why does a motor draw more current when the pump is throttled less?,general,"Other departments (electrical, instruments, stores, HR)"
+What is the difference between a 4-20 mA and a HART transmitter?,general,"Other departments (electrical, instruments, stores, HR)"
+How often should earthing pits be tested?,general,"Other departments (electrical, instruments, stores, HR)"
+What does IP65 mean on a motor nameplate?,general,"Other departments (electrical, instruments, stores, HR)"
+How do I raise a material requisition for spare bearings?,general,"Other departments (electrical, instruments, stores, HR)"
+What is the minimum stock we should keep for mechanical seals?,general,"Other departments (electrical, instruments, stores, HR)"
+Draft a leave application for two days next week,general,"Other departments (electrical, instruments, stores, HR)"
+How many hours of overtime can a technician work in a month?,general,"Other departments (electrical, instruments, stores, HR)"
+What calibration interval is normal for pressure gauges?,general,"Other departments (electrical, instruments, stores, HR)"
+Why does a VFD reduce energy use on a centrifugal pump?,general,"Other departments (electrical, instruments, stores, HR)"
+What is the function of the minimum flow recirculation valve?,general,Everyday uses of code words
+Create a program of inspections for the coming year,general,Everyday uses of code words
+What is the operating logic of the standby auto-start?,general,Everyday uses of code words
+Which code applies to piping design in our refinery?,general,Everyday uses of code words
+What is the script I should read at the start of a permit meeting?,general,Everyday uses of code words
+Describe the test procedure for a high-level alarm,general,Everyday uses of code words
+What does the function key on the vibration meter do?,general,Everyday uses of code words
+Prepare a training programme for new operators,general,Everyday uses of code words
+Explain the sequence of the pump start-up interlocks,general,Everyday uses of code words
+What are the variables that affect NPSH available?,general,Everyday uses of code words
+What does a debug session mean in DCS commissioning?,general,Everyday uses of code words
+How do I loop in the safety officer on this permit?,general,Everyday uses of code words
+Estimate the annual energy cost of a 75 kW pump running 8000 hours at 8 rupees per kWh,general,Calculations in words
+"If corrosion is 0.15 mm a year and we have 2.1 mm left, how long until minimum thickness?",general,Calculations in words
+What is 15 percent of 12 lakh?,general,Calculations in words
+How many shifts are needed for a 60-hour job with 8-hour shifts?,general,Calculations in words
+"Average these temperatures: 71, 74, 69 and 77",general,Calculations in words
+Convert 3 m3/h to litres per minute,general,Calculations in words
+What is the efficiency if hydraulic power is 30 kW and motor input is 45 kW?,general,Calculations in words
+"Add up these costs: 2.5 lakh, 80,000 and 1.2 lakh",general,Calculations in words
+Write a 200-word article for the plant newsletter about our zero-incident month,general,Writing and communication
+Reply to the GM saying the pump will be back in service by Friday,general,Writing and communication
+Make my email sound more polite: send the report now,general,Writing and communication
+Suggest a title for a presentation on seal failures,general,Writing and communication
+Correct the grammar: the pump have been repaired yesterday,general,Writing and communication
+Write a WhatsApp message to the team about tomorrow's shutdown,general,Writing and communication
+"Turn these notes into a short paragraph: seal leak, flush blocked, cleaned, OK now",general,Writing and communication
+Give me a motivational quote for the safety week poster,general,Writing and communication
+Good morning,general,Very short messages
+ok thanks,general,Very short messages
+why?,general,Very short messages
+more detail please,general,Very short messages
+and the NDE side?,general,Very short messages
+yes do that,general,Very short messages
+What is a root cause analysis and when should we do one?,general,Concepts and advice
+Is it better to repair or replace a pump with three seal failures a year?,general,Concepts and advice
+What are the signs of a failing coupling?,general,Concepts and advice
+How do I prepare for a safety audit?,general,Concepts and advice
+What is predictive maintenance?,general,Concepts and advice
+What should be in a pump datasheet?,general,Concepts and advice
+Explain the bathtub curve for equipment failures,general,Concepts and advice
+What are the risks of running a pump dry?,general,Concepts and advice
+"I have a CSV of 10,000 readings. I want the top 10 pumps by average vibration, in Python.",code,Two-sentence requests
+My pandas groupby gives a weird MultiIndex. How do I flatten the columns?,code,Two-sentence requests
+The report script runs every morning. Make it skip weekends.,code,Two-sentence requests
+Our Excel macro crashes on empty rows. Can you fix the VBA?,code,Two-sentence requests
+I need a tiny web page that shows the latest readings. Use Flask.,code,Two-sentence requests
+This function is slow on big lists. Can you make it faster?,code,Two-sentence requests
+I want to store readings in SQLite. Show me the table and an insert.,code,Two-sentence requests
+My script prints nothing. Here is the code: def main(): pass,code,Two-sentence requests
+Write a Python function that returns days until the next inspection date,code,Write code
+Generate a script that converts all .xls files in a folder to .xlsx,code,Write code
+Code a function to check if a permit number has the right format PTW-2026-0001,code,Write code
+Write a small class that keeps a rolling average of the last 10 readings,code,Write code
+Write Python to send a Windows notification when a file appears,code,Write code
+Write a function that splits a full name into first and last name,code,Write code
+Write a program that reads a JSON config and prints each pump's limit,code,Write code
+Write code to draw a bar chart of costs per pump with matplotlib,code,Write code
+Write a function that rounds rupees to the nearest thousand,code,Write code
+Write a script to find duplicate rows in a spreadsheet,code,Write code
+AttributeError: 'NoneType' object has no attribute 'split',code,Error messages and debugging
+"FileNotFoundError when I run the script from another folder, why?",code,Error messages and debugging
+UnicodeDecodeError reading a CSV saved from Excel,code,Error messages and debugging
+My for loop modifies the list and skips items,code,Error messages and debugging
+"pandas SettingWithCopyWarning, what does it mean and how do I fix it?",code,Error messages and debugging
+RecursionError: maximum recursion depth exceeded,code,Error messages and debugging
+My datetime comparison says can't compare offset-naive and offset-aware,code,Error messages and debugging
+ImportError: cannot import name from partially initialized module,code,Error messages and debugging
+The SQL insert works but nothing is saved in the database,code,Error messages and debugging
+"my regex matches too much, it should stop at the first comma",code,Error messages and debugging
+"SELECT pump, COUNT(*) FROM failures GROUP BY pump - add a filter for this year",code,"Queries, formulas and other languages"
+Excel formula to count readings above 7.1 in column C,code,"Queries, formulas and other languages"
+Google Sheets formula to look up a pump's owner from another tab,code,"Queries, formulas and other languages"
+Bash script to zip yesterday's log files,code,"Queries, formulas and other languages"
+"TypeScript type for a pump reading with tag, value and time",code,"Queries, formulas and other languages"
+Write a SQL trigger that stamps the update time,code,"Queries, formulas and other languages"
+Power Query step to remove blank rows,code,"Queries, formulas and other languages"
+Write a C# method to parse a date in dd-MM-yyyy,code,"Queries, formulas and other languages"
+Regex for Indian mobile numbers,code,"Queries, formulas and other languages"
+Rust function to add two numbers safely,code,"Queries, formulas and other languages"
+How do I install pandas offline from a wheel file?,code,Programming how-to (no keyword)
+How can I speed up reading a 2 GB CSV?,code,Programming how-to (no keyword)
+What is the difference between append and extend for lists?,code,Programming how-to (no keyword)
+How do I make a dataframe column into a list?,code,Programming how-to (no keyword)
+How do I format a number with Indian commas in Python?,code,Programming how-to (no keyword)
+How do I handle exceptions properly?,code,Programming how-to (no keyword)
+How do I freeze a requirements.txt?,code,Programming how-to (no keyword)
+How do I read only some columns from Excel with pandas?,code,Programming how-to (no keyword)
+When should I use a dictionary instead of a list?,code,Programming how-to (no keyword)
+How do I merge two dataframes on the tag column?,code,Programming how-to (no keyword)
+Explain what *args and **kwargs are,code,"Explain, review, improve code"
+"Review this function name: def x(a, b): return a/b",code,"Explain, review, improve code"
+Make this code PEP 8 compliant,code,"Explain, review, improve code"
+What does this line do: df[df['zone'] == 'C'],code,"Explain, review, improve code"
+Convert this for loop into a vectorised pandas operation,code,"Explain, review, improve code"
+Add input validation to my remaining life function,code,"Explain, review, improve code"
+Write pytest fixtures for a temporary CSV file,code,"Explain, review, improve code"
+Is it safe to use eval on user input?,code,"Explain, review, improve code"
+Explain the difference between a thread and a process in Python,code,"Explain, review, improve code"
+Document this module with a docstring at the top,code,"Explain, review, improve code"

@@ -1,0 +1,201 @@
+task,label,category
+What PPE is required for confined space entry?,general,SOP and procedure questions
+How long must vibration records be kept?,general,SOP and procedure questions
+What is the gas test limit for hydrocarbons before hot work?,general,SOP and procedure questions
+Who signs the hot work permit at the end of the shift?,general,SOP and procedure questions
+What must be done before a pump is handed over for maintenance?,general,SOP and procedure questions
+When does a pressure vessel need an approval note for inspection?,general,SOP and procedure questions
+What is the alarm limit for the bearing housing temperature rise?,general,SOP and procedure questions
+Which zone requires the pump to be stopped?,general,SOP and procedure questions
+What is the delegation limit of a General Manager?,general,SOP and procedure questions
+Which sections are compulsory in an approval note?,general,SOP and procedure questions
+How often should standby pumps be monitored?,general,SOP and procedure questions
+What does Zone B mean for long-term operation?,general,SOP and procedure questions
+Who is responsible for spectrum analysis after a Zone C reading?,general,SOP and procedure questions
+How many days is a hot work permit valid for?,general,SOP and procedure questions
+What is the minimum oxygen percentage for safe entry?,general,SOP and procedure questions
+What happens if the measured thickness is below the minimum required?,general,SOP and procedure questions
+Which readings must be taken at the drive end bearing?,general,SOP and procedure questions
+What fire watch is needed after welding is finished?,general,SOP and procedure questions
+Who approves spending above one crore rupees?,general,SOP and procedure questions
+What action is needed when the bearing temperature exceeds 90 degrees?,general,SOP and procedure questions
+Calculate the corrosion rate if the wall went from 14 mm to 11.6 mm in 8 years,general,Engineering calculations
+What is the remaining life of a shell at 9.4 mm with a minimum of 8 mm and 0.2 mm per year corrosion?,general,Engineering calculations
+"If vibration rose from 3.2 to 5.8 mm/s, which zone is it in now?",general,Engineering calculations
+"How much will replacing two mechanical seals cost at 1.8 lakh each plus 40,000 labour?",general,Engineering calculations
+When is the next inspection due if the remaining life is 6 years?,general,Engineering calculations
+Convert 250 psi into bar for the inspection note,general,Engineering calculations
+What is the temperature rise if ambient is 32 and the bearing is 71 degrees?,general,Engineering calculations
+"Work out the average of these readings: 4.1, 4.6, 5.0 and 4.8 mm/s",general,Engineering calculations
+By what percentage did vibration increase from 2.9 to 6.4 mm/s?,general,Engineering calculations
+How many litres are in 40 barrels of oil?,general,Engineering calculations
+Estimate the total downtime cost at 2 lakh per hour for 14 hours,general,Engineering calculations
+Is 7.3 mm/s above the Zone D limit?,general,Engineering calculations
+What is the corrosion allowance left if actual thickness is 10.1 mm and minimum is 8.5 mm?,general,Engineering calculations
+Find the flow in cubic metres per hour for 5000 barrels per day,general,Engineering calculations
+Calculate the half-life inspection interval for a remaining life of 3.2 years,general,Engineering calculations
+Draft an email to the maintenance planner about the pump shutdown,general,Writing and drafting
+Write a short note to the plant manager about the seal failures,general,Writing and drafting
+Prepare a toolbox talk on hot work safety,general,Writing and drafting
+Write a letter to the vendor asking for an earlier delivery date,general,Writing and drafting
+Draft the justification paragraph for replacing the NDE bearing,general,Writing and drafting
+Summarise the last three inspection findings for the morning meeting,general,Writing and drafting
+Write a reminder to the team about overdue vibration readings,general,Writing and drafting
+Prepare meeting minutes for the reliability review,general,Writing and drafting
+Draft a request for a second quotation from another supplier,general,Writing and drafting
+Write a one-page brief on why pumps cavitate,general,Writing and drafting
+Rewrite this sentence in simpler English: the impeller exhibits erosive degradation,general,Writing and drafting
+Write a polite reply declining the vendor's price increase,general,Writing and drafting
+Draft a shift handover note for the crude unit,general,Writing and drafting
+Prepare a checklist for starting a centrifugal pump after repair,general,Writing and drafting
+Write a lessons-learned summary for the seal failure incident,general,Writing and drafting
+Draft an incident report outline for a minor oil leak,general,Writing and drafting
+Write a notice for contractors about the gas test rules,general,Writing and drafting
+Prepare five questions to ask the vendor about the new bearings,general,Writing and drafting
+Write a status update on the P-2105B repair for the GM,general,Writing and drafting
+Translate the hot work rules into Hindi,general,Writing and drafting
+Explain why misalignment causes high axial vibration,general,Explaining engineering concepts
+What is the difference between Zone A and Zone C?,general,Explaining engineering concepts
+Why does bearing temperature rise when lubrication fails?,general,Explaining engineering concepts
+Explain NPSH in simple words,general,Explaining engineering concepts
+What causes erosion corrosion in pipelines?,general,Explaining engineering concepts
+How does a mechanical seal work?,general,Explaining engineering concepts
+Why is laser alignment better than dial gauge alignment?,general,Explaining engineering concepts
+What does RMS mean in vibration measurement?,general,Explaining engineering concepts
+Explain the difference between short-term and long-term corrosion rate,general,Explaining engineering concepts
+Why must the spectrum analysis find the cause before parts are ordered?,general,Explaining engineering concepts
+What is soft foot and how does it affect a pump?,general,Explaining engineering concepts
+Explain what a P&ID shows,general,Explaining engineering concepts
+Why are hot work permits needed near hydrocarbon lines?,general,Explaining engineering concepts
+What is the role of a delegation of financial powers?,general,Explaining engineering concepts
+Explain how ultrasonic thickness gauges measure wall thickness,general,Explaining engineering concepts
+Make a table of the vibration limits for each zone,general,Tables and records (no code)
+List the cost items for the bearing replacement in a table,general,Tables and records (no code)
+Create a spreadsheet of this month's pump readings,general,Tables and records (no code)
+Put the inspection due dates for all vessels into a table,general,Tables and records (no code)
+Make a comparison table of two seal suppliers,general,Tables and records (no code)
+List all the SOPs that mention bearings,general,Tables and records (no code)
+Tabulate the approval limits from Department Head to Director,general,Tables and records (no code)
+"Organise these readings by location: DE 6.4, NDE 3.1, DE axial 2.2",general,Tables and records (no code)
+Make a list of spare parts needed for P-2105A,general,Tables and records (no code)
+Prepare a maintenance schedule for the next four weeks,general,Tables and records (no code)
+What is the function of a balance line in a multistage pump?,general,General tasks using code-like words
+Plan the preventive maintenance program for the next quarter,general,General tasks using code-like words
+Explain the logic of the low-flow trip interlock,general,General tasks using code-like words
+Which function of the DCS raises the high vibration alarm?,general,General tasks using code-like words
+Write a training program for new condition monitoring technicians,general,General tasks using code-like words
+What does the code ASME VIII say about corrosion allowance?,general,General tasks using code-like words
+Explain the testing procedure for a relief valve,general,General tasks using code-like words
+What is the script for the safety briefing at the start of the shift?,general,General tasks using code-like words
+Describe the loop check procedure for a vibration transmitter,general,General tasks using code-like words
+What is the error margin of a handheld vibration meter?,general,General tasks using code-like words
+"Hi, what can you help me with?",general,Short or casual requests
+"Thanks, that helped",general,Short or casual requests
+Make it shorter,general,Short or casual requests
+Give me three bullet points instead,general,Short or casual requests
+Is that within limits?,general,Short or casual requests
+What should I do next?,general,Short or casual requests
+Explain that again more simply,general,Short or casual requests
+Who should I send this to?,general,Short or casual requests
+Is the pump safe to run?,general,Short or casual requests
+Any other risks I should know about?,general,Short or casual requests
+Write a Python function that returns the vibration zone for a reading,code,Write Python
+Write a script to calculate remaining life for a list of vessels,code,Write Python
+Create a Python program that converts barrels per day to cubic metres per hour,code,Write Python
+Write a function that checks whether a bearing temperature is in alarm,code,Write Python
+Write Python code to read all PDF file names in a folder,code,Write Python
+Write a script that emails me when a reading crosses 7.1 mm/s,code,Write Python
+"Write a Python class for an inspection record with date, tag and thickness",code,Write Python
+Write a function to format rupees in lakh and crore,code,Write Python
+Write a script that merges two CSV files of readings by date,code,Write Python
+Write a Python program that plots vibration against time,code,Write Python
+Generate Python code to compute the corrosion rate from two thickness readings,code,Write Python
+Write a function that validates equipment tags like P-2105B,code,Write Python
+Write a Python script to rename photos by the date they were taken,code,Write Python
+Write a program that counts how many readings are in each zone,code,Write Python
+Write Python code that finds the highest reading per pump,code,Write Python
+Write a script to back up the reports folder every night,code,Write Python
+Write a function that converts Celsius to Fahrenheit and back,code,Write Python
+Write Python to send the daily readings summary to a printer,code,Write Python
+Write a command-line tool that asks for a thickness and prints the remaining life,code,Write Python
+Write a Python generator that yields readings above a threshold,code,Write Python
+Write a function that returns the approving authority for an amount,code,Write Python
+Write Python code to compress old log files,code,Write Python
+Write a script that downloads nothing but lists files larger than 100 MB,code,Write Python
+Write a Python program to schedule inspections half-way through the remaining life,code,Write Python
+Write a recursive function to list all files in nested folders,code,Write Python
+"My script says KeyError: 'thickness', what is wrong?",code,Debug and fix
+Why does this loop never stop?,code,Debug and fix
+I get TypeError: unsupported operand type(s) for -: 'str' and 'float',code,Debug and fix
+Fix this: the function returns None for every reading,code,Debug and fix
+My code prints the wrong zone for exactly 4.5,code,Debug and fix
+Why is my pandas merge giving duplicate rows?,code,Debug and fix
+This script works on my laptop but fails on the server with ModuleNotFoundError,code,Debug and fix
+Fix the off-by-one error in this range loop,code,Debug and fix
+My regex does not match tags with two letters,code,Debug and fix
+Why does my program crash when the CSV has an empty line?,code,Debug and fix
+"The date parsing fails for 05/11/2026, how do I fix it?",code,Debug and fix
+"My matplotlib labels overlap, how do I fix the code?",code,Debug and fix
+Why do I get an IndentationError on line 12?,code,Debug and fix
+This SQL query returns nothing even though the table has data,code,Debug and fix
+My function gives 0.30000000000000004 instead of 0.3,code,Debug and fix
+Write an SQL query to count seal failures per pump,code,Other languages and queries
+Write a regex to extract dates in DD-MM-YYYY format,code,Other languages and queries
+Write a JavaScript function that highlights readings above 7.1,code,Other languages and queries
+Write an Excel VBA macro that colours cells above the alarm limit,code,Other languages and queries
+Write a PowerShell script to copy reports to the backup drive,code,Other languages and queries
+Write a bash command to find all files modified today,code,Other languages and queries
+Write an SQL join between the pumps and inspections tables,code,Other languages and queries
+"Write a regex that finds rupee amounts like 12,50,000",code,Other languages and queries
+Write HTML and CSS for a simple readings table,code,Other languages and queries
+Write a SQL view showing the latest reading for each pump,code,Other languages and queries
+Write a JavaScript fetch call to our local API,code,Other languages and queries
+Write a batch file that starts the workbench,code,Other languages and queries
+Write a Dockerfile for a small Python service,code,Other languages and queries
+Write a cron expression that runs every weekday at 6 am,code,Other languages and queries
+Write a YAML config for three pumps with their limits,code,Other languages and queries
+Write a C function that converts mm/s to in/s,code,Other languages and queries
+Write a Java method that returns the zone letter,code,Other languages and queries
+Write a SQL query to find vessels due for inspection this month,code,Other languages and queries
+Write an Excel formula that returns the zone for a reading in A2,code,Other languages and queries
+Write a regex that matches IR-2026-118 style report numbers,code,Other languages and queries
+Explain what this list comprehension does,code,Explain or review code
+Review my function for bugs and bad naming,code,Explain or review code
+What does the 'with open' statement do in Python?,code,Explain or review code
+Explain this traceback line by line,code,Explain or review code
+Is my recursive function going to hit the recursion limit?,code,Explain or review code
+What does async and await mean in this code?,code,Explain or review code
+Explain the difference between a list and a tuple in Python,code,Explain or review code
+What does this SQL GROUP BY clause do?,code,Explain or review code
+Why should I use a virtual environment for my script?,code,Explain or review code
+Explain what this regular expression matches,code,Explain or review code
+How do I read an Excel sheet into pandas?,code,Coding questions without obvious keywords
+"pip install fails with a permission error, what should I do?",code,Coding questions without obvious keywords
+How do I loop over the rows of a dataframe?,code,Coding questions without obvious keywords
+How can I parse this JSON and get every tag number?,code,Coding questions without obvious keywords
+How do I make a virtual environment on Windows?,code,Coding questions without obvious keywords
+What is the fastest way to sort a million readings?,code,Coding questions without obvious keywords
+How do I call the Ollama API from Python?,code,Coding questions without obvious keywords
+How do I convert a column of strings to numbers in pandas?,code,Coding questions without obvious keywords
+How do I add a progress bar to a long loop?,code,Coding questions without obvious keywords
+How do I read a file line by line without loading it all?,code,Coding questions without obvious keywords
+Which library should I use to create Word files programmatically?,code,Coding questions without obvious keywords
+How do I handle a missing value in a CSV column with pandas?,code,Coding questions without obvious keywords
+How do I install a package without internet access?,code,Coding questions without obvious keywords
+How do I schedule a Python job with Windows Task Scheduler?,code,Coding questions without obvious keywords
+How do I return two values from a function?,code,Coding questions without obvious keywords
+What does if __name__ == '__main__' mean?,code,Coding questions without obvious keywords
+How do I write a dictionary to a JSON file?,code,Coding questions without obvious keywords
+How do I read command-line arguments with argparse?,code,Coding questions without obvious keywords
+How do I log errors to a file instead of printing them?,code,Coding questions without obvious keywords
+How do I unit test a function that reads a file?,code,Coding questions without obvious keywords
+Add pytest tests for the zone function,code,"Tests, refactoring and performance"
+Refactor this long function into smaller ones,code,"Tests, refactoring and performance"
+Make this loop faster using numpy,code,"Tests, refactoring and performance"
+Add type hints to my inspection functions,code,"Tests, refactoring and performance"
+Write tests for the remaining life calculation with edge cases,code,"Tests, refactoring and performance"
+Reduce the memory use of my script that loads big CSV files,code,"Tests, refactoring and performance"
+Add error handling to this file-reading code,code,"Tests, refactoring and performance"
+Rename the variables in this code so they are clearer,code,"Tests, refactoring and performance"
+Add docstrings to every function in this module,code,"Tests, refactoring and performance"
+Turn these repeated if-statements into a lookup table,code,"Tests, refactoring and performance"
